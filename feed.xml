@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>The Hungarian Daily</title>
+    <link>https://github.com/ericchi-valuation/Hungary-Daily-Insider</link>
+    <description>Your essential daily English-language briefing on Hungarian politics, business, and culture. Fully automated with AI.</description>
+    <itunes:explicit>no</itunes:explicit>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 13 Apr 2026 23:17:07 +0000</lastBuildDate>
+    <itunes:author>Eric Chi</itunes:author>
+    <managingEditor>sally0618@gmail.com (Eric Chi)</managingEditor>
+    <pubDate>Mon, 13 Apr 2026 23:17:05 +0000</pubDate>
+    <itunes:category text="News">
+      <itunes:category text="Daily News"/>
+    </itunes:category>
+    <itunes:image href="https://raw.githubusercontent.com/ericchi-valuation/Hungary-Daily-Insider/main/cover.png"/>
+    <itunes:owner>
+      <itunes:name>Eric Chi</itunes:name>
+      <itunes:email>sally0618@gmail.com</itunes:email>
+    </itunes:owner>
+    <item>
+      <title>The Hungarian Daily — 2026-04-14</title>
+      <description><![CDATA[Good morning, afternoon, or evening, depending on where youre tuning in from! And a very warm welcome to The Hungarian Daily, your essential podcast for foreign professionals, expats, digital nomads, and international business executives navigating life and work here in Budapest, Hungary.It is Monday, April 13, 2026, and what a seismic shift we have to discuss today. If youre just waking up, or perhaps still reeling from the weekends events, buckle up. Hungary has just witnessed a political earthquake of historic proportions, and the tremors are already being felt across the economy and beyond.Our top story, dominating every headline and conversation, is the **landslide victory of Péter Magyar** (Pay-ter Mah-djar) and his Tisza (Tih-sah) Party in yesterday’s parliamentary elections. This outcome has swept away the Orbán (Or-bahn) era, bringing to an end Viktor Orbáns remarkable 16-year tenure as Prime Minister. Its a moment that many thought might never come, and the capital, Budapest (Boo-da-pesht), erupted into spontaneous celebrations last night, with Reuters reporting that the city truly turned into a party zone as the news broke.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-14/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-14/HungaryDaily_Podcast_Final.mp3" length="14821503" type="audio/mpeg"/>
+      <itunes:duration>10:17</itunes:duration>
+      <pubDate>Mon, 13 Apr 2026 23:17:05 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
