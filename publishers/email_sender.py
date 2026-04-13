@@ -38,7 +38,7 @@ def send_newsletter(subject, html_content, subscriber_list=None):
         for recipient in subscriber_list:
             msg = MIMEMultipart('alternative')
             msg['Subject'] = subject
-            msg['From'] = f"Hungary Daily Insider <{gmail_user}>"
+            msg['From'] = f"The Hungarian Daily <{gmail_user}>"
             msg['To'] = recipient
 
             # Attach HTML content
@@ -60,4 +60,4 @@ if __name__ == "__main__":
     from dotenv import load_dotenv
     load_dotenv()
     test_html = "<h1>Szia!</h1><p>This is a test email for Hungary Daily Insider.</p>"
-    send_newsletter("Hungary Daily Insider Test Email", test_html)
+    send_newsletter("The Hungarian Daily Test Email", test_html)

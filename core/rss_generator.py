@@ -8,8 +8,8 @@ EPISODES_FILE = "episodes.json"
 FEED_FILE = "feed.xml"
 
 # Podcast Metadata
-PODCAST_NAME = "Hungary Daily Insider"
-PODCAST_DESC = "Your daily English-language briefing on everything that matters in Hungary — politics, business, expat life, and what locals are talking about. Fully automated with AI."
+PODCAST_NAME = "The Hungarian Daily"
+PODCAST_DESC = "Your essential daily English-language briefing on Hungarian politics, business, and culture. Fully automated with AI."
 PODCAST_WEBSITE = "https://github.com/ericchi-valuation/Hungary-Daily-Insider"
 PODCAST_EXPLICIT = False
 PODCAST_IMAGE_URL = "https://raw.githubusercontent.com/ericchi-valuation/Hungary-Daily-Insider/main/cover.png"

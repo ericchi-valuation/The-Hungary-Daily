@@ -6,7 +6,7 @@ from core.script_generator import generate_podcast_script
 
 def main():
     print("=" * 55)
-    print("🎙️  Hungary Daily Insider — Auto-Production System 🎙️")
+    print("🎙️  The Hungarian Daily — Auto-Production System 🎙️")
     print("=" * 55)
 
     # -----------------------------------------------------------------
@@ -65,7 +65,7 @@ def main():
     # Send newsletter
     from publishers.email_sender import send_newsletter
     today_date = time.strftime("%Y-%m-%d")
-    send_newsletter(f"Hungary Daily Insider — {today_date}", newsletter_html)
+    send_newsletter(f"The Hungarian Daily — {today_date}", newsletter_html)
 
     # Post to Threads
     from publishers.threads_poster import post_to_threads

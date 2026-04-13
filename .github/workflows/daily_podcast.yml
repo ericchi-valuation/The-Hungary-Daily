@@ -1,4 +1,4 @@
-name: Hungary Daily Insider — Auto Podcast Generator
+name: The Hungarian Daily — Auto Podcast Generator
 
 on:
   schedule:
@@ -58,7 +58,7 @@ jobs:
 
           echo "==== Creating GitHub Release ===="
           gh release create "ep-${TODAY}" HungaryDaily_Podcast_Final.mp3 \
-            --title "Hungary Daily Insider — ${TODAY}" \
+            --title "The Hungarian Daily — ${TODAY}" \
             --notes "Auto-generated daily English podcast about Hungary." || true
 
           echo "==== Updating RSS Feed ===="
@@ -68,7 +68,7 @@ jobs:
           if [ -z "$SUMMARY" ]; then SUMMARY="Today's top news and updates from Hungary for expats and international professionals."; fi
 
           python core/rss_generator.py \
-            --title "Hungary Daily Insider — ${TODAY}" \
+            --title "The Hungarian Daily — ${TODAY}" \
             --summary "$SUMMARY" \
             --date "$ISO_DATE" \
             --url "$URL" \

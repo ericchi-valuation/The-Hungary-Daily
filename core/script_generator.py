@@ -43,7 +43,7 @@ def generate_podcast_script(news_data, social_data):
     # -----------------------------------------------------------------------
     system_prompt = f"""
     You are an energetic, professional yet engaging podcast host for a daily English-language news show
-    called "Hungary Daily Insider".
+    called "The Hungarian Daily".
 
     Your strict target audience is: foreign professionals, expats, digital nomads, EU citizens, and 
     international business executives living or working in Budapest, Hungary.

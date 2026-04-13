@@ -26,7 +26,7 @@ def reformat_for_newsletter(podcast_script):
     1. Output ONLY valid HTML code. Do NOT output markdown formatting like ```html.
     2. Use semantic HTML tags: <h2> for main news topics, <ul>/<li> for bullet points, <strong> for emphasis.
     3. Remove any podcast-specific filler words (like "Welcome to the show", "I'm your host", "That wraps up our episode").
-    4. Start immediately with a friendly greeting directly formatted in HTML, e.g., <h1>Hungary Daily Insider</h1><p>Here are your top updates for today:</p>.
+    4. Start immediately with a friendly greeting directly formatted in HTML, e.g., <h1>The Hungarian Daily</h1><p>Here are your top updates for today:</p>.
     5. Summarize the stories slightly if the spoken text is too verbose.
     6. Tone: Professional, forward-thinking, and easy to skim.
     
@@ -53,7 +53,7 @@ def reformat_for_threads(podcast_script):
     """
     client = _get_gemini_client()
     if not client:
-        return "New episode of Hungary Daily Insider is live! Click the link in bio to listen 🎧"
+        return "New episode of The Hungarian Daily is live! Click the link in bio to listen 🎧"
 
     print("🤖 正在使用 AI 萃取 Threads 貼文精華短語...")
     
@@ -80,4 +80,4 @@ def reformat_for_threads(podcast_script):
         return response.text.strip()
     except Exception as e:
         print(f"❌ Failed to generate Threads post: {e}")
-        return "New episode of Hungary Daily Insider is live! Click the link to listen 🎧"
+        return "New episode of The Hungarian Daily is live! Click the link to listen 🎧"

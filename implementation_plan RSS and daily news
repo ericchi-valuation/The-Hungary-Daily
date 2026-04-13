@@ -1,0 +1,73 @@
+# 廣播稿自動轉換為電子報與 Threads 貼文實作計畫
+
+這份實作計畫旨在升級現有的 `Taiwan Daily Insider` 廣播稿自動化產製系統，讓產生的劇本能夠自動發送為「電子報 (Newsletter)」並同步發布至「Threads」。
+
+> [!NOTE]
+> 目前您的 `main.py` 已經能爬取新聞並透過 LLM (Gemini) 整理成 `script.txt`，我們只需要在這個核心流程後方，掛載兩個新的發送模組（Email 與 Threads）即可輕鬆達成全自動化發布。
+
+## User Review Required
+
+> [!IMPORTANT]
+> 要讓系統自動發信與發 Threads，我們需要取得對應的帳號授權與 API 金鑰。請您參考下方的 **Open Questions** 區塊，並告訴我您的選擇，我將根據您的決定來撰寫程式碼。
+
+---
+
+## Proposed Changes
+
+我們將在專案架構中新增專門負責發布的模組。
+
+### 發布模組 (Publishers)
+
+在專案中建立 `publishers` 資料夾來放置發布相關的程式碼：
+
+#### [NEW] publishers/email_sender.py
+建立寄送電子報的邏輯：
+- 接收 `script.txt` 或是另一份專為文字閱讀優化的 LLM 摘要（因為音訊廣播稿直接當文章閱讀可能稍長）。
+- 使用所選的 Email 協議（例如：Gmail 應用程式密碼 SMTP 或寄信服務 API）發送給訂閱者列表。
+- 支援寄發給多個收件人。
+
+#### [NEW] publishers/threads_poster.py
+建立發布 Threads 貼文的邏輯：
+- Threads 官方 API 屬於 Meta Graph API 的一部分。
+- 此模組負責組合要發布的文字（由於 Threads 有字數限制 500 字，可能需要透過 LLM 特別產出一篇精簡版的「熱點快訊」）。
+- 呼叫 Meta Threads API 正式發布貼文。
+
+---
+
+### 主程式更新 (Main Script)
+
+#### [MODIFY] main.py
+修改現有進入點，將上述兩個發送模組整合進總流程：
+- 於【階段 2：生成講稿】之後，平行或循序呼叫 `email_sender` 與 `threads_poster`。
+- （可選）在傳給 Threads 與 Email 之前，再呼叫一次 Gemini 將「廣播口語稿 (Podcast Script)」轉換為「閱讀體驗好的圖文排版文章 (Newsletter Article)」。
+
+---
+
+## Open Questions
+
+請您決定以下這幾個關鍵工具的選擇，以利後續的程式碼撰寫：
+
+> [!CAUTION]  
+> **1. Threads 發文權限設定**  
+> 目前 Meta 對於 Threads 開發者有嚴格的官方 API。若要「自動發文」，您必須要有 Instagram/Threads 的帳號，並且在 **Meta for Developers** (Facebook 開發者後台) 註冊一個 App 來取得 `Access Token`。
+> - **問題：** 您是否已經有 Meta 開發者帳號且願意花大約 10 分鐘取得 Threads Token？(若有的話我們就使用官方 API 實作！若覺得麻煩，我也可以建議使用 Make/Zapier 等自動化平台)。
+
+> [!WARNING]  
+> **2. 電子報發送方式**  
+> 您打算如何寄送電子報給訂閱者？有以下兩種常見方式：
+> - **選項 A (最簡單、免費、適合小量)：** 使用您現有的 Gmail 帳號，透過開啟「應用程式密碼」，由 Python SMTP 直接寄出信件。(如果訂閱者低於 100 人，非常推薦用這個！)
+> - **選項 B (專業平台、適合大量)：** 您已經有在使用例如 Substack, Mailchimp, 或是 SendGrid 等服務，並希望透過它們的 API 派發。
+> - **問題：** 請問您想選擇 **選項 A** 還是 **選項 B**？
+
+> [!TIP]  
+> **3. 內容需要重新潤飾嗎？**  
+> 目前產生的是「給機器聽的廣播口語稿」。如果要發在 Threads (有 500 字數限制) 與電子報，是否希望我們在程式裡多安排一次 AI 請求，請 AI 把口語稿改寫為「社群貼文版」與「電子報閱讀版」？
+
+---
+
+## Verification Plan
+
+### 自動化測試與確認
+1. **沙盒測試 (Threads)：** 透過 Threads Token 使用自己為測試人員發布一篇私密或測試推文，確認不會被 Meta 阻擋。
+2. **寄信測試 (Email)：** 準備一個只包含您自己的 `test_subscribers.txt` 名單，確認信件能正確寄達信箱且排版正常。
+3. **流程整合 (Dry Run)：** 執行一次 `main.py`，檢驗爬蟲 -> 生成稿件 -> 發送 Email -> 發佈 Threads 的順序是否流暢，過程中是否妥善處理了發送失敗的例外錯誤 (Exception Handling)。
