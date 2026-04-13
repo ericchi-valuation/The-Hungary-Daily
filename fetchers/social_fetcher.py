@@ -105,18 +105,7 @@ def get_fb_hungary_expats(limit=3):
 # ---------------------------------------------------------------------------
 # Public entry point
 # ---------------------------------------------------------------------------
-def get_social_trending(limit_per_source=2):
-    """
-    Aggregate trending social posts from:
-      - Reddit r/hungary  (Hungarian public discussion)
-      - Reddit r/budapest (Expat city-life topics)
-      - Facebook – Hungary Expats group (optional, requires credentials)
-    """
-    posts = []
-    posts.extend(get_reddit_hungary(limit=limit_per_source))
-    posts.extend(get_reddit_budapest(limit=limit_per_source))
-    posts.extend(get_fb_hungary_expats(limit=limit_per_source))
-    return posts
+# (Integrated at the top)
 
 
 if __name__ == "__main__":
