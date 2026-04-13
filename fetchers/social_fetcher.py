@@ -5,77 +5,47 @@ import urllib3
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-REDDIT_HEADERS = {
-    'User-Agent': 'HungaryDailyInsiderBot/1.0 (automated podcast; contact: ericchi.valuation@gmail.com)'
-}
-
 # ---------------------------------------------------------------------------
-# Reddit r/hungary
+# Reddit Bypass (via Google News RSS)
 # ---------------------------------------------------------------------------
-def get_reddit_hungary(limit=3):
+def get_reddit_trending_bypassed(subreddit, limit=3):
     """
-    Fetch hot posts from r/hungary via Reddit's public JSON API (no OAuth needed).
+    Bypasses Reddit's 403/block by searching for the subreddit content on Google News RSS.
+    This is highly reliable for GitHub Actions runners.
     """
-    url = "https://www.reddit.com/r/hungary/hot.json"
+    query = f"site:reddit.com/r/{subreddit}+when:1d"
+    url = f"https://news.google.com/rss/search?q={query}&hl=en-HU&gl=HU&ceid=HU:en"
+    
     try:
-        resp = requests.get(url, headers=REDDIT_HEADERS, timeout=10)
-        resp.raise_for_status()
-        data = resp.json()
+        feed = feedparser.parse(url)
         posts = []
-        for child in data['data']['children']:
-            post = child['data']
-            # Skip stickied mod posts and very short/image-only posts
-            if post.get('stickied'):
-                continue
-            title = post.get('title', '').strip()
-            if not title:
-                continue
+        for entry in feed.entries[:limit]:
+            title = entry.get('title', '').split(' - r/')[0].strip()
             posts.append({
                 'title': title,
-                'url': 'https://www.reddit.com' + post.get('permalink', ''),
-                'topics': ['Reddit r/hungary'],
-                'score': post.get('score', 0)
+                'url': entry.get('link', ''),
+                'topics': [f'Reddit r/{subreddit}']
             })
-            if len(posts) >= limit:
-                break
         return posts
     except Exception as e:
-        print(f"Error fetching Reddit r/hungary: {e}")
+        print(f"Error fetching Reddit r/{subreddit} (Bypassed): {e}")
         return []
 
-
 # ---------------------------------------------------------------------------
-# Reddit r/budapest
+# Public entry point
 # ---------------------------------------------------------------------------
-def get_reddit_budapest(limit=3):
+def get_social_trending(limit_per_source=2):
     """
-    Fetch hot posts from r/budapest – expat-heavy city-life discussions.
+    Aggregate trending social posts from:
+      - Reddit r/hungary  (via Google News Bypass)
+      - Reddit r/budapest (via Google News Bypass)
+      - Facebook – Hungary Expats group (optional)
     """
-    url = "https://www.reddit.com/r/budapest/hot.json"
-    try:
-        resp = requests.get(url, headers=REDDIT_HEADERS, timeout=10)
-        resp.raise_for_status()
-        data = resp.json()
-        posts = []
-        for child in data['data']['children']:
-            post = child['data']
-            if post.get('stickied'):
-                continue
-            title = post.get('title', '').strip()
-            if not title:
-                continue
-            posts.append({
-                'title': title,
-                'url': 'https://www.reddit.com' + post.get('permalink', ''),
-                'topics': ['Reddit r/budapest'],
-                'score': post.get('score', 0)
-            })
-            if len(posts) >= limit:
-                break
-        return posts
-    except Exception as e:
-        print(f"Error fetching Reddit r/budapest: {e}")
-        return []
+    posts = []
+    posts.extend(get_reddit_trending_bypassed('hungary', limit=limit_per_source))
+    posts.extend(get_reddit_trending_bypassed('budapest', limit=limit_per_source))
+    posts.extend(get_fb_hungary_expats(limit=limit_per_source))
+    return posts
 
 
 # ---------------------------------------------------------------------------
