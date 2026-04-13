@@ -1,0 +1,85 @@
+name: Hungary Daily Insider — Auto Podcast Generator
+
+on:
+  schedule:
+    # 04:30 UTC = 06:30 Budapest Summer Time (CEST = UTC+2)
+    # ⚠️  Winter (CET = UTC+1): change to '30 05 * * *' from late October to late March
+    - cron: '30 4 * * *'
+  workflow_dispatch: # Allow manual trigger from the GitHub Actions UI
+
+jobs:
+  build_podcast:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Required for GitHub Releases and git push
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: ⚙️ Install system-level audio tools (ffmpeg)
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: 📦 Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: 🎙️ Run main pipeline (scrape → AI script → TTS → mix → email → Threads)
+        env:
+          GEMINI_API_KEY:       ${{ secrets.GEMINI_API_KEY }}
+          ELEVENLABS_API_KEY:   ${{ secrets.ELEVENLABS_API_KEY }}
+          GMAIL_ADDRESS:        ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD:   ${{ secrets.GMAIL_APP_PASSWORD }}
+          THREADS_USER_ID:      ${{ secrets.THREADS_USER_ID }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          FB_GROUP_ID:          ${{ secrets.FB_GROUP_ID }}
+          FB_ACCESS_TOKEN:      ${{ secrets.FB_ACCESS_TOKEN }}
+        run: python main.py
+
+      - name: 🚀 Upload MP3 to GitHub Releases and update RSS (feed.xml)
+        id: create_release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Get today's date in Budapest time
+          TODAY=$(TZ='Europe/Budapest' date +'%Y-%m-%d')
+          ISO_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+
+          echo "==== Measuring audio file ===="
+          DURATION=$(ffprobe -i HungaryDaily_Podcast_Final.mp3 -show_entries format=duration -v quiet -of csv="p=0" | cut -d'.' -f1)
+          if [ -z "$DURATION" ]; then DURATION=600; fi
+          FORMATTED_DURATION=$(printf "%02d:%02d:%02d\n" $(($DURATION/3600)) $(($DURATION%3600/60)) $(($DURATION%60)))
+
+          FILE_SIZE=$(stat -c%s "HungaryDaily_Podcast_Final.mp3")
+
+          echo "==== Creating GitHub Release ===="
+          gh release create "ep-${TODAY}" HungaryDaily_Podcast_Final.mp3 \
+            --title "Hungary Daily Insider — ${TODAY}" \
+            --notes "Auto-generated daily English podcast about Hungary." || true
+
+          echo "==== Updating RSS Feed ===="
+          URL="https://github.com/${{ github.repository }}/releases/download/ep-${TODAY}/HungaryDaily_Podcast_Final.mp3"
+
+          SUMMARY=$(head -n 5 script.txt | tr -d '\n' | tr -d '"' | tr -d "'")
+          if [ -z "$SUMMARY" ]; then SUMMARY="Today's top news and updates from Hungary for expats and international professionals."; fi
+
+          python core/rss_generator.py \
+            --title "Hungary Daily Insider — ${TODAY}" \
+            --summary "$SUMMARY" \
+            --date "$ISO_DATE" \
+            --url "$URL" \
+            --duration "$FORMATTED_DURATION" \
+            --size "$FILE_SIZE"
+
+      - name: 💾 Commit updated RSS feed to repository
+        run: |
+          TODAY=$(TZ='Europe/Budapest' date +'%Y-%m-%d')
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add feed.xml episodes.json
+          git commit -m "Auto-update podcast feed for ${TODAY}" || exit 0
+          git push

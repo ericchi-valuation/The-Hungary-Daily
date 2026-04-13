@@ -1,0 +1,30 @@
+# Environment variables (contains API keys — NEVER commit this)
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Generated audio files (too large for git)
+*.mp3
+*.wav
+
+# Generated podcast files (committed via GitHub Release, not git)
+HungaryDaily_Podcast.mp3
+HungaryDaily_Podcast_Final.mp3
+
+# Generated script (committed separately if needed)
+# script.txt  ← keep this committed so RSS can read it
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE / OS
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
