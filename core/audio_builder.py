@@ -69,12 +69,14 @@ def build_podcast_audio(script_file="script.txt", output_file="podcast.mp3"):
     # 1. 嘗試用 ElevenLabs
     success = generate_audio_elevenlabs(script_text, output_file)
     
-    # 2. 十一實驗室失敗或無金鑰，就用霸王級免費語音 (Edge TTS)
+    # 2. Use free Edge TTS if ElevenLabs fails or has no key
     if not success:
         try:
             asyncio.run(generate_audio_edge(script_text, output_file))
             success = True
-            print("\n❌ edge-tts not installed. Run: pip install edge-tts")
+        except Exception as e:
+            print(f"\n❌ Error generating Edge TTS audio: {e}")
+            print("Please ensure edge-tts is installed: pip install edge-tts")
             return
             
     if success:
