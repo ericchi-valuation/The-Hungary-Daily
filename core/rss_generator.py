@@ -10,9 +10,9 @@ FEED_FILE = "feed.xml"
 # Podcast Metadata
 PODCAST_NAME = "The Hungarian Daily"
 PODCAST_DESC = "Your essential daily English-language briefing on Hungarian politics, business, and culture."
-PODCAST_WEBSITE = "https://github.com/ericchi-valuation/Hungary-Daily-Insider"
+PODCAST_WEBSITE = "https://github.com/ericchi-valuation/The-Hungary-Daily"
 PODCAST_EXPLICIT = False
-PODCAST_IMAGE_URL = "https://raw.githubusercontent.com/ericchi-valuation/Hungary-Daily-Insider/main/cover.png"
+PODCAST_IMAGE_URL = "https://raw.githubusercontent.com/ericchi-valuation/The-Hungary-Daily/main/cover.jpg"
 AUTHOR_NAME = "Eric Chi"
 AUTHOR_EMAIL = "eric.chi1988@gmail.com"
 
