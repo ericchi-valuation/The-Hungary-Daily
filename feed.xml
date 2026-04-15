@@ -3,22 +3,22 @@
   <channel>
     <title>The Hungarian Daily</title>
     <link>https://github.com/ericchi-valuation/Hungary-Daily-Insider</link>
-    <description>Your essential daily English-language briefing on Hungarian politics, business, and culture. Fully automated with AI.</description>
+    <description>Your essential daily English-language briefing on Hungarian politics, business, and culture.</description>
     <itunes:explicit>no</itunes:explicit>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 15 Apr 2026 06:21:29 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2026 19:22:34 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
-    <managingEditor>sally0618@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Wed, 15 Apr 2026 06:21:26 +0000</pubDate>
+    <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
+    <pubDate>Wed, 15 Apr 2026 19:22:33 +0000</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
     <itunes:image href="https://raw.githubusercontent.com/ericchi-valuation/Hungary-Daily-Insider/main/cover.png"/>
     <itunes:owner>
       <itunes:name>Eric Chi</itunes:name>
-      <itunes:email>sally0618@gmail.com</itunes:email>
+      <itunes:email>eric.chi1988@gmail.com</itunes:email>
     </itunes:owner>
     <item>
       <title>The Hungarian Daily — 2026-04-14</title>
@@ -30,11 +30,11 @@
     </item>
     <item>
       <title>The Hungarian Daily — 2026-04-15</title>
-      <description><![CDATA[Jó reggelt, Boo-da-pesht! And a very warm welcome to The Hungarian Daily, your essential podcast for foreign professionals, expats, digital nomads, and international business executives navigating life and work in Hungary. I’m your host, and it is Wednesday, April 15, 2026. Lets dive into the headlines that are shaping our world here in Hungary today.We are kicking off with what can only be described as a seismic shift in Hungarian politics. After 16 years at the helm, Prime Minister Viktor Orbán has conceded defeat following what international media outlets like PBS, NPR, and the BBC are calling a painful election result and a landslide for the opposition. The Tisza (Tee-sa) Party, led by the charismatic Péter Magyar (Pay-ter Mah-djar), has reportedly secured a dominant mandate, with some reports even suggesting a two-thirds majority in Parliament. This is an absolutely monumental development, signaling the end of an era and the beginning of a new chapter for Hungary.Péter Magyar (Pay-ter Mah-djar) has wasted no time in making his intentions clear. In a series of high-profile interviews on state media, including Kossuth (Koh-shoot) Rádió and M1, his first appearances there in over a year, he delivered a stark message. He stated that after 16 years of the Orbán (Or-bahn) government, a staggering 400,000 Hungarian children are living in deep poverty. This is a powerful statement, setting a clear agenda for social change. Furthermore, in a move that will resonate deeply with international observers and press freedom advocates, Magyar (Mah-djar) pledged that one of his first steps would be to suspend the news service of this propaganda media, referring to the state-controlled outlets. This promise of media reform, after years of criticism regarding press freedom in Hungary, marks a significant departure from the previous administrations approach. He also reassured the public that everything that is a good measure regarding family support would be maintained, indicating a selective approach to policy changes rather than a wholesale dismantling of existing programs.]]></description>
+      <description><![CDATA[Jó reggelt, és üdvözlöm a The Hungarian Daily mai adásában! Im your host, and its a pleasure to have you join us this Wednesday, April 15, 2026, for your essential update on everything happening in and around Budapest (Boo-da-pesht). Weve got a packed show today, delving into the latest political shifts, key economic indicators, and some exciting cultural happenings that are sure to pique your interest. Grab your kávé, lets dive in!Were going to start today with some fascinating cultural news, before moving into the seismic political shifts that have captured everyones attention, and then we’ll round out with crucial economic insights for our international professionals and business leaders.First up, for those looking to immerse themselves deeper into the rich tapestry of Hungarian culture, the Museum of Ethnography is launching a brand new special traveling exhibition called Folklore Forever – Old Patterns, New Motifs. This isnt just about looking at artifacts behind glass; its designed to be an experience to be lived and tried out. Kicking off on April 24th, this interactive exhibition promises to showcase the history and enduring legacy of Hungarian folk art, bringing it vibrantly into the present day. For expats, digital nomads, and international families, this is a fantastic opportunity to really connect with the heart of Hungarian identity. Folk motifs and melodies are not static relics; they are living traditions, constantly evolving, and this exhibition aims to demonstrate that dynamic spirit. Imagine engaging with traditional crafts, understanding the symbolism behind intricate embroidery, or perhaps even trying your hand at some folk art techniques. It’s a wonderful way to bridge cultural gaps, learn about the country you call home, and perhaps even find unique, authentic souvenirs or inspirations for your own creative endeavors. Keep an eye out for its schedule as it travels beyond Budapest, offering a glimpse into regional cultural expressions.]]></description>
       <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-15/HungaryDaily_Podcast_Final.mp3</guid>
-      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-15/HungaryDaily_Podcast_Final.mp3" length="13402114" type="audio/mpeg"/>
-      <itunes:duration>09:18</itunes:duration>
-      <pubDate>Wed, 15 Apr 2026 06:21:26 +0000</pubDate>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-15/HungaryDaily_Podcast_Final.mp3" length="27029882" type="audio/mpeg"/>
+      <itunes:duration>18:46</itunes:duration>
+      <pubDate>Wed, 15 Apr 2026 19:22:33 +0000</pubDate>
     </item>
   </channel>
 </rss>
