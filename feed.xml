@@ -2,20 +2,20 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
   <channel>
     <title>The Hungarian Daily</title>
-    <link>https://github.com/ericchi-valuation/Hungary-Daily-Insider</link>
+    <link>https://github.com/ericchi-valuation/The-Hungary-Daily</link>
     <description>Your essential daily English-language briefing on Hungarian politics, business, and culture.</description>
     <itunes:explicit>no</itunes:explicit>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 15 Apr 2026 19:22:34 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2026 20:47:14 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Wed, 15 Apr 2026 19:22:33 +0000</pubDate>
+    <pubDate>Wed, 15 Apr 2026 20:47:13 +0000</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
-    <itunes:image href="https://raw.githubusercontent.com/ericchi-valuation/Hungary-Daily-Insider/main/cover.png"/>
+    <itunes:image href="https://raw.githubusercontent.com/ericchi-valuation/The-Hungary-Daily/main/cover.jpg"/>
     <itunes:owner>
       <itunes:name>Eric Chi</itunes:name>
       <itunes:email>eric.chi1988@gmail.com</itunes:email>
@@ -30,11 +30,11 @@
     </item>
     <item>
       <title>The Hungarian Daily — 2026-04-15</title>
-      <description><![CDATA[Jó reggelt, és üdvözlöm a The Hungarian Daily mai adásában! Im your host, and its a pleasure to have you join us this Wednesday, April 15, 2026, for your essential update on everything happening in and around Budapest (Boo-da-pesht). Weve got a packed show today, delving into the latest political shifts, key economic indicators, and some exciting cultural happenings that are sure to pique your interest. Grab your kávé, lets dive in!Were going to start today with some fascinating cultural news, before moving into the seismic political shifts that have captured everyones attention, and then we’ll round out with crucial economic insights for our international professionals and business leaders.First up, for those looking to immerse themselves deeper into the rich tapestry of Hungarian culture, the Museum of Ethnography is launching a brand new special traveling exhibition called Folklore Forever – Old Patterns, New Motifs. This isnt just about looking at artifacts behind glass; its designed to be an experience to be lived and tried out. Kicking off on April 24th, this interactive exhibition promises to showcase the history and enduring legacy of Hungarian folk art, bringing it vibrantly into the present day. For expats, digital nomads, and international families, this is a fantastic opportunity to really connect with the heart of Hungarian identity. Folk motifs and melodies are not static relics; they are living traditions, constantly evolving, and this exhibition aims to demonstrate that dynamic spirit. Imagine engaging with traditional crafts, understanding the symbolism behind intricate embroidery, or perhaps even trying your hand at some folk art techniques. It’s a wonderful way to bridge cultural gaps, learn about the country you call home, and perhaps even find unique, authentic souvenirs or inspirations for your own creative endeavors. Keep an eye out for its schedule as it travels beyond Budapest, offering a glimpse into regional cultural expressions.]]></description>
+      <description><![CDATA[Jó reggelt, Budapest! And a very warm welcome to The Hungarian Daily, your essential guide to news and insights for foreign professionals, expats, digital nomads, and international business executives living and working right here in Hungary. Im your host, and Im thrilled to have you join us this morning, Wednesday, April 15, 2026.Weve got a packed agenda today, diving into everything from the evolving political landscape to key economic indicators and cultural happenings that shape your life in this vibrant country. While all our top stories today carry a similar urgency score, rest assured, weve meticulously curated them to bring you the most relevant and impactful information, with a special emphasis on how these developments resonate with our international community.Lets kick things off with a look at the economic pulse of Hungary, as this directly impacts your investments, your cost of living, and the overall business environment.]]></description>
       <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-15/HungaryDaily_Podcast_Final.mp3</guid>
-      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-15/HungaryDaily_Podcast_Final.mp3" length="27029882" type="audio/mpeg"/>
-      <itunes:duration>18:46</itunes:duration>
-      <pubDate>Wed, 15 Apr 2026 19:22:33 +0000</pubDate>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-15/HungaryDaily_Podcast_Final.mp3" length="24186088" type="audio/mpeg"/>
+      <itunes:duration>16:47</itunes:duration>
+      <pubDate>Wed, 15 Apr 2026 20:47:13 +0000</pubDate>
     </item>
   </channel>
 </rss>
