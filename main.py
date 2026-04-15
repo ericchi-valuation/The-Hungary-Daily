@@ -64,7 +64,10 @@ def main():
 
     # Send newsletter
     from publishers.email_sender import send_newsletter
-    today_date = time.strftime("%Y-%m-%d")
+    import pytz
+    import datetime
+    tz_hu = pytz.timezone('Europe/Budapest')
+    today_date = datetime.datetime.now(tz_hu).strftime("%Y-%m-%d")
     send_newsletter(f"The Hungarian Daily — {today_date}", newsletter_html)
 
     # Post to Threads
