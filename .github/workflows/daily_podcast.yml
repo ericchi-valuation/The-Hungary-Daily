@@ -47,7 +47,7 @@ jobs:
         run: |
           # Get today's date in Budapest time
           TODAY=$(TZ='Europe/Budapest' date +'%Y-%m-%d')
-          ISO_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+          ISO_DATE=$(TZ='Europe/Budapest' date +'%Y-%m-%dT%H:%M:%S%:z')
 
           echo "==== Measuring audio file ===="
           DURATION=$(ffprobe -i HungaryDaily_Podcast_Final.mp3 -show_entries format=duration -v quiet -of csv="p=0" | cut -d'.' -f1)
@@ -64,7 +64,8 @@ jobs:
           echo "==== Updating RSS Feed ===="
           URL="https://github.com/${{ github.repository }}/releases/download/ep-${TODAY}/HungaryDaily_Podcast_Final.mp3"
 
-          SUMMARY=$(head -n 5 script.txt | tr -d '\n' | tr -d '"' | tr -d "'")
+          # Read the AI-generated concise summary
+          SUMMARY=$(cat summary.txt | tr -d '"' | tr -d "'")
           if [ -z "$SUMMARY" ]; then SUMMARY="Today's top news and updates from Hungary for expats and international professionals."; fi
 
           python core/rss_generator.py \
