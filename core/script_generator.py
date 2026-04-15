@@ -153,24 +153,25 @@ def generate_podcast_script(news_data, social_data):
        Think "NPR Up First". Fast-paced, insightful, and always end with a smile.
  
     ### SCRIPT FORMAT ###
-    - Output ONLY the spoken words. No stage directions ([Intro Music]). No Markdown (**).
-    - Write in natural, conversational spoken English.
-    - Elaborate extensively on high-scoring stories to ensure the script is sufficiently long and detailed.
+    - Output ONLY a JSON object with two keys:
+      "script": The full spoken broadcast script (natural conversational English, no Markdown, no stage directions).
+      "summary": A concise 1-2 sentence summary of the top news items covered today in Hungary, suitable for a podcast app description.
     - Target length: 1800–2200 words (~10–12 minutes of spoken audio). Do not cut corners.
     """
 
-    print("\n[AI Working] Synthesising Hungarian news with Gemini to write the broadcast script (~20–40 sec)...")
+    print("\n[AI Working] Synthesising Hungarian news and summary with Gemini (~20–40 sec)...")
 
     try:
         config = types.GenerateContentConfig(
             system_instruction=system_prompt,
             temperature=0.6,
+            response_mime_type='application/json',
         )
 
-        prompt_content = f"Here are today's materials. Please write the script:\n\n{sources_text}"
+        prompt_content = f"Here are today's materials. Please write the script and a summary:\n\n{sources_text}"
 
         # Multi-model fallback chain
-        models_to_try = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-1.5-flash']
+        models_to_try = ['gemini-2.0-flash', 'gemini-1.5-flash', 'gemini-1.5-pro']
         response = None
 
         for model_name in models_to_try:
@@ -181,24 +182,34 @@ def generate_podcast_script(news_data, social_data):
                     contents=prompt_content,
                     config=config
                 )
-                print(f"✔️  Script generated successfully with {model_name}!")
+                print(f"✔️  Content generated successfully with {model_name}!")
                 break
             except Exception as inner_e:
                 print(f"⚠️  {model_name} failed: {inner_e}")
                 continue
 
-        if not response:
+        if getattr(response, 'text', None) is None:
             print("❌ All models failed to respond. Please check API status.")
             return None
 
-        script = response.text
+        result_json = json.loads(response.text)
+        script = result_json.get('script', '')
+        summary = result_json.get('summary', "Today's top news and updates from Hungary for expats and international professionals.")
 
         # Save draft for human review (semi-automated safety valve)
         with open("script.txt", "w", encoding="utf-8") as f:
             f.write(script)
 
-        print("✅ Script ready! Draft saved to script.txt")
+        # Save summary
+        with open("summary.txt", "w", encoding="utf-8") as f:
+            f.write(summary)
+
+        print("✅ Script and summary ready! Saved to script.txt and summary.txt")
         return script
+
+    except Exception as e:
+        print(f"\n❌ Fatal error during Gemini generation: {e}")
+        return None
 
     except Exception as e:
         print(f"\n❌ Fatal error during Gemini generation: {e}")
