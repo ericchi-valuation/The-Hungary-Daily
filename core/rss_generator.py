@@ -9,12 +9,12 @@ FEED_FILE = "feed.xml"
 
 # Podcast Metadata
 PODCAST_NAME = "The Hungarian Daily"
-PODCAST_DESC = "Your essential daily English-language briefing on Hungarian politics, business, and culture. Fully automated with AI."
+PODCAST_DESC = "Your essential daily English-language briefing on Hungarian politics, business, and culture."
 PODCAST_WEBSITE = "https://github.com/ericchi-valuation/Hungary-Daily-Insider"
 PODCAST_EXPLICIT = False
 PODCAST_IMAGE_URL = "https://raw.githubusercontent.com/ericchi-valuation/Hungary-Daily-Insider/main/cover.png"
 AUTHOR_NAME = "Eric Chi"
-AUTHOR_EMAIL = "sally0618@gmail.com"
+AUTHOR_EMAIL = "eric.chi1988@gmail.com"
 
 def generate_rss(new_title, new_summary, str_date, mp3_url, duration, file_size):
     tz = pytz.timezone('Europe/Budapest')
