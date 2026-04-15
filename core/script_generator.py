@@ -49,7 +49,7 @@ def score_and_sort_articles(client, news_data):
     try:
         print(f"正在為 {len(all_articles)} 則匈牙利新聞評分 (歐盟與匯率權重加持中)...")
         response = client.models.generate_content(
-            model='gemini-1.5-flash',
+            model='gemini-1.5-flash-latest',
             contents=scoring_prompt,
             config=types.GenerateContentConfig(
                 response_mime_type='application/json',
@@ -170,8 +170,8 @@ def generate_podcast_script(news_data, social_data):
 
         prompt_content = f"Here are today's materials. Please write the script and a summary:\n\n{sources_text}"
 
-        # Multi-model fallback chain
-        models_to_try = ['gemini-2.0-flash', 'gemini-1.5-flash', 'gemini-1.5-pro']
+        # Multi-model fallback chain - 優先嘗試 1.5-flash-latest (額度較多且穩定)
+        models_to_try = ['gemini-1.5-flash-latest', 'gemini-2.0-flash', 'gemini-1.5-pro-latest']
         response = None
 
         for model_name in models_to_try:
@@ -185,7 +185,17 @@ def generate_podcast_script(news_data, social_data):
                 print(f"✔️  Content generated successfully with {model_name}!")
                 break
             except Exception as inner_e:
-                print(f"⚠️  {model_name} failed: {inner_e}")
+                error_msg = str(inner_e)
+                print(f"⚠️  {model_name} failed: {error_msg}")
+                # 針對 429 額度耗盡進行特殊處理
+                if "429" in error_msg or "Quota exceeded" in error_msg:
+                    print("⏳ 偵測到 API 額度耗盡 (429)，暫停 10 秒後嘗試下一個模型...")
+                    import time
+                    time.sleep(10)
+                else:
+                    # 其他錯誤也暫停一下，避開潛在的連鎖失敗
+                    import time
+                    time.sleep(2)
                 continue
 
         if getattr(response, 'text', None) is None:
