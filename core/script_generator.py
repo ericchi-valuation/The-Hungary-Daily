@@ -4,16 +4,75 @@ from google import genai
 from google.genai import types
 from dotenv import load_dotenv
 
+import json
+
 # Load environment variables
 load_dotenv()
+
+def score_and_sort_articles(client, news_data):
+    """
+    使用 Gemini 1.5 Flash 快速為匈牙利新聞評分 (1-10)。
+    考量：歐盟關係、HUF 匯率、大型投資計畫與熱度加權。
+    """
+    all_articles = []
+    for source, articles in news_data.items():
+        for a in articles:
+            a['source_name'] = source
+            all_articles.append(a)
+    
+    if not all_articles:
+        return []
+
+    articles_list_text = ""
+    for i, a in enumerate(all_articles):
+        articles_list_text += f"ID: {i} | Title: {a['title']}\nSummary: {a['summary']}\n\n"
+
+    scoring_prompt = f"""
+    You are an expert news editor for an English-language podcast in Hungary. 
+    Score the following news articles from 1 to 10 based on their importance for international professionals and expats in Hungary.
+    
+    SCORING CRITERIA:
+    - 8-10: Major economic shifts (HUF exchange rate, inflation), EU-Hungary political disputes (funding, rule of law), major foreign investments (BMW, CATL, battery plants), residency/visa rule changes.
+    - 5-7: Significant tech/business news, major Budapest infrastructure updates, high-impact cultural events.
+    - 1-4: Minor local news, general interest, lifestyle stories.
+    
+    IMPORTANT: If multiple articles discuss the same major topic (e.g., a specific Orbán government decision or a major economic report), give them a "Frequency Bonus" (+1 or +2) to reflect its importance as a top headline.
+    
+    OUTPUT FORMAT:
+    Provide only a JSON list of objects with "id" and "score", like this:
+    [{"id": 0, "score": 8}, {"id": 1, "score": 5}, ...]
+    
+    ARTICLES:
+    {articles_list_text}
+    """
+
+    try:
+        print(f"正在為 {len(all_articles)} 則匈牙利新聞評分 (歐盟與匯率權重加持中)...")
+        response = client.models.generate_content(
+            model='gemini-1.5-flash',
+            contents=scoring_prompt,
+            config=types.GenerateContentConfig(
+                response_mime_type='application/json',
+            )
+        )
+        scores = json.loads(response.text)
+        score_map = {item['id']: item['score'] for item in scores}
+        for i, a in enumerate(all_articles):
+            a['score'] = score_map.get(i, 1)
+            
+    except Exception as e:
+        print(f"⚠️ 評分階段發生錯誤: {e}")
+        for a in all_articles:
+            a['score'] = 1
+
+    sorted_articles = sorted(all_articles, key=lambda x: x.get('score', 0), reverse=True)
+    return sorted_articles[:10]
 
 def generate_podcast_script(news_data, social_data):
     """
     Feed raw news and social-media data to Gemini and produce a fully written
     English broadcast script for 'Hungary Daily Insider'.
-
-    News may arrive in both English and Hungarian; Gemini handles translation
-    and synthesis natively.
+    (Enhanced with prioritized scoring and sorting)
     """
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key or api_key == "your_gemini_api_key_here":
@@ -24,17 +83,23 @@ def generate_podcast_script(news_data, social_data):
     client = genai.Client(api_key=api_key)
 
     # -----------------------------------------------------------------------
-    # Step 1 – Format raw data into structured text for the model
+    # Step 1 – Score and prioritize news (Top 10)
     # -----------------------------------------------------------------------
-    sources_text = "【Today's Hungary News Headlines】\n"
-    for source, articles in news_data.items():
-        sources_text += f"\n--- Source: {source} ---\n"
-        for a in articles:
-            sources_text += f"Title: {a['title']}\nSummary: {a['summary']}\n"
+    top_articles = score_and_sort_articles(client, news_data)
+
+    sources_text = "【Today's Prioritized Hungary News Headlines】\n"
+    if not top_articles:
+        sources_text += "No significant news articles found today.\n"
+    else:
+        for a in top_articles:
+            sources_text += f"\n[Score: {a.get('score', 0)}/10] Source: {a.get('source_name')} | Title: {a.get('title')}\nSummary: {a.get('summary')}\n"
 
     sources_text += "\n\n【Hungary Social Media Trending (Reddit r/hungary + r/budapest + Facebook Expats)】\n"
     for post in social_data:
-        sources_text += f"Topic: {post['title']} (From {', '.join(post['topics'])})\n"
+        title = post.get('title', 'Unknown Topic')
+        topics = post.get('topics', [])
+        topics_str = ', '.join(topics) if topics else 'General'
+        sources_text += f"Topic: {title} (From {topics_str})\n"
 
     today_str = datetime.date.today().strftime("%B %d, %Y")
 
@@ -55,60 +120,40 @@ def generate_podcast_script(news_data, social_data):
     in Hungarian — and synthesize everything into a cohesive, highly engaging English podcast script.
 
     ### EDITORIAL GUIDELINES ###
-
-    1. SYNTHESIS, NOT TRANSLATION:
-       Do not just translate. Connect the dots. Group related stories thematically
-       (e.g., "On the political front...", "In business and markets...", "Around the city...").
-       Pick the most impactful 6–8 stories.
-
-    2. EXPAT FOCUS & DEEP DIVE:
+ 
+    1. PRIORITIZATION & SEQUENCING:
+       The news items are pre-sorted by an importance score (1-10). You MUST maintain this order in your broadcast, leading with the highest-scoring stories to capture the audience's attention immediately.
+       
+    2. DEPTH BY IMPORTANCE:
+       Devote significantly more time and analytical detail to higher-scoring stories. Low-scoring stories should be mentioned briefly as part of a news roundup.
+ 
+    3. EXPAT FOCUS:
        Prioritise content most relevant to internationals:
-       - EU–Hungary political tensions (Orbán government, rule-of-law disputes, EU funding battles)
-       - Hungarian forint (HUF) exchange rate movements and inflation
-       - Major foreign investments (BMW, Audi, CATL/Samsung SDI battery factories, tech sector)
-       - Budapest real-estate, cost of living, and visa / residence permit changes
-       - Budapest city life, public transport, and infrastructure news
-       Provide expanded, analytical commentary on economic and political items — do not just skim them.
-
-    3. FILTER TRASH:
-       Completely ignore any remaining tabloid gossip, petty celebrity news, or irrelevant local crime 
-       stories. If any slipped through the filters, drop them entirely.
-
+       - EU–Hungary political tensions and legal disputes.
+       - Hungarian forint (HUF) exchange rate and macro-economics.
+       - Major foreign investments and tech sector news.
+       - Residency, visa, and legal changes for expats.
+       Include these topics even if their individual score is medium, but scale their length based on the relative score.
+ 
     4. HUNGARIAN-LANGUAGE SOURCES:
-       Some headlines will be in Hungarian (e.g., from Telex.hu, 444.hu, HVG.hu, Portfolio.hu).
-       Read and understand them, then present the information naturally in English.
-       Do not mention that the original source was in Hungarian.
-
-    5. SOCIAL MEDIA SEGMENT:
-       Always close the show with a fun "Trending in Budapest" segment.
-       Pick 1–2 lively or quirky topics from the Reddit / Facebook Expats feed to help internationals
-       understand Hungarian daily life, culture, and what locals are talking about.
-       Keep it light and relatable.
-
-    6. PRONUNCIATION SAFEGUARDS:
-       Write out difficult Hungarian place names and words phonetically so a 
-       generic English Text-to-Speech (TTS) engine won't mispronounce them.
-       Examples:
-         - Budapest   → "Boo-da-pesht"
-         - Debrecen   → "Debb-ret-sen"
-         - Miskolc    → "Mish-kolts"
-         - Győr       → "Djur"
-         - Pécs       → "Paych"
-         - Orbán      → "Or-bahn"
-         - forint     → "FOH-rint"
-         - Telex      → "Teh-lex"
-
-    7. TONE:
-       Think "NPR Up First" meets "The Economist Podcast" meets a knowledgeable expat friend who 
-       just had coffee in a Budapest café and wants to catch you up.
-       Fast-paced, insightful, never condescending — and always end with a smile.
-
+       Some headlines will be in Hungarian. Present the information naturally in English without mentioning the original language source.
+ 
+    5. FILTER TRASH:
+       Completely ignore tabloid gossip or irrelevant local crime stories.
+ 
+    6. SOCIAL MEDIA SEGMENT:
+       Always close the show with 1–2 quirky topics from the Reddit / Facebook feed to explain Hungarian daily life and culture.
+ 
+    7. PRONUNCIATION SAFEGUARDS:
+       Write out difficult Hungarian names phonetically (e.g., "Budapest" -> "Boo-da-pesht", "forint" -> "FOH-rint").
+ 
+    8. TONE:
+       Think "NPR Up First". Fast-paced, insightful, and always end with a smile.
+ 
     ### SCRIPT FORMAT ###
-    - Output ONLY the spoken words.
-    - DO NOT output any stage directions like [Intro Music] or [Outro Music].
-    - DO NOT output any Markdown formatting (**, *, ##, []). Text goes straight into a TTS engine.
-    - Write in natural, conversational spoken English — short punchy sentences for news beats, 
-      longer flowing sentences for analysis.
+    - Output ONLY the spoken words. No stage directions ([Intro Music]). No Markdown (**).
+    - Write in natural, conversational spoken English.
+    - Elaborate extensively on high-scoring stories to ensure the script is sufficiently long and detailed.
     - Target length: 1800–2200 words (~10–12 minutes of spoken audio). Do not cut corners.
     """
 
