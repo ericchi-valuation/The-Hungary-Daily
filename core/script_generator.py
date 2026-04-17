@@ -9,10 +9,33 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
+def diagnostic_list_models(client):
+    """
+    [自動診斷工具] 查詢這把 API Key 到底可以使用哪些模型
+    """
+    print("\n🔍 [系統診斷] 正在向 Google 查詢此 API Key 可用的模型清單...")
+    try:
+        models = client.models.list()
+        available_models = []
+        for m in models:
+            if 'generateContent' in m.supported_actions:
+                clean_name = m.name.replace('models/', '')
+                available_models.append(clean_name)
+        
+        if available_models:
+            print(f"✅ 您的 API Key 支援以下 {len(available_models)} 個模型：")
+            print(", ".join(available_models))
+        else:
+            print("❌ 警告：您的 API Key 無法存取任何文字生成模型！這通常是因為帳號權限或地區限制 (歐盟區)。")
+            
+    except Exception as e:
+        print(f"❌ 查詢模型清單失敗，您的金鑰或連線被阻擋: {e}")
+    print("-" * 50 + "\n")
+
+
 def score_and_sort_articles(client, news_data):
     """
     使用 Gemini 1.5 Flash 快速為匈牙利新聞評分 (1-10)。
-    考量：歐盟關係、HUF 匯率、大型投資計畫與熱度加權。
     """
     all_articles = []
     for source, articles in news_data.items():
@@ -52,13 +75,11 @@ def score_and_sort_articles(client, news_data):
 
     try:
         print(f"正在為 {len(all_articles)} 則匈牙利新聞評分 (歐盟與匯率權重加持中)...")
-        # Removed response_mime_type to fix 1.5-flash 404 issue
         response = client.models.generate_content(
             model='gemini-1.5-flash',
             contents=scoring_prompt
         )
         
-        # Clean up potential markdown formatting before parsing
         clean_text = response.text.replace("```json", "").replace("```", "").strip()
         scores = json.loads(clean_text)
         
@@ -68,20 +89,14 @@ def score_and_sort_articles(client, news_data):
             
     except Exception as e:
         print(f"⚠️ 評分階段發生錯誤: {e}")
-        # Defense mechanism: Give default scores but DO NOT crash
         for a in all_articles:
             a['score'] = 1
 
     sorted_articles = sorted(all_articles, key=lambda x: x.get('score', 0), reverse=True)
-    # Strictly return only top 10 to prevent 429 Token limits in the next step
     return sorted_articles[:10]
 
 
 def generate_podcast_script(news_data, social_data):
-    """
-    Feed raw news and social-media data to Gemini and produce a fully written
-    English broadcast script for 'Hungary Daily Insider'.
-    """
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key or api_key == "your_gemini_api_key_here":
         print("\n❌ Error: No valid GEMINI_API_KEY found.")
@@ -89,9 +104,11 @@ def generate_podcast_script(news_data, social_data):
 
     client = genai.Client(api_key=api_key)
 
-    # -----------------------------------------------------------------------
-    # Step 1 – Score and prioritize news (Top 10)
-    # -----------------------------------------------------------------------
+    # ==========================================
+    # 在執行任何任務前，先印出您的專屬模型清單！
+    # ==========================================
+    diagnostic_list_models(client)
+
     top_articles = score_and_sort_articles(client, news_data)
 
     sources_text = "【Today's Prioritized Hungary News Headlines】\n"
@@ -112,9 +129,6 @@ def generate_podcast_script(news_data, social_data):
     tz = pytz.timezone('Europe/Budapest')
     today_str = datetime.datetime.now(tz).strftime("%B %d, %Y")
 
-    # -----------------------------------------------------------------------
-    # Step 2 – System Prompt
-    # -----------------------------------------------------------------------
     system_prompt = f"""
     You are an energetic, professional yet engaging podcast host for a daily English-language news show
     called "The Hungarian Daily".
@@ -146,7 +160,6 @@ def generate_podcast_script(news_data, social_data):
 
     print("\n[AI Working] Synthesising Hungarian news and summary with Gemini (~20–40 sec)...")
 
-    # Removed response_mime_type to ensure compatibility across all model versions
     config = types.GenerateContentConfig(
         system_instruction=system_prompt,
         temperature=0.6,
@@ -154,7 +167,7 @@ def generate_podcast_script(news_data, social_data):
 
     prompt_content = f"Here are today's materials. Please write the script and a summary:\n\n{sources_text}"
 
-    # Removed -latest suffixes
+    # 這裡我們維持使用標準名稱
     models_to_try = ['gemini-1.5-flash', 'gemini-1.5-pro']
     response = None
 
@@ -171,29 +184,27 @@ def generate_podcast_script(news_data, social_data):
                     config=config
                 )
                 print(f"✔️  Content generated successfully with {model_name}!")
-                break # Success, exit the while loop
+                break 
                 
             except Exception as e:
                 error_msg = str(e)
                 print(f"⚠️  {model_name} failed: {error_msg}")
                 
-                # Correct 429 Logic: Wait longer, then retry the SAME model
                 if "429" in error_msg or "Quota exceeded" in error_msg:
                     print("⏳ API Quota exhausted (429). Waiting 60 seconds before retrying...")
                     time.sleep(60)
                     retry_count += 1
                 else:
-                    break # Not a quota issue, break the while loop to try the next model in the list
+                    break 
 
         if response:
-            break # We got a successful response, break out of the model for loop
+            break 
 
     if getattr(response, 'text', None) is None:
         print("❌ All models failed to respond. Please check API status.")
         return None
 
     try:
-        # Clean markdown wrappers before parsing JSON
         clean_text = response.text.replace("```json", "").replace("```", "").strip()
         result_json = json.loads(clean_text)
         
