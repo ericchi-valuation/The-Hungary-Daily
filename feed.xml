@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 15 Apr 2026 20:47:14 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2026 23:03:52 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Wed, 15 Apr 2026 20:47:13 +0000</pubDate>
+    <pubDate>Sat, 18 Apr 2026 01:03:50 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -35,6 +35,14 @@
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-15/HungaryDaily_Podcast_Final.mp3" length="24186088" type="audio/mpeg"/>
       <itunes:duration>16:47</itunes:duration>
       <pubDate>Wed, 15 Apr 2026 20:47:13 +0000</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-04-18</title>
+      <description><![CDATA[An EU delegation is set to meet Hungarys incoming government amid Polish hopes for a policy shift on Ukraine aid, while the Forint strengthens to a multi-year high post-election.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-18/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-18/HungaryDaily_Podcast_Final.mp3" length="4849415" type="audio/mpeg"/>
+      <itunes:duration>03:22</itunes:duration>
+      <pubDate>Sat, 18 Apr 2026 01:03:50 +0200</pubDate>
     </item>
   </channel>
 </rss>
