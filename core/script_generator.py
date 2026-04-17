@@ -1,10 +1,10 @@
 import os
+import json
+import time
 import datetime
 from google import genai
 from google.genai import types
 from dotenv import load_dotenv
-
-import json
 
 # Load environment variables
 load_dotenv()
@@ -36,11 +36,15 @@ def score_and_sort_articles(client, news_data):
     - 5-7: Significant tech/business news, major Budapest infrastructure updates, high-impact cultural events.
     - 1-4: Minor local news, general interest, lifestyle stories.
     
-    IMPORTANT: If multiple articles discuss the same major topic (e.g., a specific Orbán government decision or a major economic report), give them a "Frequency Bonus" (+1 or +2) to reflect its importance as a top headline.
+    IMPORTANT: If multiple articles discuss the same major topic, give them a "Frequency Bonus" (+1 or +2).
     
     OUTPUT FORMAT:
-    Provide only a JSON list of objects with "id" and "score", like this:
-    [{{"id": 0, "score": 8}}, {{"id": 1, "score": 5}}, ...]
+    You MUST output ONLY a raw JSON array. DO NOT wrap it in ```json blocks. DO NOT add any conversational text.
+    Example:
+    [
+      {{"id": 0, "score": 8}},
+      {{"id": 1, "score": 5}}
+    ]
     
     ARTICLES:
     {articles_list_text}
@@ -48,36 +52,39 @@ def score_and_sort_articles(client, news_data):
 
     try:
         print(f"正在為 {len(all_articles)} 則匈牙利新聞評分 (歐盟與匯率權重加持中)...")
+        # Removed response_mime_type to fix 1.5-flash 404 issue
         response = client.models.generate_content(
-            model='gemini-1.5-flash-latest',
-            contents=scoring_prompt,
-            config=types.GenerateContentConfig(
-                response_mime_type='application/json',
-            )
+            model='gemini-1.5-flash',
+            contents=scoring_prompt
         )
-        scores = json.loads(response.text)
+        
+        # Clean up potential markdown formatting before parsing
+        clean_text = response.text.replace("```json", "").replace("```", "").strip()
+        scores = json.loads(clean_text)
+        
         score_map = {item['id']: item['score'] for item in scores}
         for i, a in enumerate(all_articles):
             a['score'] = score_map.get(i, 1)
             
     except Exception as e:
         print(f"⚠️ 評分階段發生錯誤: {e}")
+        # Defense mechanism: Give default scores but DO NOT crash
         for a in all_articles:
             a['score'] = 1
 
     sorted_articles = sorted(all_articles, key=lambda x: x.get('score', 0), reverse=True)
+    # Strictly return only top 10 to prevent 429 Token limits in the next step
     return sorted_articles[:10]
+
 
 def generate_podcast_script(news_data, social_data):
     """
     Feed raw news and social-media data to Gemini and produce a fully written
     English broadcast script for 'Hungary Daily Insider'.
-    (Enhanced with prioritized scoring and sorting)
     """
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key or api_key == "your_gemini_api_key_here":
         print("\n❌ Error: No valid GEMINI_API_KEY found.")
-        print("Please add  GEMINI_API_KEY=<your key>  to the .env file.")
         return None
 
     client = genai.Client(api_key=api_key)
@@ -106,7 +113,7 @@ def generate_podcast_script(news_data, social_data):
     today_str = datetime.datetime.now(tz).strftime("%B %d, %Y")
 
     # -----------------------------------------------------------------------
-    # Step 2 – System Prompt: the editorial soul of Hungary Daily Insider
+    # Step 2 – System Prompt
     # -----------------------------------------------------------------------
     system_prompt = f"""
     You are an energetic, professional yet engaging podcast host for a daily English-language news show
@@ -118,63 +125,44 @@ def generate_podcast_script(news_data, social_data):
     IMPORTANT: You MUST start every broadcast by warmly welcoming the listener and explicitly reading 
     today's date ({today_str}).
 
-    Your job is to read the provided daily news headlines and social media topics — which may be partly 
-    in Hungarian — and synthesize everything into a cohesive, highly engaging English podcast script.
-
     ### EDITORIAL GUIDELINES ###
- 
-    1. PRIORITIZATION & SEQUENCING:
-       The news items are pre-sorted by an importance score (1-10). You MUST maintain this order in your broadcast, leading with the highest-scoring stories to capture the audience's attention immediately.
-       
-    2. DEPTH BY IMPORTANCE:
-       Devote significantly more time and analytical detail to higher-scoring stories. Low-scoring stories should be mentioned briefly as part of a news roundup.
- 
-    3. EXPAT FOCUS:
-       Prioritise content most relevant to internationals:
-       - EU–Hungary political tensions and legal disputes.
-       - Hungarian forint (HUF) exchange rate and macro-economics.
-       - Major foreign investments and tech sector news.
-       - Residency, visa, and legal changes for expats.
-       Include these topics even if their individual score is medium, but scale their length based on the relative score.
- 
-    4. HUNGARIAN-LANGUAGE SOURCES:
-       Some headlines will be in Hungarian. Present the information naturally in English without mentioning the original language source.
- 
-    5. FILTER TRASH:
-       Completely ignore tabloid gossip or irrelevant local crime stories.
- 
-    6. SOCIAL MEDIA SEGMENT:
-       Always close the show with 1–2 quirky topics from the Reddit / Facebook feed to explain Hungarian daily life and culture.
- 
-    7. PRONUNCIATION SAFEGUARDS:
-       Write out difficult Hungarian names phonetically (e.g., "Budapest" -> "Boo-da-pesht", "forint" -> "FOH-rint").
- 
-    8. TONE:
-       Think "NPR Up First". Fast-paced, insightful, and always end with a smile.
- 
+    1. PRIORITIZATION: Maintain the order of the pre-sorted news items, leading with the highest-scoring stories.
+    2. DEPTH: Devote significantly more time to higher-scoring stories.
+    3. EXPAT FOCUS: Prioritise EU-Hungary politics, HUF exchange rate, foreign investments, and visa changes.
+    4. LANGUAGE: Present information naturally in English without mentioning the original language source.
+    5. FILTER TRASH: Ignore tabloid gossip.
+    6. SOCIAL MEDIA: Close the show with 1-2 quirky topics to explain Hungarian daily life.
+    7. PRONUNCIATION: Write out difficult names phonetically (e.g., "Budapest" -> "Boo-da-pesht").
+    8. TONE: Think "NPR Up First". Fast-paced, insightful, and end with a smile.
+
     ### SCRIPT FORMAT ###
-    - Output ONLY a JSON object with two keys:
-      "script": The full spoken broadcast script (natural conversational English, no Markdown, no stage directions).
-      "summary": A concise 1-2 sentence summary of the top news items covered today in Hungary, suitable for a podcast app description.
-    - Target length: 1800–2200 words (~10–12 minutes of spoken audio). Do not cut corners.
+    Output ONLY a JSON object. DO NOT wrap it in ```json blocks. 
+    Format:
+    {{
+      "script": "The full spoken broadcast script...",
+      "summary": "A concise 1-2 sentence summary..."
+    }}
     """
 
     print("\n[AI Working] Synthesising Hungarian news and summary with Gemini (~20–40 sec)...")
 
-    try:
-        config = types.GenerateContentConfig(
-            system_instruction=system_prompt,
-            temperature=0.6,
-            response_mime_type='application/json',
-        )
+    # Removed response_mime_type to ensure compatibility across all model versions
+    config = types.GenerateContentConfig(
+        system_instruction=system_prompt,
+        temperature=0.6,
+    )
 
-        prompt_content = f"Here are today's materials. Please write the script and a summary:\n\n{sources_text}"
+    prompt_content = f"Here are today's materials. Please write the script and a summary:\n\n{sources_text}"
 
-        # Multi-model fallback chain - 優先嘗試 1.5-flash-latest (額度較多且穩定)
-        models_to_try = ['gemini-1.5-flash-latest', 'gemini-2.0-flash', 'gemini-1.5-pro-latest']
-        response = None
+    # Removed -latest suffixes
+    models_to_try = ['gemini-1.5-flash', 'gemini-1.5-pro']
+    response = None
 
-        for model_name in models_to_try:
+    for model_name in models_to_try:
+        retry_count = 0
+        max_retries = 2
+        
+        while retry_count < max_retries:
             try:
                 print(f"Trying model: {model_name}...")
                 response = client.models.generate_content(
@@ -183,34 +171,38 @@ def generate_podcast_script(news_data, social_data):
                     config=config
                 )
                 print(f"✔️  Content generated successfully with {model_name}!")
-                break
-            except Exception as inner_e:
-                error_msg = str(inner_e)
+                break # Success, exit the while loop
+                
+            except Exception as e:
+                error_msg = str(e)
                 print(f"⚠️  {model_name} failed: {error_msg}")
-                # 針對 429 額度耗盡進行特殊處理
+                
+                # Correct 429 Logic: Wait longer, then retry the SAME model
                 if "429" in error_msg or "Quota exceeded" in error_msg:
-                    print("⏳ 偵測到 API 額度耗盡 (429)，暫停 10 秒後嘗試下一個模型...")
-                    import time
-                    time.sleep(10)
+                    print("⏳ API Quota exhausted (429). Waiting 60 seconds before retrying...")
+                    time.sleep(60)
+                    retry_count += 1
                 else:
-                    # 其他錯誤也暫停一下，避開潛在的連鎖失敗
-                    import time
-                    time.sleep(2)
-                continue
+                    break # Not a quota issue, break the while loop to try the next model in the list
 
-        if getattr(response, 'text', None) is None:
-            print("❌ All models failed to respond. Please check API status.")
-            return None
+        if response:
+            break # We got a successful response, break out of the model for loop
 
-        result_json = json.loads(response.text)
+    if getattr(response, 'text', None) is None:
+        print("❌ All models failed to respond. Please check API status.")
+        return None
+
+    try:
+        # Clean markdown wrappers before parsing JSON
+        clean_text = response.text.replace("```json", "").replace("```", "").strip()
+        result_json = json.loads(clean_text)
+        
         script = result_json.get('script', '')
-        summary = result_json.get('summary', "Today's top news and updates from Hungary for expats and international professionals.")
+        summary = result_json.get('summary', "Today's top news and updates from Hungary for expats.")
 
-        # Save draft for human review (semi-automated safety valve)
         with open("script.txt", "w", encoding="utf-8") as f:
             f.write(script)
 
-        # Save summary
         with open("summary.txt", "w", encoding="utf-8") as f:
             f.write(summary)
 
@@ -218,12 +210,5 @@ def generate_podcast_script(news_data, social_data):
         return script
 
     except Exception as e:
-        print(f"\n❌ Fatal error during Gemini generation: {e}")
+        print(f"\n❌ Fatal error parsing JSON output: {e}\nModel returned:\n{response.text[:200]}...")
         return None
-
-    except Exception as e:
-        print(f"\n❌ Fatal error during Gemini generation: {e}")
-        return None
-
-if __name__ == "__main__":
-    print("This module is a library. Run via main.py.")
