@@ -72,6 +72,10 @@ def main():
 
     # Post to Threads
     from publishers.threads_poster import post_to_threads
+    
+    # 🌟 新增的 Debug 行：將 Threads 準備發布的內容印在 Log 裡
+    print(f"\n👀 [Debug] Content prepared for Threads:\n{threads_text}\n" + "-" * 30)
+    
     post_to_threads(threads_text)
 
     print("\n🎉  All automated tasks complete for today. Jó munkát! 🇭🇺")
