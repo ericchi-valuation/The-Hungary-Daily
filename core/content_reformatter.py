@@ -35,7 +35,7 @@ def reformat_for_newsletter(podcast_script):
     """
 
     try:
-         # Use the modern gemini-2.5-flash as default, fallback to gemini-2.0-flash if needed
+         # Use the modern gemini-2.5-flash as default
         response = client.models.generate_content(
             model='gemini-2.5-flash',
             contents=prompt,
@@ -57,16 +57,18 @@ def reformat_for_threads(podcast_script):
 
     print("🤖 正在使用 AI 萃取 Threads 貼文精華短語...")
     
+    # 強化版 Prompt：強制 AI 抓出具體新聞事件 (針對匈牙利頻道客製化)
     prompt = f"""
     You are a witty, professional social media manager for an English-language news podcast about Hungary.
-    Read the following podcast script and extract the top 2-3 most exciting highlights to create a single post for Threads.
+    Read the following podcast script and create a single post for Threads.
     
-    Requirements:
-    1. The output MUST be strictly UNDER 450 characters (leave some room for hashtags).
-    2. Use 1 or 2 relevant emojis.
-    3. Do NOT use HTML formatting. Use plain text and line breaks.
-    4. End the post with a call-to-action like "Listen to the full episode on our GitHub feed or Spotify! 🎧".
-    5. Do not include any title/heading like "Threads Post:". Just return the text.
+    CRITICAL REQUIREMENTS:
+    1. You MUST include 2 or 3 bullet points summarizing the actual news headlines from the script (e.g., EU updates, HUF exchange rates, local tech). Do NOT just write generic teasers. Give me the facts.
+    2. The entire output MUST be strictly UNDER 450 characters.
+    3. Use 1 or 2 relevant emojis.
+    4. Do NOT use HTML formatting. Use plain text and line breaks.
+    5. End the post with: "Listen to the full episode on our feed! 🎧".
+    6. Do not include any title like "Threads Post:". Just return the text.
     
     Here is the podcast script:
     {podcast_script}
@@ -77,7 +79,17 @@ def reformat_for_threads(podcast_script):
             model='gemini-2.5-flash',
             contents=prompt,
         )
-        return response.text.strip()
+        result_text = response.text.strip()
+        
+        # [Debug] 直接在 GitHub Log 印出來，方便我們抓蟲
+        print("\n👀 [Debug] Gemini 生成的 Threads 貼文結果如下：")
+        print("-" * 30)
+        print(result_text)
+        print("-" * 30 + "\n")
+        
+        return result_text
+        
     except Exception as e:
         print(f"❌ Failed to generate Threads post: {e}")
-        return "New episode of The Hungarian Daily is live! Click the link to listen 🎧"
+        # 將備用字串加上標籤，方便辨識是否出錯
+        return "[Auto-Gen Failed] New episode of The Hungarian Daily is live! Click the link to listen 🎧"
