@@ -3,7 +3,7 @@ name: The Hungarian Daily — Auto Podcast Generator
 on:
   schedule:
     # 04:30 UTC = 06:30 Budapest Summer Time (CEST = UTC+2)
-    # ⚠️  Winter (CET = UTC+1): change to '30 05 * * *' from late October to late March
+    # ⚠️ Winter (CET = UTC+1): change to '30 05 * * *' from late October to late March
     - cron: '30 4 * * *'
   workflow_dispatch: # Allow manual trigger from the GitHub Actions UI
 
@@ -32,13 +32,27 @@ jobs:
         env:
           GEMINI_API_KEY:       ${{ secrets.GEMINI_API_KEY }}
           ELEVENLABS_API_KEY:   ${{ secrets.ELEVENLABS_API_KEY }}
-          GMAIL_ADDRESS:        ${{ secrets.GMAIL_ADDRESS }}
-          GMAIL_APP_PASSWORD:   ${{ secrets.GMAIL_APP_PASSWORD }}
-          THREADS_USER_ID:      ${{ secrets.THREADS_USER_ID }}
+          GMAIL_ADDRESS:         ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD:    ${{ secrets.GMAIL_APP_PASSWORD }}
+          THREADS_USER_ID:       ${{ secrets.THREADS_USER_ID }}
           THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
-          FB_GROUP_ID:          ${{ secrets.FB_GROUP_ID }}
-          FB_ACCESS_TOKEN:      ${{ secrets.FB_ACCESS_TOKEN }}
+          FB_GROUP_ID:           ${{ secrets.FB_GROUP_ID }}
+          FB_ACCESS_TOKEN:       ${{ secrets.FB_ACCESS_TOKEN }}
         run: python main.py
+
+      # ==========================================
+      # 🌟 新增：將產出的匈牙利稿件與音檔打包存檔 (Artifacts)
+      # ==========================================
+      - name: 📤 Upload Draft Script and Audio (Artifacts)
+        uses: actions/upload-artifact@v4
+        with:
+          name: HungaryDaily-Podcast-Outputs
+          path: |
+            script.txt
+            summary.txt
+            HungaryDaily_Podcast.mp3
+            HungaryDaily_Podcast_Final.mp3
+          retention-days: 7 # 檔案保留 7 天
 
       - name: 🚀 Upload MP3 to GitHub Releases and update RSS (feed.xml)
         id: create_release
