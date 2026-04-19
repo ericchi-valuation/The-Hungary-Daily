@@ -2,47 +2,36 @@ import os
 import shutil
 
 def mix_podcast_audio(voice_file, bgm_file, output_file):
-    """
-    Mixes the voice track with a background music track.
-    If bgm_file is missing or pydub fails, it gracefully falls back to just 
-    using the voice track as the final output so the pipeline doesn't break.
-    """
-    # 1. Check if BGM exists
+    print("\n[Mixer] 🎵 準備進入混音中心 (嚴格檢查版)...")
+
+    # 🚨 嚴格檢查 1：人聲檔是否存在且不是空檔案？
+    if not os.path.exists(voice_file):
+        raise FileNotFoundError(f"❌ 致命錯誤：找不到人聲音檔 '{voice_file}'！這代表前面的 TTS 語音根本沒有成功生成。")
+    if os.path.getsize(voice_file) == 0:
+        raise ValueError(f"❌ 致命錯誤：人聲音檔 '{voice_file}' 大小為 0 byte！TTS 伺服器可能阻擋了請求或發生異常。")
+
+    # 🚨 嚴格檢查 2：配樂檔是否存在？
     if not os.path.exists(bgm_file):
-        print(f"\n🎧 [Notice] {bgm_file} not found. Skipping background music mixing.")
-        print(f"Fallback: copying {voice_file} to {output_file}")
-        try:
-            shutil.copy(voice_file, output_file)
-            return True
-        except Exception as e:
-            print(f"❌ Error during fallback copy: {e}")
-            return False
-            
-    print(f"\n[Mixer] Background music detected. Starting synthesis...")
+        raise FileNotFoundError(f"❌ 致命錯誤：找不到配樂檔 '{bgm_file}'！您要求必須有混音，因此中斷程式。")
+
+    print(f"  ✔️ 檔案物理檢查通過！開始載入混音套件...")
     
     # 2. Try loading pydub
     try:
         from pydub import AudioSegment
     except ImportError as e:
-        print(f"❌ Failed to load pydub: {e}")
-        print("Fallback: using voice track without background music.")
-        shutil.copy(voice_file, output_file)
-        return True
+        raise ImportError(f"❌ 致命錯誤：無法載入 pydub 套件！請確定 requirements.txt 有正確安裝: {e}")
         
     # 3. Try reading audio files
     try:
         voice = AudioSegment.from_file(voice_file)
         bgm = AudioSegment.from_file(bgm_file)
     except Exception as e:
-        print(f"❌ Failed to read audio files: {e}")
-        print("Fallback: using voice track without background music.")
-        try:
-            shutil.copy(voice_file, output_file)
-            return True
-        except:
-            return False
+        raise Exception(f"❌ 致命錯誤：無法解析音檔格式 (可能是檔案損毀或系統缺少 ffmpeg)：{e}")
     
-    # 4. Logic: Core Mixing
+    print("  ✔️ 正在進行專業混音 (保留您的 5s 片頭 + 語音 + 5s 片尾邏輯)...")
+    
+    # 4. Logic: Core Mixing (完全保留您的優質邏輯)
     # Target length = 5s intro + voice length + 5s outro
     target_len = len(voice) + 10000 
     
@@ -50,6 +39,9 @@ def mix_podcast_audio(voice_file, bgm_file, output_file):
     while len(bgm) < target_len:
         bgm += bgm
     bgm = bgm[:target_len] 
+    
+    # 💡 小優化：將背景音樂稍微降音 (避免蓋過人聲)
+    bgm = bgm - 12 
     
     # Fade intro/outro
     intro = bgm[:5000].fade_out(2000)
@@ -61,8 +53,9 @@ def mix_podcast_audio(voice_file, bgm_file, output_file):
     
     # 5. Export
     try:
+        print("  ✔️ 正在輸出最終 MP3...")
         final_audio.export(output_file, format="mp3", bitrate="192k")
-        print(f"✅ Mixing complete! Final podcast saved as: {output_file}")
+        print(f"✅ 混音大功告成！加上配樂的 Podcast 已儲存為：{output_file}")
         
         # Backup original voice
         backup_name = voice_file.replace(".mp3", "_raw_voice_backup.mp3")
@@ -70,7 +63,4 @@ def mix_podcast_audio(voice_file, bgm_file, output_file):
             os.rename(voice_file, backup_name)
         return True
     except Exception as e:
-        print(f"❌ Export error: {e}")
-        # Final desperate fallback
-        shutil.copy(voice_file, output_file)
-        return True
+        raise Exception(f"❌ 致命錯誤：輸出 MP3 時發生錯誤：{e}")
