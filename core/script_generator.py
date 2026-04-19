@@ -127,7 +127,7 @@ def generate_podcast_script(news_data, social_data):
 
     import pytz
     tz = pytz.timezone('Europe/Budapest')
-    today_str = datetime.datetime.now(tz).strftime("%B %d, %Y")
+    today_str = datetime.datetime.now(tz).strftime("%A, %B %d, %Y")
 
     system_prompt = f"""
     You are an energetic, professional yet engaging podcast host for a daily English-language news show
@@ -167,6 +167,10 @@ def generate_podcast_script(news_data, social_data):
       coaching of Hungarian words/phrases. The TTS voice cannot pronounce Hungarian naturally, and such
       segments sound robotic and unprofessional. This is absolutely forbidden.
     - DO NOT teach listeners any Hungarian vocabulary, grammar, or language tips of any kind.
+    - DO NOT use rhetorical sentence fragments as transitions. Fragments like "The central theme?",
+      "The question?" or "The result?" followed by an answer are lazy writing that sounds odd when
+      read aloud. Always write in complete, flowing sentences instead.
+    - DO NOT state the wrong day of the week. Today is {today_str}. Use this exact date and day.
 
     ### SCRIPT FORMAT ###
     Output ONLY a JSON object. DO NOT wrap it in ```json blocks. 
