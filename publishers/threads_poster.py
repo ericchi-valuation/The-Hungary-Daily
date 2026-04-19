@@ -21,7 +21,10 @@ def post_to_threads(text_content):
         text_content = text_content[:496] + "..."
 
     # Step 1: Create Media Container
-    create_container_url = f"https://graph.threads.net/v1.0/{threads_user_id}/threads"
+    # Hint: If threads_user_id is invalid, try using 'me'
+    target_id = threads_user_id if threads_user_id and threads_user_id.lower() != "none" else "me"
+    create_container_url = f"https://graph.threads.net/v1.0/{target_id}/threads"
+    
     payload = {
         "media_type": "TEXT",
         "text": text_content,
@@ -29,11 +32,15 @@ def post_to_threads(text_content):
     }
 
     try:
+        print(f"  Attempting to post with ID: {target_id}")
         res = requests.post(create_container_url, data=payload)
         res_data = res.json()
         
         if "error" in res_data:
-            print(f"❌ Failed to create Threads container: {res_data['error']['message']}")
+            error_msg = res_data['error'].get('message', 'Unknown error')
+            print(f"❌ Failed to create Threads container: {error_msg}")
+            if "ID" in error_msg:
+                print("💡 Tip: Your THREADS_USER_ID might be wrong. Try setting it to 'me' in GitHub Secrets.")
             return False
             
         creation_id = res_data.get("id")
@@ -43,7 +50,7 @@ def post_to_threads(text_content):
         time.sleep(3)
 
         # Step 2: Publish the container
-        publish_url = f"https://graph.threads.net/v1.0/{threads_user_id}/threads_publish"
+        publish_url = f"https://graph.threads.net/v1.0/{target_id}/threads_publish"
         publish_payload = {
             "creation_id": creation_id,
             "access_token": access_token
