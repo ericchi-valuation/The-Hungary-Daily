@@ -93,3 +93,103 @@ def reformat_for_threads(podcast_script):
     except Exception as e:
         print(f"❌ Failed to generate Threads post: {e}")
         return "[Auto-Gen Failed] New episode of The Hungarian Daily is live! Click the link to listen 🎧"
+
+
+# ===========================================================================
+# MAIN PIPELINE — this is the entry point called by GitHub Actions
+# ===========================================================================
+if __name__ == "__main__":
+    import datetime
+    import pytz
+    from fetchers.news_fetcher import get_daily_news
+    from fetchers.social_fetcher import get_social_trending
+    from core.script_generator import generate_podcast_script
+    from core.audio_builder import build_podcast_audio
+    from core.audio_mixer import mix_podcast_audio
+    from publishers.email_sender import send_newsletter
+    from publishers.threads_poster import post_to_threads
+
+    tz = pytz.timezone('Europe/Budapest')
+    today_str = datetime.datetime.now(tz).strftime("%B %d, %Y")
+
+    print("=" * 60)
+    print(f"🎙️  The Hungarian Daily — Pipeline starting for {today_str}")
+    print("=" * 60)
+
+    # ── Step 1: Fetch news & social data ────────────────────────────
+    print("\n📡 Step 1/5: Fetching latest Hungarian news...")
+    news_data = get_daily_news(items_per_source=3)
+    print(f"  ✔️ Collected articles from {len(news_data)} sources.")
+
+    print("\n💬 Step 1b: Fetching social trending topics...")
+    social_data = get_social_trending(limit_per_source=2)
+    print(f"  ✔️ Collected {len(social_data)} social trending posts.")
+
+    # ── Step 2: Generate AI podcast script ──────────────────────────
+    print("\n🤖 Step 2/5: Generating AI podcast script...")
+    script = generate_podcast_script(news_data, social_data)
+
+    if not script:
+        print("❌ Script generation failed. Aborting pipeline.")
+        raise SystemExit(1)
+
+    print(f"  ✔️ Script generated ({len(script.split())} words).")
+
+    # ── Step 3: Build TTS audio ──────────────────────────────────────
+    print("\n🎤 Step 3/5: Generating TTS audio from script...")
+    VOICE_FILE = "HungaryDaily_Podcast.mp3"
+    FINAL_FILE = "HungaryDaily_Podcast_Final.mp3"
+    BGM_FILE   = "bgm.mp3"
+
+    build_podcast_audio(script_file="script.txt", output_file=VOICE_FILE)
+
+    if not os.path.exists(VOICE_FILE) or os.path.getsize(VOICE_FILE) == 0:
+        print("❌ TTS audio not generated. Aborting pipeline.")
+        raise SystemExit(1)
+
+    print(f"  ✔️ Raw voice audio ready: {VOICE_FILE}")
+
+    # ── Step 4: Mix BGM with voice ────────────────────────────────────
+    print("\n🎵 Step 4/5: Mixing BGM with voice...")
+    if os.path.exists(BGM_FILE):
+        try:
+            mix_podcast_audio(
+                voice_file=VOICE_FILE,
+                bgm_file=BGM_FILE,
+                output_file=FINAL_FILE
+            )
+            print(f"  ✔️ Final mixed podcast ready: {FINAL_FILE}")
+        except Exception as e:
+            print(f"  ⚠️ Mixing failed ({e}). Falling back to voice-only file.")
+            import shutil
+            shutil.copy(VOICE_FILE, FINAL_FILE)
+    else:
+        print(f"  ⚠️ BGM file '{BGM_FILE}' not found. Using voice-only output.")
+        import shutil
+        shutil.copy(VOICE_FILE, FINAL_FILE)
+
+    # ── Step 5: Publish ─────────────────────────────────────────────
+    print("\n📢 Step 5/5: Publishing content...")
+
+    # 5a. Newsletter
+    try:
+        with open("script.txt", "r", encoding="utf-8") as f:
+            script_text = f.read()
+        html_content = reformat_for_newsletter(script_text)
+        subject = f"The Hungarian Daily — {today_str}"
+        send_newsletter(subject, html_content)
+    except Exception as e:
+        print(f"  ⚠️ Newsletter step failed: {e}")
+
+    # 5b. Threads
+    try:
+        with open("script.txt", "r", encoding="utf-8") as f:
+            script_text = f.read()
+        threads_post = reformat_for_threads(script_text)
+        post_to_threads(threads_post)
+    except Exception as e:
+        print(f"  ⚠️ Threads step failed: {e}")
+
+    print("\n" + "=" * 60)
+    print(f"✅ Pipeline complete! '{FINAL_FILE}' is ready for upload.")
+    print("=" * 60)
