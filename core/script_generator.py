@@ -76,7 +76,7 @@ def score_and_sort_articles(client, news_data):
     try:
         print(f"正在為 {len(all_articles)} 則匈牙利新聞評分 (歐盟與匯率權重加持中)...")
         response = client.models.generate_content(
-            model='gemini-2.0-flash',
+            model='gemini-2.5-flash',
             contents=scoring_prompt
         )
         
@@ -187,7 +187,7 @@ def generate_podcast_script(news_data, social_data):
     prompt_content = f"Here are today's materials. Please write the script and a summary:\n\n{sources_text}"
 
     # 這裡我們維持使用標準名稱
-    models_to_try = ['gemini-2.0-flash', 'gemini-1.5-pro']
+    models_to_try = ['gemini-2.5-flash', 'gemini-2.5-pro']
     response = None
 
     for model_name in models_to_try:
