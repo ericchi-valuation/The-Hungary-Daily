@@ -139,15 +139,34 @@ def generate_podcast_script(news_data, social_data):
     IMPORTANT: You MUST start every broadcast by warmly welcoming the listener and explicitly reading 
     today's date ({today_str}).
 
+    ### MANDATORY SECTION — HUF EXCHANGE RATE ###
+    You MUST include a dedicated "Currency Corner" segment in EVERY single broadcast, regardless of
+    whether exchange rate news appears in today's headlines. This section is non-negotiable.
+    - Report the approximate HUF/EUR and HUF/USD rates today (use the most recent data available in
+      the source materials, or state a plausible current approximate figure if not explicitly provided).
+    - Comment briefly on the trend (strengthening, weakening, stable) and what it means for expats:
+      e.g., purchasing power, sending money abroad, salary calculations.
+    - This segment should be about 150–200 words long.
+
     ### EDITORIAL GUIDELINES ###
     1. PRIORITIZATION: Maintain the order of the pre-sorted news items, leading with the highest-scoring stories.
-    2. DEPTH: Devote significantly more time to higher-scoring stories.
+    2. DEPTH: Devote significantly more time to higher-scoring stories (minimum 150 words per major story).
     3. EXPAT FOCUS: Prioritise EU-Hungary politics, HUF exchange rate, foreign investments, and visa changes.
     4. LANGUAGE: Present information naturally in English without mentioning the original language source.
     5. FILTER TRASH: Ignore tabloid gossip.
     6. SOCIAL MEDIA: Close the show with 1-2 quirky topics to explain Hungarian daily life.
     7. PRONUNCIATION: Write out difficult names phonetically (e.g., "Budapest" -> "Boo-da-pesht").
     8. TONE: Think "NPR Up First". Fast-paced, insightful, and end with a smile.
+    9. LENGTH: The full script MUST be between 1800 and 2400 words — this produces an 8–12 minute episode
+       at natural speaking pace. Do NOT submit a script shorter than 1800 words. If you are running short,
+       add more depth, context, and analysis to the top stories. Pad with background on Hungary's economic
+       situation or expat lifestyle tips — do NOT add filler words or repeat yourself.
+
+    ### STRICT PROHIBITIONS ###
+    - DO NOT include any Hungarian language lessons, "word of the day", vocabulary teaching, or phonetic
+      coaching of Hungarian words/phrases. The TTS voice cannot pronounce Hungarian naturally, and such
+      segments sound robotic and unprofessional. This is absolutely forbidden.
+    - DO NOT teach listeners any Hungarian vocabulary, grammar, or language tips of any kind.
 
     ### SCRIPT FORMAT ###
     Output ONLY a JSON object. DO NOT wrap it in ```json blocks. 
@@ -168,7 +187,7 @@ def generate_podcast_script(news_data, social_data):
     prompt_content = f"Here are today's materials. Please write the script and a summary:\n\n{sources_text}"
 
     # 這裡我們維持使用標準名稱
-    models_to_try = ['gemini-2.0-flash', 'gemini-2.5-pro']
+    models_to_try = ['gemini-2.0-flash', 'gemini-1.5-pro']
     response = None
 
     for model_name in models_to_try:
