@@ -93,5 +93,5 @@ def reformat_for_threads(podcast_script):
     except Exception as e:
         print(f"❌ Failed to generate Threads post: {e}")
         return "[Auto-Gen Failed] New episode of The Hungarian Daily is live! Click the link to listen 🎧"
-        if __name__ == "__main__":
-    main()
+if __name__ == "__main__":
+main()
