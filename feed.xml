@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 20 Apr 2026 05:33:30 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2026 06:37:06 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 20 Apr 2026 07:33:27 +0200</pubDate>
+    <pubDate>Mon, 20 Apr 2026 08:37:05 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -54,11 +54,11 @@
     </item>
     <item>
       <title>The Hungarian Daily — 2026-04-20</title>
-      <description><![CDATA[On Monday, April 20, 2026, The Hungarian Daily reports on the EUs immediate engagement with Hungarys new government to unlock frozen funds, and analyzes the significant economic and foreign policy shifts this political change entails.]]></description>
+      <description><![CDATA[Today, Monday, April 20, 2026, The Hungarian Daily focuses on the new Tisza governments potential to unlock billions in frozen EU funds, a critical development for Hungarys economy and international standing, alongside a strengthening Forint and rising real wages. We also discuss energy security, Norways support for democratic reforms, and local expat queries for planning May 1st activities and bachelor parties in Budapest.]]></description>
       <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-20/HungaryDaily_Podcast_Final.mp3</guid>
-      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-20/HungaryDaily_Podcast_Final.mp3" length="18246470" type="audio/mpeg"/>
-      <itunes:duration>12:40</itunes:duration>
-      <pubDate>Mon, 20 Apr 2026 07:33:27 +0200</pubDate>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-20/HungaryDaily_Podcast_Final.mp3" length="19728553" type="audio/mpeg"/>
+      <itunes:duration>13:41</itunes:duration>
+      <pubDate>Mon, 20 Apr 2026 08:37:05 +0200</pubDate>
     </item>
   </channel>
 </rss>
