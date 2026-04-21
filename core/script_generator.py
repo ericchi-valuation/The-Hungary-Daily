@@ -96,7 +96,7 @@ def score_and_sort_articles(client, news_data):
     return sorted_articles[:10]
 
 
-def generate_podcast_script(news_data, social_data):
+def generate_podcast_script(news_data, social_data, weather_data=None):
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key or api_key == "your_gemini_api_key_here":
         print("\n❌ Error: No valid GEMINI_API_KEY found.")
@@ -118,7 +118,19 @@ def generate_podcast_script(news_data, social_data):
         for a in top_articles:
             sources_text += f"\n[Score: {a.get('score', 0)}/10] Source: {a.get('source_name')} | Title: {a.get('title')}\nSummary: {a.get('summary')}\n"
 
-    sources_text += "\n\n【Hungary Social Media Trending (Reddit r/hungary + r/budapest + Facebook Expats)】\n"
+    sources_text += "\n\n[🌤️ Today's Budapest Weather Forecast]》\n"
+    if weather_data and weather_data.get('condition') != 'Data unavailable':
+        sources_text += (
+            f"Condition: {weather_data.get('condition')}\n"
+            f"High: {weather_data.get('temp_max_c')}°C / {weather_data.get('temp_max_f')}°F\n"
+            f"Low: {weather_data.get('temp_min_c')}°C / {weather_data.get('temp_min_f')}°F\n"
+            f"Wind: up to {weather_data.get('wind_kmh')} km/h\n"
+            f"Precipitation: {weather_data.get('precip_mm')} mm\n"
+        )
+    else:
+        sources_text += "Weather data unavailable today.\n"
+
+    sources_text += "\n\n《💬 Hungary Social Media Trending (Reddit r/hungary + r/budapest + Facebook Expats)》\n"
     for post in social_data:
         title = post.get('title', 'Unknown Topic')
         topics = post.get('topics', [])
@@ -138,6 +150,15 @@ def generate_podcast_script(news_data, social_data):
 
     IMPORTANT: You MUST start every broadcast by warmly welcoming the listener and explicitly reading 
     today's date ({today_str}).
+
+    ### MANDATORY SECTION — WEATHER BRIEFING ###
+    Immediately after the Currency Corner, include a short "Budapest Weather Briefing" segment.
+    - Use the weather data provided in the source materials.
+    - Report the high and low temperatures in BOTH Celsius and Fahrenheit (for diverse expat audience).
+    - Mention wind and precipitation if notable.
+    - Give a brief lifestyle tip (e.g., "bring an umbrella", "great day for a walk").
+    - This segment should be about 80–120 words.
+    - If weather data is unavailable, say so and advise listeners to check locally.
 
     ### MANDATORY SECTION — HUF EXCHANGE RATE ###
     You MUST include a dedicated "Currency Corner" segment in EVERY single broadcast, regardless of
