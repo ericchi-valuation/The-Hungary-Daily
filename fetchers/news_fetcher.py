@@ -61,11 +61,15 @@ def get_daily_news(items_per_source=2):
         'The Budapest Times (English)': 'https://budapesttimes.hu/feed',
 
         # --- Hungarian-language domestic media (AI synthesizes into English) ---
-        'Telex.hu (Magyar – független)': 'https://telex.hu/rss',
-        '444.hu (Magyar – ellenzéki)': 'https://444.hu/feed',
+        'Telex.hu (Magyar – független)':   'https://telex.hu/rss',
+        '444.hu (Magyar – ellenzéki)':     'https://444.hu/feed',
         'HVG.hu (Magyar – gazdaság/politika)': 'https://hvg.hu/rss',
         'Portfolio.hu (Magyar – pénzügy/piac)': 'https://www.portfolio.hu/rss/all.xml',
 
+        # --- Additional Hungarian local media (wider coverage & political balance) ---
+        'Index.hu (Magyar – legnagyobb portál)': 'https://index.hu/24ora/rss/',
+        'Origo.hu (Magyar – kormányközeli)': 'https://www.origo.hu/rss/origo.xml',
+        'G7.hu (Magyar – gazdasági elemzés)': 'https://g7.hu/feed/',
         # --- Thematic Google News feeds ---
         'Google News – Hungary Economy': (
             'https://news.google.com/rss/search?q=Hungary+economy+business'
