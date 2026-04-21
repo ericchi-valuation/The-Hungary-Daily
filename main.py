@@ -61,7 +61,10 @@ def reformat_for_threads(podcast_script):
     
     CRITICAL REQUIREMENTS:
     1. You MUST include 2 or 3 bullet points summarizing the actual news headlines from the script.
-    2. STRICT FACTUALITY: Do NOT invent, hallucinate, or assume any numbers, dates, stock prices, or exchange rates (like HUF/EUR). ONLY use facts and figures explicitly stated in the script. If the script doesn't mention a number, do NOT add one.
+    2. STRICT FACTUALITY: Do NOT invent, hallucinate, or assume any numbers, dates, stock prices,
+       exchange rates (like HUF/EUR or HUF/USD) or weather figures.
+       ONLY use facts and figures EXPLICITLY stated word-for-word in the script.
+       If the script does not mention a number, you MUST NOT include that number. Period.
     3. The entire output MUST be strictly UNDER 450 characters (leave some room for hashtags).
     4. Use 1 or 2 relevant emojis.
     5. Do NOT use HTML formatting. Use plain text and line breaks.
@@ -103,6 +106,7 @@ if __name__ == "__main__":
     import pytz
     from fetchers.news_fetcher import get_daily_news
     from fetchers.social_fetcher import get_social_trending
+    from fetchers.weather_fetcher import get_budapest_weather
     from core.script_generator import generate_podcast_script
     from core.audio_builder import build_podcast_audio
     from core.audio_mixer import mix_podcast_audio
@@ -116,18 +120,21 @@ if __name__ == "__main__":
     print(f"🎙️  The Hungarian Daily — Pipeline starting for {today_str}")
     print("=" * 60)
 
-    # ── Step 1: Fetch news & social data ────────────────────────────
+    # ── Step 1: Fetch news, weather & social data ──────────────────────────────────────────
     print("\n📡 Step 1/5: Fetching latest Hungarian news...")
     news_data = get_daily_news(items_per_source=3)
     print(f"  ✔️ Collected articles from {len(news_data)} sources.")
 
-    print("\n💬 Step 1b: Fetching social trending topics...")
+    print("\n🌤️  Step 1b: Fetching Budapest weather...")
+    weather_data = get_budapest_weather()
+
+    print("\n💬 Step 1c: Fetching social trending topics...")
     social_data = get_social_trending(limit_per_source=2)
     print(f"  ✔️ Collected {len(social_data)} social trending posts.")
 
-    # ── Step 2: Generate AI podcast script ──────────────────────────
+    # ── Step 2: Generate AI podcast script ──────────────────────────────────────────
     print("\n🤖 Step 2/5: Generating AI podcast script...")
-    script = generate_podcast_script(news_data, social_data)
+    script = generate_podcast_script(news_data, social_data, weather_data)
 
     if not script:
         print("❌ Script generation failed. Aborting pipeline.")
