@@ -2,9 +2,10 @@ name: The Hungarian Daily — Auto Podcast Generator
 
 on:
   schedule:
-    # 04:30 UTC = 06:30 Budapest Summer Time (CEST = UTC+2)
-    # ⚠️ Winter (CET = UTC+1): change to '30 05 * * *' from late October to late March
-    - cron: '30 4 * * *'
+    # 04:00 UTC = 06:00 Budapest Summer Time (CEST = UTC+2)
+    # Starting 30 min early to compensate for GitHub Actions runner queue delays
+    # ⚠️ Winter (CET = UTC+1): change to '00 05 * * *' from late October to late March
+    - cron: '00 4 * * *'
   workflow_dispatch: # Allow manual trigger from the GitHub Actions UI
 
 jobs:
