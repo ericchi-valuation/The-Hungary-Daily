@@ -114,7 +114,8 @@ if __name__ == "__main__":
     from publishers.email_sender import send_newsletter
     from publishers.threads_poster import post_to_threads
 
-    tz = pytz.timezone('Europe/Budapest')
+    tz_str = os.environ.get("TZ", "Europe/Budapest")
+    tz = pytz.timezone(tz_str)
     today_str = datetime.datetime.now(tz).strftime("%B %d, %Y")
 
     print("=" * 60)
