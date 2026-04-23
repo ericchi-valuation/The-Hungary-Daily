@@ -23,8 +23,8 @@ jobs:
         with:
           python-version: '3.13'
 
-      - name: ⚙️ Install system-level audio tools (ffmpeg)
-        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: ⚙️ Verify ffmpeg (pre-installed on ubuntu-latest)
+        run: ffmpeg -version
 
       - name: 📦 Install Python dependencies
         run: pip install -r requirements.txt
