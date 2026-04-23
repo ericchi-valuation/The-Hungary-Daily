@@ -96,7 +96,7 @@ def score_and_sort_articles(client, news_data):
     return sorted_articles[:10]
 
 
-def generate_podcast_script(news_data, social_data, weather_data=None):
+def generate_podcast_script(news_data, social_data, weather_data=None, exchange_data=None):
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key or api_key == "your_gemini_api_key_here":
         print("\n❌ Error: No valid GEMINI_API_KEY found.")
@@ -129,6 +129,10 @@ def generate_podcast_script(news_data, social_data, weather_data=None):
         )
     else:
         sources_text += "Weather data unavailable today.\n"
+
+    if exchange_data and exchange_data.get('eur_huf'):
+        sources_text += "\n\n[💱 Today's Exchange Rates]》\n"
+        sources_text += exchange_data.get('summary', '') + "\n"
 
     sources_text += "\n\n《💬 Hungary Social Media Trending (Reddit r/hungary + r/budapest + Facebook Expats)》\n"
     for post in social_data:
@@ -163,8 +167,8 @@ def generate_podcast_script(news_data, social_data, weather_data=None):
     ### MANDATORY SECTION — HUF EXCHANGE RATE ###
     You MUST include a dedicated "Currency Corner" segment in EVERY single broadcast, regardless of
     whether exchange rate news appears in today's headlines. This section is non-negotiable.
-    - Report the approximate HUF/EUR and HUF/USD rates today (use the most recent data available in
-      the source materials, or state a plausible current approximate figure if not explicitly provided).
+    - Report the exact HUF/EUR and HUF/USD rates provided in the source materials.
+    - If the rates are not provided, simply mention that the data is unavailable today. DO NOT invent or hallucinate numbers.
     - Comment briefly on the trend (strengthening, weakening, stable) and what it means for expats:
       e.g., purchasing power, sending money abroad, salary calculations.
     - This segment should be about 150–200 words long.
@@ -211,8 +215,12 @@ def generate_podcast_script(news_data, social_data, weather_data=None):
 
     prompt_content = f"Here are today's materials. Please write the script and a summary:\n\n{sources_text}"
 
-    # 這裡我們維持使用標準名稱
-    models_to_try = ['gemini-2.5-flash', 'gemini-2.5-pro']
+    # 優先使用 2.5 系列，並以 3.1 系列作為高效後援
+    models_to_try = [
+        'gemini-2.5-flash', 
+        'gemini-2.5-pro', 
+        'gemini-3.1-flash-lite-preview'
+    ]
     response = None
 
     for model_name in models_to_try:
