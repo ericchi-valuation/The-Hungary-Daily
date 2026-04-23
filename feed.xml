@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 21 Apr 2026 06:25:37 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Apr 2026 06:24:46 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 21 Apr 2026 08:25:32 +0200</pubDate>
+    <pubDate>Thu, 23 Apr 2026 08:24:42 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -67,6 +67,14 @@
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-21/HungaryDaily_Podcast_Final.mp3" length="20714728" type="audio/mpeg"/>
       <itunes:duration>14:23</itunes:duration>
       <pubDate>Tue, 21 Apr 2026 08:25:32 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-04-23</title>
+      <description><![CDATA[Today on The Hungarian Daily, we explore a stunning new poll indicating a potential decline for Orbáns Fidesz party and the rise of Péter Magyars Tisza party, signaling a major political realignment in Hungary. We also cover the formation of the new government, key cabinet appointments, the future of education and Erasmus, and the Forints stability amidst global pressures, alongside positive shifts for Korean battery firms in Hungary.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-23/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-23/HungaryDaily_Podcast_Final.mp3" length="23939074" type="audio/mpeg"/>
+      <itunes:duration>16:37</itunes:duration>
+      <pubDate>Thu, 23 Apr 2026 08:24:42 +0200</pubDate>
     </item>
   </channel>
 </rss>
