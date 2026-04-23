@@ -122,7 +122,7 @@ if __name__ == "__main__":
 
     # ── Step 1: Fetch news, weather & social data ──────────────────────────────────────────
     print("\n📡 Step 1/5: Fetching latest Hungarian news...")
-    news_data = get_daily_news(items_per_source=3)
+    news_data = get_daily_news(items_per_source=2)
     print(f"  ✔️ Collected articles from {len(news_data)} sources.")
 
     print("\n🌤️  Step 1b: Fetching Budapest weather...")
