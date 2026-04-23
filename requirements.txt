@@ -1,9 +1,8 @@
+streamlit
+yfinance
+pandas
+numpy
 requests
 beautifulsoup4
-feedparser
-python-dotenv
-google-genai
-edge-tts
-pydub
-audioop-lts
-podgen
+xlsxwriter
+openpyxl
