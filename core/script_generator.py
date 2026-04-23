@@ -142,7 +142,8 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
         sources_text += f"Topic: {title} (From {topics_str})\n"
 
     import pytz
-    tz = pytz.timezone('Europe/Budapest')
+    tz_str = os.environ.get("TZ", "Europe/Budapest")
+    tz = pytz.timezone(tz_str)
     today_str = datetime.datetime.now(tz).strftime("%A, %B %d, %Y")
 
     system_prompt = f"""
