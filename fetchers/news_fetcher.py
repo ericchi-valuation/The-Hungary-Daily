@@ -1,4 +1,5 @@
 import feedparser
+import time
 
 # Basic blacklist to filter clickbait/tabloid headlines (LLM does a second pass)
 GOSSIP_KEYWORDS = [
@@ -10,15 +11,20 @@ def is_trash_news(title, summary):
     text = (title + summary).lower()
     return any(kw in text for kw in GOSSIP_KEYWORDS)
 
-def fetch_rss_news(feed_url, limit=3):
+def fetch_rss_news(feed_url, limit=3, max_retries=3):
     """Fetch articles from a single RSS source."""
-    feed = feedparser.parse(feed_url)
     entries = []
 
-    if not feed.entries:
-        return entries
-
-    for entry in feed.entries:
+    for attempt in range(max_retries):
+        try:
+            feed = feedparser.parse(feed_url)
+            if not feed.entries:
+                if attempt < max_retries - 1:
+                    time.sleep(2)
+                    continue
+                return entries
+            
+            for entry in feed.entries:
         if len(entries) >= limit:
             break
 
@@ -37,7 +43,15 @@ def fetch_rss_news(feed_url, limit=3):
             'summary': summary,
             'link': entry.get('link', '')
         })
-    return entries
+            
+        return entries
+        
+    except Exception as e:
+        if attempt < max_retries - 1:
+            time.sleep(2)
+        else:
+            print(f"Error parsing feed {feed_url}: {e}")
+            return entries
 
 def get_daily_news(items_per_source=2):
     """
