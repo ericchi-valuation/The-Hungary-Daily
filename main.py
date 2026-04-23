@@ -107,6 +107,7 @@ if __name__ == "__main__":
     from fetchers.news_fetcher import get_daily_news
     from fetchers.social_fetcher import get_social_trending
     from fetchers.weather_fetcher import get_budapest_weather
+    from fetchers.exchange_rate_fetcher import get_exchange_rates
     from core.script_generator import generate_podcast_script
     from core.audio_builder import build_podcast_audio
     from core.audio_mixer import mix_podcast_audio
@@ -128,13 +129,16 @@ if __name__ == "__main__":
     print("\n🌤️  Step 1b: Fetching Budapest weather...")
     weather_data = get_budapest_weather()
 
-    print("\n💬 Step 1c: Fetching social trending topics...")
+    print("\n💱  Step 1c: Fetching Exchange Rates...")
+    exchange_data = get_exchange_rates()
+
+    print("\n💬 Step 1d: Fetching social trending topics...")
     social_data = get_social_trending(limit_per_source=2)
     print(f"  ✔️ Collected {len(social_data)} social trending posts.")
 
     # ── Step 2: Generate AI podcast script ──────────────────────────────────────────
     print("\n🤖 Step 2/5: Generating AI podcast script...")
-    script = generate_podcast_script(news_data, social_data, weather_data)
+    script = generate_podcast_script(news_data, social_data, weather_data, exchange_data)
 
     if not script:
         print("❌ Script generation failed. Aborting pipeline.")
