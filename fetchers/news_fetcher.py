@@ -25,24 +25,24 @@ def fetch_rss_news(feed_url, limit=3, max_retries=3):
                 return entries
             
             for entry in feed.entries:
-        if len(entries) >= limit:
-            break
+                if len(entries) >= limit:
+                    break
 
-        title = entry.get('title', 'No Title').strip()
-        summary = entry.get('summary', entry.get('description', ''))
+                title = entry.get('title', 'No Title').strip()
+                summary = entry.get('summary', entry.get('description', ''))
 
-        if not title:
-            continue
+                if not title:
+                    continue
 
-        # Basic filter at crawler level
-        if is_trash_news(title, summary):
-            continue
+                # Basic filter at crawler level
+                if is_trash_news(title, summary):
+                    continue
 
-        entries.append({
-            'title': title,
-            'summary': summary,
-            'link': entry.get('link', '')
-        })
+                entries.append({
+                    'title': title,
+                    'summary': summary,
+                    'link': entry.get('link', '')
+                })
             
         return entries
         
