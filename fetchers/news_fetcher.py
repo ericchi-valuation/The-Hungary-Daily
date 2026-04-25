@@ -44,14 +44,14 @@ def fetch_rss_news(feed_url, limit=3, max_retries=3):
                     'link': entry.get('link', '')
                 })
             
-        return entries
-        
-    except Exception as e:
-        if attempt < max_retries - 1:
-            time.sleep(2)
-        else:
-            print(f"Error parsing feed {feed_url}: {e}")
             return entries
+        
+        except Exception as e:
+            if attempt < max_retries - 1:
+                time.sleep(2)
+            else:
+                print(f"Error parsing feed {feed_url}: {e}")
+                return entries
 
 def get_daily_news(items_per_source=2):
     """
