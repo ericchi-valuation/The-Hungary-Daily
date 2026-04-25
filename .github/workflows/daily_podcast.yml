@@ -23,7 +23,10 @@ jobs:
         with:
           python-version: '3.13'
 
-      - name: ⚙️ Verify ffmpeg (pre-installed on ubuntu-latest)
+      - name: ⚙️ Setup ffmpeg
+        uses: FedericoCarboni/setup-ffmpeg@v3
+
+      - name: ⚙️ Verify ffmpeg
         run: ffmpeg -version
 
       - name: 📦 Install Python dependencies
