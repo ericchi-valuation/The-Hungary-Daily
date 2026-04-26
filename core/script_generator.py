@@ -73,15 +73,40 @@ def score_and_sort_articles(client, news_data):
     {articles_list_text}
     """
 
+    # 定義 JSON Schema
+    scoring_schema = {
+        "type": "ARRAY",
+        "items": {
+            "type": "OBJECT",
+            "properties": {
+                "id": {"type": "INTEGER"},
+                "score": {"type": "INTEGER"}
+            },
+            "required": ["id", "score"]
+        }
+    }
+
     try:
         print(f"正在為 {len(all_articles)} 則匈牙利新聞評分 (歐盟與匯率權重加持中)...")
         response = client.models.generate_content(
             model='gemini-2.5-flash',
-            contents=scoring_prompt
+            contents=scoring_prompt,
+            config=types.GenerateContentConfig(
+                response_mime_type='application/json',
+                response_schema=scoring_schema
+            )
         )
         
-        clean_text = response.text.replace("```json", "").replace("```", "").strip()
-        scores = json.loads(clean_text)
+        if response.parsed:
+            scores = response.parsed
+        else:
+            clean_text = response.text.replace("```json", "").replace("```", "").strip()
+            # 嘗試尋找第一個 [ 與最後一個 ] 之間的內容
+            import re
+            json_match = re.search(r'\[.*\]', clean_text, re.DOTALL)
+            if json_match:
+                clean_text = json_match.group(0)
+            scores = json.loads(clean_text)
         
         score_map = {item['id']: item['score'] for item in scores}
         for i, a in enumerate(all_articles):
@@ -187,6 +212,7 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
        at natural speaking pace. Do NOT submit a script shorter than 1800 words. If you are running short,
        add more depth, context, and analysis to the top stories. Pad with background on Hungary's economic
        situation or expat lifestyle tips — do NOT add filler words or repeat yourself.
+    10. ESCAPING: Since your output is JSON, you MUST properly escape all special characters, especially double quotes (") and control characters (like newlines) inside the script text. Use \" for quotes and \n for line breaks within the JSON string.
 
     ### STRICT PROHIBITIONS ###
     - DO NOT include any Hungarian language lessons, "word of the day", vocabulary teaching, or phonetic
@@ -201,7 +227,7 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
     - DO NOT state the wrong day of the week. Today is {today_str}. Use this exact date and day.
 
     ### SCRIPT FORMAT ###
-    Output ONLY a JSON object. DO NOT wrap it in ```json blocks. 
+    Output ONLY a JSON object.
     Format:
     {{
       "script": "The full spoken broadcast script...",
@@ -209,11 +235,23 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
     }}
     """
 
+    # 定義 JSON Schema
+    podcast_schema = {
+        "type": "OBJECT",
+        "properties": {
+            "script": {"type": "STRING"},
+            "summary": {"type": "STRING"}
+        },
+        "required": ["script", "summary"]
+    }
+
     print("\n[AI Working] Synthesising Hungarian news and summary with Gemini (~20–40 sec)...")
 
     config = types.GenerateContentConfig(
         system_instruction=system_prompt,
         temperature=0.6,
+        response_mime_type='application/json',
+        response_schema=podcast_schema
     )
 
     prompt_content = f"Here are today's materials. Please write the script and a summary:\n\n{sources_text}"
@@ -260,8 +298,15 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
         return None
 
     try:
-        clean_text = response.text.replace("```json", "").replace("```", "").strip()
-        result_json = json.loads(clean_text)
+        if getattr(response, 'parsed', None):
+            result_json = response.parsed
+        else:
+            clean_text = response.text.replace("```json", "").replace("```", "").strip()
+            import re
+            json_match = re.search(r'\{.*\}', clean_text, re.DOTALL)
+            if json_match:
+                clean_text = json_match.group(0)
+            result_json = json.loads(clean_text)
         
         script = result_json.get('script', '')
         summary = result_json.get('summary', "Today's top news and updates from Hungary for expats.")
@@ -276,5 +321,11 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
         return script
 
     except Exception as e:
-        print(f"\n❌ Fatal error parsing JSON output: {e}\nModel returned:\n{response.text[:200]}...")
+        print(f"\n❌ Fatal error parsing JSON output: {e}")
+        print("-" * 30)
+        print(f"Model returned (Length: {len(response.text)}):")
+        print(response.text[:1000])
+        print("...")
+        print(response.text[-500:] if len(response.text) > 500 else "")
+        print("-" * 30)
         return None
