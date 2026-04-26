@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 25 Apr 2026 14:38:41 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2026 06:53:02 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sat, 25 Apr 2026 16:38:37 +0200</pubDate>
+    <pubDate>Sun, 26 Apr 2026 08:53:01 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -83,6 +83,14 @@
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-25/HungaryDaily_Podcast_Final.mp3" length="27998501" type="audio/mpeg"/>
       <itunes:duration>19:26</itunes:duration>
       <pubDate>Sat, 25 Apr 2026 16:38:37 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-04-26</title>
+      <description><![CDATA[Todays Hungarian Daily covers the critical economic challenges facing Hungarys new government, the positive business shifts for Korean battery firms, and the significant political rally in Budapest against Orbán ahead of the vote. We also discuss tax plans, economic confidence, Orbáns potential parliamentary exit, and the future of the V4 group, along with essential currency and weather briefings for expats.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-26/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-26/HungaryDaily_Podcast_Final.mp3" length="7544624" type="audio/mpeg"/>
+      <itunes:duration>05:14</itunes:duration>
+      <pubDate>Sun, 26 Apr 2026 08:53:01 +0200</pubDate>
     </item>
   </channel>
 </rss>
