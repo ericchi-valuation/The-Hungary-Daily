@@ -2,10 +2,11 @@ name: The Hungarian Daily — Auto Podcast Generator
 
 on:
   schedule:
-    # 04:30 UTC = 06:30 Budapest Summer Time (CEST = UTC+2) -> Target publish 07:00
-    # Starting 30 min early to compensate for GitHub Actions runner queue delays
-    # ⚠️ Winter (CET = UTC+1): change to '30 05 * * *' from late October to late March
-    - cron: '30 4 * * *'
+    # 04:00 UTC = 06:00 Budapest Summer Time (CEST = UTC+2)
+    # 前置 30 分鐘起跟，补償 GitHub Actions 排隊延遲 (15–30 min)、API 超時重試 (503 retry)
+    # ✔ 夏令時 (CEST = UTC+2): 04:00 UTC = 06:00 Budapest → 預期範封 07:00
+    # ⚠️ 冬令時 (CET  = UTC+1): 請改為 '00 05 * * *' (十月下旬從)
+    - cron: '0 4 * * *'
   workflow_dispatch: # Allow manual trigger from the GitHub Actions UI
 
 jobs:
@@ -34,7 +35,8 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install requests beautifulsoup4 feedparser python-dotenv google-genai edge-tts pydub audioop-lts podgen
 
-      - name: 🎙️ Run main pipeline (scrape → AI script → TTS → mix → email → Threads)
+      - name: 🎙️ Run main pipeline (scrape → AI script → AI editor → TTS → mix → email → Threads)
+        timeout-minutes: 30
         env:
           GEMINI_API_KEY:       ${{ secrets.GEMINI_API_KEY }}
           ELEVENLABS_API_KEY:   ${{ secrets.ELEVENLABS_API_KEY }}
