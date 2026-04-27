@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 26 Apr 2026 06:53:02 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2026 06:07:34 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 26 Apr 2026 08:53:01 +0200</pubDate>
+    <pubDate>Mon, 27 Apr 2026 08:07:30 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -91,6 +91,14 @@
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-26/HungaryDaily_Podcast_Final.mp3" length="7544624" type="audio/mpeg"/>
       <itunes:duration>05:14</itunes:duration>
       <pubDate>Sun, 26 Apr 2026 08:53:01 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-04-27</title>
+      <description><![CDATA[Today, Monday, April 27, 2026, The Hungarian Daily covered the EUs proposed industrial investment rules drawing Chinese criticism, Hungarys new economy minister Kapitány promising budget transparency amidst economic challenges, and a massive rally in Budapest urging the vote against Prime Minister Orbán. We also discussed U.S. Senator JD Vances support for Orbán, the potential future of the V4 group and EU decision-making without Orbáns veto, and updates on the Budapest-Belgrade railway, domestic political appointments, and Mayor Karácsonys urban renewal vision, alongside expat social media trends.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-27/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-27/HungaryDaily_Podcast_Final.mp3" length="25028065" type="audio/mpeg"/>
+      <itunes:duration>17:22</itunes:duration>
+      <pubDate>Mon, 27 Apr 2026 08:07:30 +0200</pubDate>
     </item>
   </channel>
 </rss>
