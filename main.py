@@ -108,7 +108,7 @@ if __name__ == "__main__":
     from fetchers.social_fetcher import get_social_trending
     from fetchers.weather_fetcher import get_budapest_weather
     from fetchers.exchange_rate_fetcher import get_exchange_rates
-    from core.script_generator import generate_podcast_script
+    from core.script_generator import generate_podcast_script, review_and_improve_script
     from core.audio_builder import build_podcast_audio
     from core.audio_mixer import mix_podcast_audio
     from publishers.email_sender import send_newsletter
@@ -146,6 +146,15 @@ if __name__ == "__main__":
         raise SystemExit(1)
 
     print(f"  ✔️ Script generated ({len(script.split())} words).")
+
+    # ── Step 2b: AI Editor 審稿 —————————————————————————————──
+    print("\n📝 Step 2b/5: AI Editor reviewing script before TTS...")
+    script = review_and_improve_script(script)
+
+    # 將審稿後的最終稿件寫回 script.txt
+    with open("script.txt", "w", encoding="utf-8") as f:
+        f.write(script)
+    print(f"  ✔️ Final script saved ({len(script.split())} words). Ready for TTS.")
 
     # ── Step 3: Build TTS audio ──────────────────────────────────────
     print("\n🎤 Step 3/5: Generating TTS audio from script...")
