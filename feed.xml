@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 28 Apr 2026 06:06:22 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2026 06:36:56 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 28 Apr 2026 08:06:18 +0200</pubDate>
+    <pubDate>Tue, 28 Apr 2026 08:36:53 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -102,11 +102,11 @@
     </item>
     <item>
       <title>The Hungarian Daily — 2026-04-28</title>
-      <description><![CDATA[Todays Hungarian Daily focuses on the dramatic political shift post-election, with Péter Magyar heading to Brussels to discuss EU funds recovery amidst allegations of wealth flight and a new parliamentary landscape. We also cover the economic outlook under the new government, current exchange rates, Budapest weather, and trending social media topics relevant to expats.]]></description>
+      <description><![CDATA[Todays The Hungarian Daily covers Hungarys pivotal moment as the new government prepares for high-stakes discussions in Brussels on Wednesday to unlock crucial EU funds, with Budapest anticipating 700 billion Forints for urban development. The broadcast also delves into the post-election political landscape, including the Tisza Partys stance and former PM Orbáns decision not to take his mandate, while examining the challenges and opportunities for Hungarys economy and its relationship with the EU. Additionally, it touches on Tiszas ambitious healthcare reform plans, the impending launch of the Belgrade-Budapest passenger rail, and a look at current social media trends among expats.]]></description>
       <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-28/HungaryDaily_Podcast_Final.mp3</guid>
-      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-28/HungaryDaily_Podcast_Final.mp3" length="22810583" type="audio/mpeg"/>
-      <itunes:duration>15:50</itunes:duration>
-      <pubDate>Tue, 28 Apr 2026 08:06:18 +0200</pubDate>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-28/HungaryDaily_Podcast_Final.mp3" length="23067628" type="audio/mpeg"/>
+      <itunes:duration>16:01</itunes:duration>
+      <pubDate>Tue, 28 Apr 2026 08:36:53 +0200</pubDate>
     </item>
   </channel>
 </rss>
