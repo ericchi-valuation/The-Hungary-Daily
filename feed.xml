@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 28 Apr 2026 06:36:56 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2026 06:34:45 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 28 Apr 2026 08:36:53 +0200</pubDate>
+    <pubDate>Wed, 29 Apr 2026 08:34:42 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -107,6 +107,14 @@
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-28/HungaryDaily_Podcast_Final.mp3" length="23067628" type="audio/mpeg"/>
       <itunes:duration>16:01</itunes:duration>
       <pubDate>Tue, 28 Apr 2026 08:36:53 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-04-29</title>
+      <description><![CDATA[Todays broadcast covers a potential thaw in Hungary-EU relations, how Budapest companies are embracing workplace flexibility, and Wizz Airs plans for a major summer expansion.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-29/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-29/HungaryDaily_Podcast_Final.mp3" length="14326848" type="audio/mpeg"/>
+      <itunes:duration>09:56</itunes:duration>
+      <pubDate>Wed, 29 Apr 2026 08:34:42 +0200</pubDate>
     </item>
   </channel>
 </rss>
