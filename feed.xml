@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 29 Apr 2026 06:34:45 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2026 05:54:40 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Wed, 29 Apr 2026 08:34:42 +0200</pubDate>
+    <pubDate>Thu, 30 Apr 2026 07:54:37 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -115,6 +115,14 @@
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-29/HungaryDaily_Podcast_Final.mp3" length="14326848" type="audio/mpeg"/>
       <itunes:duration>09:56</itunes:duration>
       <pubDate>Wed, 29 Apr 2026 08:34:42 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-04-30</title>
+      <description><![CDATA[Todays Hungarian Daily focuses on the pivotal political and economic shifts underway in Hungary, driven by the upcoming elections, the potential unlocking of crucial EU funds, and the emergence of new political forces. We delve into European calls for credit of trust for a new government, a reported pivot by Hungarys business elite, and the pressing question of economic recovery, all against a backdrop of significant public rallies and international interest.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-30/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-30/HungaryDaily_Podcast_Final.mp3" length="22982991" type="audio/mpeg"/>
+      <itunes:duration>15:57</itunes:duration>
+      <pubDate>Thu, 30 Apr 2026 07:54:37 +0200</pubDate>
     </item>
   </channel>
 </rss>
