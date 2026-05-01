@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 30 Apr 2026 06:35:40 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2026 06:43:54 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Thu, 30 Apr 2026 08:35:38 +0200</pubDate>
+    <pubDate>Fri, 01 May 2026 08:43:48 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -123,6 +123,14 @@
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-04-30/HungaryDaily_Podcast_Final.mp3" length="20270227" type="audio/mpeg"/>
       <itunes:duration>14:04</itunes:duration>
       <pubDate>Thu, 30 Apr 2026 08:35:38 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-05-01</title>
+      <description><![CDATA[Todays Hungarian Daily covers a heated debate on alleged EU election interference, a significant drop in household financial savings, and the formation of a new Hungarian government under Magyar Péters Tisza party, alongside a pivot of the business elite away from Viktor Orbán, and international political endorsements. The show also includes a stable Forint exchange rate, an overcast but mild Budapest weather forecast, and a look at expat social media trends.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-01/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-01/HungaryDaily_Podcast_Final.mp3" length="19664604" type="audio/mpeg"/>
+      <itunes:duration>13:39</itunes:duration>
+      <pubDate>Fri, 01 May 2026 08:43:48 +0200</pubDate>
     </item>
   </channel>
 </rss>
