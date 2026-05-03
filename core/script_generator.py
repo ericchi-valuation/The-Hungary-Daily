@@ -88,7 +88,7 @@ def score_and_sort_articles(client, news_data):
     }
 
     # 評分用的備援模型清單
-    scoring_models = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-2.5-pro']
+    scoring_models = ['gemini-2.0-flash', 'gemini-1.5-flash', 'gemini-1.5-pro']
     scores = None
 
     for scoring_model in scoring_models:
@@ -136,7 +136,7 @@ def score_and_sort_articles(client, news_data):
     return sorted_articles[:10]
 
 
-def generate_podcast_script(news_data, social_data, weather_data=None, exchange_data=None):
+def generate_podcast_script(news_data, social_data, weather_data=None, exchange_data=None, events_data=None, sponsor_text=None):
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key or api_key == "your_gemini_api_key_here":
         print("\n❌ Error: No valid GEMINI_API_KEY found.")
@@ -172,6 +172,7 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
 
     if exchange_data and exchange_data.get('eur_huf'):
         sources_text += "\n\n[💱 Today's Exchange Rates]》\n"
+        sources_text += f"High Volatility: {'YES' if exchange_data.get('high_volatility') else 'NO'}\n"
         sources_text += exchange_data.get('summary', '') + "\n"
 
     sources_text += "\n\n《💬 Hungary Social Media Trending (Reddit r/hungary + r/budapest + Facebook Expats)》\n"
@@ -181,65 +182,63 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
         topics_str = ', '.join(topics) if topics else 'General'
         sources_text += f"Topic: {title} (From {topics_str})\n"
 
-    import pytz
+    if events_data:
+        sources_text += "\n\n[🎭 Today's Budapest Events]》\n"
+        for ev in events_data:
+            sources_text += f"Event: {ev.get('title')} (Source: {ev.get('source')})\nSummary: {ev.get('summary')}\n"
+
     tz_str = os.environ.get("TZ", "Europe/Budapest")
     tz = pytz.timezone(tz_str)
     today_str = datetime.datetime.now(tz).strftime("%A, %B %d, %Y")
 
+    sponsor_instruction = ""
+    if sponsor_text and sponsor_text.strip():
+        sponsor_instruction = f"This episode is sponsored by: {sponsor_text.strip()}."
+    else:
+        sponsor_instruction = "This episode has no current sponsor. Do NOT mention a sponsor."
+
     system_prompt = f"""
-    You are an energetic, professional yet engaging podcast host for a daily English-language news show
+    You are Ray, an energetic, professional yet engaging podcast host for a daily English-language news show
     called "The Hungarian Daily".
 
     Your strict target audience is: foreign professionals, expats, digital nomads, EU citizens, and 
     international business executives living or working in Budapest, Hungary.
 
-    IMPORTANT: You MUST start every broadcast by warmly welcoming the listener and explicitly reading 
-    today's date ({today_str}).
+    IMPORTANT: You MUST start every broadcast by warmly welcoming the listener, introducing yourself as Ray,
+    explicitly reading today's date ({today_str}), and integrating the sponsor message if provided.
+    
+    ### SPONSOR MESSAGE ###
+    {sponsor_instruction}
+    - If a sponsor is provided, mention it naturally early in the show.
+    - If NO sponsor is provided, skip the sponsor mention entirely.
 
     ### MANDATORY SECTION — WEATHER BRIEFING ###
-    Immediately after the Currency Corner, include a short "Budapest Weather Briefing" segment.
-    - Use the weather data provided in the source materials.
-    - Report the high and low temperatures in BOTH Celsius and Fahrenheit (for diverse expat audience).
-    - Mention wind and precipitation if notable.
-    - Give a brief lifestyle tip (e.g., "bring an umbrella", "great day for a walk").
-    - This segment should be about 80–120 words.
-    - If weather data is unavailable, say so and advise listeners to check locally.
+    Immediately after the opening, include a short "Budapest Weather Briefing" segment.
+    - Use the weather data provided. Report high/low in both Celsius and Fahrenheit.
+    - Give a brief lifestyle tip (e.g., "bring an umbrella").
 
-    ### MANDATORY SECTION — HUF EXCHANGE RATE ###
-    You MUST include a dedicated "Currency Corner" segment in EVERY single broadcast, regardless of
-    whether exchange rate news appears in today's headlines. This section is non-negotiable.
-    - Report the exact HUF/EUR and HUF/USD rates provided in the source materials.
-    - If the rates are not provided, simply mention that the data is unavailable today. DO NOT invent or hallucinate numbers.
-    - Comment briefly on the trend (strengthening, weakening, stable) and what it means for expats:
-      e.g., purchasing power, sending money abroad, salary calculations.
-    - This segment should be about 150–200 words long.
+    ### MANDATORY SECTION — SMART CURRENCY CORNER ###
+    Next, include the "Currency Corner".
+    - Report the exact HUF/EUR and HUF/USD rates provided.
+    - SMART LOGIC: Check the source materials. If "High Volatility: YES" is present, you MUST provide a deeper analysis 
+      of the recent 1%+ swing, explaining why it happened (if evident in news) and what it means for expats' purchasing power.
+      If "High Volatility: NO", keep it VERY brief. Just state the rates and say "The Forint is stable today." DO NOT give a long analysis if it's stable.
 
     ### EDITORIAL GUIDELINES ###
-    1. PRIORITIZATION: Maintain the order of the pre-sorted news items, leading with the highest-scoring stories.
-    2. DEPTH: Devote significantly more time to higher-scoring stories (minimum 150 words per major story).
-    3. EXPAT FOCUS: Prioritise EU-Hungary politics, HUF exchange rate, foreign investments, and visa changes.
-    4. LANGUAGE: Present information naturally in English without mentioning the original language source.
-    5. FILTER TRASH: Ignore tabloid gossip.
-    6. SOCIAL MEDIA: Close the show with 1-2 quirky topics to explain Hungarian daily life.
-    7. PRONUNCIATION: Write out difficult names phonetically (e.g., "Budapest" -> "Boo-da-pesht").
-    8. TONE: Think "NPR Up First". Fast-paced, insightful, and end with a smile.
-    9. LENGTH: The full script MUST be between 1800 and 2400 words — this produces an 8–12 minute episode
-       at natural speaking pace. Do NOT submit a script shorter than 1800 words. If you are running short,
-       add more depth, context, and analysis to the top stories. Pad with background on Hungary's economic
-       situation or expat lifestyle tips — do NOT add filler words or repeat yourself.
-    10. ESCAPING: Since your output is JSON, you MUST properly escape all special characters, especially double quotes (") and control characters (like newlines) inside the script text. Use \" for quotes and \n for line breaks within the JSON string.
+    1. PRIORITIZATION: Maintain the order of the pre-sorted news items.
+    2. DEPTH: Devote significantly more time to higher-scoring stories.
+    3. FACT-CHECKING: For news items, check the publication dates in your mind. Do NOT say "tomorrow's vote" if the event has already passed.
+    4. EVENTS: After the news, feature 1-2 interesting Budapest events from the provided sources. Describe them to add "lifestyle flavor" for expats.
+    5. SOCIAL MEDIA: Close the show with 1 quirky social media topic.
+    6. CALL TO ACTION (CTA): At the very end of the broadcast, before signing off, you MUST explicitly ask the listeners to "subscribe to the podcast, share this episode with friends in Budapest, and leave a review if you found it helpful."
+    7. TONE: Think "NPR Up First". Fast-paced, insightful, and end with a smile.
+    8. LENGTH: The full script MUST be between 1800 and 2400 words. Pad with background on Hungary's economic situation if short.
 
     ### STRICT PROHIBITIONS ###
-    - DO NOT include any Hungarian language lessons, "word of the day", vocabulary teaching, or phonetic
-      coaching of Hungarian words/phrases. The TTS voice cannot pronounce Hungarian naturally, and such
-      segments sound robotic and unprofessional. This is absolutely forbidden.
-    - DO NOT teach listeners any Hungarian vocabulary, grammar, or language tips of any kind.
-    - DO NOT use rhetorical sentence fragments as transitions. Fragments like "The central theme?",
-      "The question?" or "The result?" followed by an answer are lazy writing that sounds odd when
-      read aloud. Always write in complete, flowing sentences instead.
-    - DO NOT use any Markdown formatting in the script (e.g., no #, ##, ### for headers, and no ** for bold). 
-      The script is for a Text-to-Speech engine; it should be written in plain, flowing text with natural transitions.
-    - DO NOT state the wrong day of the week. Today is {today_str}. Use this exact date and day.
+    - DO NOT include Hungarian language lessons.
+    - DO NOT use rhetorical sentence fragments.
+    - DO NOT use any Markdown formatting.
+    - DO NOT invent numbers or exchange rates.
 
     ### SCRIPT FORMAT ###
     Output ONLY a JSON object.
@@ -271,13 +270,11 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
 
     prompt_content = f"Here are today's materials. Please write the script and a summary:\n\n{sources_text}"
 
-    # 主要生成模型清單：優先 2.5 系列，再以 2.0-flash 作為穩定備援
+    # 主要生成模型清單：優先 2.0 系列，再以 1.5 作為穩定備援
     models_to_try = [
-        'gemini-2.5-flash',
-        'gemini-2.5-pro',
         'gemini-2.0-flash',
-        'gemini-2.0-flash-lite',
-        'gemini-3.1-flash-lite-preview',
+        'gemini-1.5-pro',
+        'gemini-1.5-flash',
     ]
     response = None
 
@@ -414,7 +411,7 @@ def review_and_improve_script(script: str, client=None) -> str:
     ---
     """
 
-    editor_models = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-2.5-pro']
+    editor_models = ['gemini-2.0-flash', 'gemini-1.5-pro', 'gemini-1.5-flash']
     for model_name in editor_models:
         try:
             response = client.models.generate_content(

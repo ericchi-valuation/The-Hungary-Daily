@@ -35,9 +35,8 @@ def reformat_for_newsletter(podcast_script):
     """
 
     try:
-         # Use the modern gemini-2.5-flash as default
         response = client.models.generate_content(
-            model='gemini-2.5-flash',
+            model='gemini-2.0-flash',
             contents=prompt,
         )
         # Clean up any potential markdown code blocks returned by the model
@@ -76,8 +75,11 @@ def reformat_for_threads(podcast_script):
 
     try:
         response = client.models.generate_content(
-            model='gemini-2.5-flash',
+            model='gemini-1.5-pro',
             contents=prompt,
+            config=types.GenerateContentConfig(
+                temperature=0.2, 
+            )
         )
         result_text = response.text.strip()
         
