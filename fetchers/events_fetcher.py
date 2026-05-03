@@ -104,14 +104,24 @@ def get_budapest_events(limit=3):
     ))
     time.sleep(0.5)
 
-    # ── Source 4: Google News fallback ───────────────────────────────────────
+    # ── Source 4: Google News (Hungarian Local Events) ───────────────────────
+    if len(all_events) < 4:
+        google_url_hu = (
+            "https://news.google.com/rss/search"
+            "?q=Budapest+AND+(program+OR+kiállítás+OR+koncert+OR+fesztivál)+when:2d"
+            "&hl=hu&gl=HU&ceid=HU:hu"
+        )
+        all_events.extend(_parse_feed(google_url_hu, limit=3, label="Local Events (HU)"))
+        time.sleep(0.5)
+
+    # ── Source 5: Google News fallback (English) ─────────────────────────────
     if len(all_events) < 2:
         google_url = (
             "https://news.google.com/rss/search"
             "?q=Budapest+event+concert+exhibition+festival+today"
             "&hl=en-HU&gl=HU&ceid=HU:en"
         )
-        all_events.extend(_parse_feed(google_url, limit=3, label="Google News"))
+        all_events.extend(_parse_feed(google_url, limit=2, label="Google News (EN)"))
 
     # ── Deduplicate by title (case-insensitive) ───────────────────────────────
     seen   = set()
