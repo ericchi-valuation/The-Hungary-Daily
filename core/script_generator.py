@@ -3,6 +3,7 @@ import json
 import time
 import datetime
 import re
+import pytz
 from google import genai
 from google.genai import types
 from dotenv import load_dotenv
@@ -87,8 +88,8 @@ def score_and_sort_articles(client, news_data):
         }
     }
 
-    # 評分用的備援模型清單
-    scoring_models = ['gemini-2.0-flash', 'gemini-1.5-flash', 'gemini-1.5-pro']
+    # 評分用的備援模型清單（依照 API Key 診斷結果排列）
+    scoring_models = ['gemini-2.5-flash', 'gemini-2.0-flash-001', 'gemini-2.5-flash-lite']
     scores = None
 
     for scoring_model in scoring_models:
@@ -270,11 +271,11 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
 
     prompt_content = f"Here are today's materials. Please write the script and a summary:\n\n{sources_text}"
 
-    # 主要生成模型清單：優先 2.0 系列，再以 1.5 作為穩定備援
+    # 主要生成模型清單（依照 API Key 診斷結果排列）
     models_to_try = [
-        'gemini-2.0-flash',
-        'gemini-1.5-pro',
-        'gemini-1.5-flash',
+        'gemini-2.5-flash',
+        'gemini-2.0-flash-001',
+        'gemini-2.5-flash-lite',
     ]
     response = None
 
@@ -411,7 +412,7 @@ def review_and_improve_script(script: str, client=None) -> str:
     ---
     """
 
-    editor_models = ['gemini-2.0-flash', 'gemini-1.5-pro', 'gemini-1.5-flash']
+    editor_models = ['gemini-2.5-flash', 'gemini-2.0-flash-001', 'gemini-2.5-flash-lite']
     for model_name in editor_models:
         try:
             response = client.models.generate_content(

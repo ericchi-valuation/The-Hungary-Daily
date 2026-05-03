@@ -36,7 +36,7 @@ def reformat_for_newsletter(podcast_script):
 
     try:
         response = client.models.generate_content(
-            model='gemini-2.0-flash',
+            model='gemini-2.5-flash',
             contents=prompt,
         )
         # Clean up any potential markdown code blocks returned by the model
@@ -75,7 +75,7 @@ def reformat_for_threads(podcast_script):
 
     try:
         response = client.models.generate_content(
-            model='gemini-1.5-pro',
+            model='gemini-2.5-flash',
             contents=prompt,
             config=types.GenerateContentConfig(
                 temperature=0.2, 
