@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 05 May 2026 06:05:34 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2026 06:25:36 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 05 May 2026 08:05:31 +0200</pubDate>
+    <pubDate>Tue, 05 May 2026 08:25:35 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -158,11 +158,11 @@
     </item>
     <item>
       <title>The Hungarian Daily — 2026-05-05</title>
-      <description><![CDATA[Todays Hungarian Daily, hosted by Ray, covered major disruptions in large-value bank transfers and an NBH investigation into abuse of power, alongside positive economic news like an uptick in the PMI and increased foreign investment. The episode also highlighted Ikaruss historic electric bus contract, discussed Budapests fiscal debates, and previewed local cultural events.]]></description>
+      <description><![CDATA[Ray hosts The Hungarian Daily on Tuesday, May 05, 2026, covering Budapests overcast weather (27.4°C/81.3°F high) and stable Forint exchange rates (1 EUR = 363.33 HUF, 1 USD = 310.54 HUF). Key news includes foreign capital returning to Hungarys property market amidst soaring Budapest prices, the IMFs warning of global inflation and meager growth due to Middle East conflict, and FocusEconomics analysis that Tiszas election win should support the economy despite fiscal constraints. The broadcast also discusses Tusks views on the Visegrad Group post-Orbán, disruptions in Hungarian large-value bank transfers, a Finra probe into Morgan Stanleys Hungary operation, and the National Banks abuse of power report. The show concludes with a look at Budapest events, a social media trend, and a call to action for listeners.]]></description>
       <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-05/HungaryDaily_Podcast_Final.mp3</guid>
-      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-05/HungaryDaily_Podcast_Final.mp3" length="24159128" type="audio/mpeg"/>
-      <itunes:duration>16:46</itunes:duration>
-      <pubDate>Tue, 05 May 2026 08:05:31 +0200</pubDate>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-05/HungaryDaily_Podcast_Final.mp3" length="26636790" type="audio/mpeg"/>
+      <itunes:duration>18:29</itunes:duration>
+      <pubDate>Tue, 05 May 2026 08:25:35 +0200</pubDate>
     </item>
   </channel>
 </rss>
