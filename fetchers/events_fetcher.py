@@ -5,10 +5,9 @@ Fetches today's cultural, sports, and city events in Budapest from multiple
 free/public sources. Returns a short list of highlights for the podcast script.
 
 Sources used (all free, no API key required):
-  1. Funzine.hu RSS             – English-language Budapest events guide
-  2. We Love Budapest RSS        – Popular local lifestyle & events site
-  3. Budapest.com Events RSS     – City event aggregator
-  4. Google News (fallback)      – Search-based event discovery
+  1. We Love Budapest RSS        – Popular local lifestyle & events site
+  2. Budapest.com Events RSS     – City event aggregator
+  3. Google News (fallback)      – Search-based event discovery
 """
 
 import feedparser
@@ -79,16 +78,8 @@ def get_budapest_events(limit=3):
     """
     print("🎭 Fetching Budapest daily events...")
     all_events = []
-
-    # ── Source 1: Funzine.hu (English events guide) ──────────────────────────
-    all_events.extend(_parse_feed(
-        "https://funzine.hu/feed/",
-        limit=4,
-        label="Funzine (English)"
-    ))
-    time.sleep(0.5)
-
-    # ── Source 2: We Love Budapest (English lifestyle & events) ─────────────
+   
+    # ── Source 1: We Love Budapest (English lifestyle & events) ─────────────
     all_events.extend(_parse_feed(
         "https://welovebudapest.com/feed/",
         limit=4,
@@ -96,7 +87,7 @@ def get_budapest_events(limit=3):
     ))
     time.sleep(0.5)
 
-    # ── Source 3: Pestbuda.hu English section ────────────────────────────────
+    # ── Source 2: Pestbuda.hu English section ────────────────────────────────
     all_events.extend(_parse_feed(
         "https://pestbuda.hu/feed/",
         limit=3,
@@ -104,7 +95,7 @@ def get_budapest_events(limit=3):
     ))
     time.sleep(0.5)
 
-    # ── Source 4: Google News (Hungarian Local Events) ───────────────────────
+    # ── Source 3: Google News (Hungarian Local Events) ───────────────────────
     if len(all_events) < 4:
         google_url_hu = (
             "https://news.google.com/rss/search"
@@ -114,7 +105,7 @@ def get_budapest_events(limit=3):
         all_events.extend(_parse_feed(google_url_hu, limit=3, label="Local Events (HU)"))
         time.sleep(0.5)
 
-    # ── Source 5: Google News fallback (English) ─────────────────────────────
+    # ── Source 4: Google News fallback (English) ─────────────────────────────
     if len(all_events) < 2:
         google_url = (
             "https://news.google.com/rss/search"
