@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 07 May 2026 06:44:27 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 08 May 2026 06:05:03 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Thu, 07 May 2026 08:44:23 +0200</pubDate>
+    <pubDate>Fri, 08 May 2026 08:04:59 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -179,6 +179,14 @@
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-07/HungaryDaily_Podcast_Final.mp3" length="20585577" type="audio/mpeg"/>
       <itunes:duration>14:17</itunes:duration>
       <pubDate>Thu, 07 May 2026 08:44:23 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-05-08</title>
+      <description><![CDATA[Ray hosts The Hungarian Daily for Friday, May 08, 2026, covering Budapests weather and stable Forint rates. The broadcast highlights Eurostat data on Hungarys public spending shifts, optimistic bank lending forecasts, and the nations regaining economic momentum amidst remaining risks, concluding with upcoming system change anniversary events and a quirky social media topic.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-08/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-08/HungaryDaily_Podcast_Final.mp3" length="24219314" type="audio/mpeg"/>
+      <itunes:duration>16:49</itunes:duration>
+      <pubDate>Fri, 08 May 2026 08:04:59 +0200</pubDate>
     </item>
   </channel>
 </rss>
