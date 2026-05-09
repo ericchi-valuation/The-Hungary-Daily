@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 08 May 2026 06:05:03 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 09 May 2026 06:23:04 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Fri, 08 May 2026 08:04:59 +0200</pubDate>
+    <pubDate>Sat, 09 May 2026 08:23:00 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -187,6 +187,14 @@
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-08/HungaryDaily_Podcast_Final.mp3" length="24219314" type="audio/mpeg"/>
       <itunes:duration>16:49</itunes:duration>
       <pubDate>Fri, 08 May 2026 08:04:59 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-05-09</title>
+      <description><![CDATA[Ray, host of The Hungarian Daily, welcomes listeners to Saturday, May 09, 2026, offering a Budapest weather briefing and stable Forint exchange rates. The broadcast then delves into Hungarys major political transition, detailing reports from Spiegel on the Orbán systems unraveling, plans for a regime-change celebration by the incoming prime minister, and the reassessment of business risk by ION Analytics. Economically, inflation driven by fuel and services is noted, alongside positive investor forecasts for Hungarian stocks and the Forint, and improved business confidence from German-Hungarian surveys. The show also touches on Orbán blaming youth voters for his defeat, the reasons Hungary retains the Forint, and the EUs push to exclude Chinese telecom giants, before highlighting local cultural events and a hopeful social media post about Hungarys new day.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-09/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-09/HungaryDaily_Podcast_Final.mp3" length="18171236" type="audio/mpeg"/>
+      <itunes:duration>12:37</itunes:duration>
+      <pubDate>Sat, 09 May 2026 08:23:00 +0200</pubDate>
     </item>
   </channel>
 </rss>
