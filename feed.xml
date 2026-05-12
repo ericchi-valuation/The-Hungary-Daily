@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 11 May 2026 07:54:21 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2026 06:45:23 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 11 May 2026 09:54:17 +0200</pubDate>
+    <pubDate>Tue, 12 May 2026 08:45:19 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -211,6 +211,14 @@
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-11/HungaryDaily_Podcast_Final.mp3" length="17880963" type="audio/mpeg"/>
       <itunes:duration>12:25</itunes:duration>
       <pubDate>Mon, 11 May 2026 09:54:17 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-05-12</title>
+      <description><![CDATA[Today, Ray covered persistent inflation concerns in Hungary, significant policy shifts proposed by future minister Kátai-Németh on environmental regulation, child protection, and immigration, and a major multi-billion Forint VAT fraud scandal with alleged Russian intelligence links. Other key stories included the Finance Ministers warning on potential economic stagnation, improving business confidence, and Péter Magyars call for transparency during the political transition. The show also highlighted local strawberry picking, upcoming music events, and a social media call for photographers in Budapest.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-12/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-12/HungaryDaily_Podcast_Final.mp3" length="20458936" type="audio/mpeg"/>
+      <itunes:duration>14:12</itunes:duration>
+      <pubDate>Tue, 12 May 2026 08:45:19 +0200</pubDate>
     </item>
   </channel>
 </rss>
