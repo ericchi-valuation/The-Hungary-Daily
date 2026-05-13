@@ -89,12 +89,25 @@ def generate_rss(new_title, new_summary, str_date, mp3_url, duration, file_size)
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument("--title", required=True)
-    parser.add_argument("--summary", required=True)
-    parser.add_argument("--date", required=True)
-    parser.add_argument("--url", required=True)
-    parser.add_argument("--duration", required=True)
-    parser.add_argument("--size", required=True)
+    parser.add_argument("--title",        required=True)
+    parser.add_argument("--summary-file", required=False, default="summary.txt",
+                        help="Path to a text file containing the episode description (default: summary.txt)")
+    parser.add_argument("--date",         required=True)
+    parser.add_argument("--url",          required=True)
+    parser.add_argument("--duration",     required=True)
+    parser.add_argument("--size",         required=True)
     args = parser.parse_args()
 
-    generate_rss(args.title, args.summary, args.date, args.url, args.duration, args.size)
+    # Read summary from file to avoid shell quoting / length issues
+    summary_text = "Today's top news and updates from Hungary for expats and international professionals."
+    summary_path = args.summary_file
+    if os.path.exists(summary_path):
+        with open(summary_path, "r", encoding="utf-8") as _f:
+            _content = _f.read().strip()
+            if _content:
+                summary_text = _content
+        print(f"  ✔️  Loaded episode summary from '{summary_path}' ({len(summary_text)} chars).")
+    else:
+        print(f"  ⚠️  '{summary_path}' not found. Using default summary.")
+
+    generate_rss(args.title, summary_text, args.date, args.url, args.duration, args.size)

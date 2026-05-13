@@ -229,11 +229,11 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
     1. PRIORITIZATION: Maintain the order of the pre-sorted news items.
     2. DEPTH: Devote significantly more time to higher-scoring stories.
     3. FACT-CHECKING: For news items, check the publication dates in your mind. Do NOT say "tomorrow's vote" if the event has already passed.
-    4. EVENTS: After the news, feature 1-2 interesting Budapest events from the provided sources. Describe them to add "lifestyle flavor" for expats.
-    5. SOCIAL MEDIA: Close the show with 1 quirky social media topic.
-    6. CALL TO ACTION (CTA): At the very end of the broadcast, before signing off, you MUST explicitly ask the listeners to "subscribe to the podcast, share this episode with friends in Budapest, and leave a review if you found it helpful."
+    4. EVENTS: After the news, feature 1-2 interesting Budapest events from the provided sources. Describe them briefly to add "lifestyle flavor".
+    5. SOCIAL MEDIA: Include 1 quirky social media topic after events.
+    6. CALL TO ACTION (CTA): MANDATORY. After the social media segment, you MUST say: "That's all for today's Hungarian Daily. If you enjoyed this episode, please subscribe, share it with friends and colleagues in Budapest, and drop us a review wherever you listen — it really helps. I'm Ray, and I'll see you tomorrow. Viszlát!" This closing MUST be the very last thing in the script. The script is NOT complete without it.
     7. TONE: Think "NPR Up First". Fast-paced, insightful, and end with a smile.
-    8. LENGTH: The full script MUST be between 1800 and 2400 words. Pad with background on Hungary's economic situation if short.
+    8. LENGTH: The full script MUST be between 1800 and 2400 words. Pad with background on Hungary's economic situation if short. ALWAYS finish the full closing before hitting the word limit — never truncate the CTA or sign-off.
 
     ### STRICT PROHIBITIONS ###
     - DO NOT include Hungarian language lessons.
@@ -241,13 +241,14 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
     - DO NOT use any Markdown formatting.
     - DO NOT invent numbers or exchange rates.
     - DO NOT mention any editorial score or rating in the spoken script (e.g. "scoring 9 out of 10", "a score of 8", "rated 7/10"). Scores are internal editorial tools only and must never appear in the broadcast.
+    - DO NOT list or enumerate the target audience by name in the script. Phrases like "our community of foreign professionals, expats, digital nomads, and international executives" or any similar enumeration of listener types are BANNED. Speak directly to the listener as "you" instead.
 
     ### SCRIPT FORMAT ###
     Output ONLY a JSON object.
     Format:
     {{
-      "script": "The full spoken broadcast script...",
-      "summary": "A concise 1-2 sentence summary..."
+      "script": "The full spoken broadcast script ending with the mandatory CTA and Viszlát sign-off...",
+      "summary": "A 3-5 sentence episode description for podcast platforms. Start with today's top 2-3 news stories, then list today's Budapest events with their names and a one-line description each. End with one sentence inviting listeners to tune in."
     }}
     """
 
@@ -389,7 +390,7 @@ def review_and_improve_script(script: str, client=None) -> str:
         action = "TRIM"
         instruction = (
             f"The current script is {word_count} words, which is slightly long. "
-            "Trim it to under 2400 words by cutting redundant sentences, but keep all main stories intact."
+            "Trim it to under 2400 words by cutting redundant sentences, but keep all main stories and the closing intact."
         )
 
     print(f"  🤖 [AI Editor] 正在 {action} 稿件...")
@@ -405,7 +406,9 @@ def review_and_improve_script(script: str, client=None) -> str:
     3. Do NOT add Hungarian vocabulary lessons or "word of the day" segments.
     4. Do NOT invent new facts, numbers, or events.
     5. Maintain the same host voice and NPR-style tone.
-    6. Keep the opening greeting and closing "Viszlát!" intact.
+    6. CRITICAL: The script MUST end with the full closing CTA and "Viszlát!" sign-off. If the original script is missing this or it is cut off, you MUST restore it: add "That's all for today's Hungarian Daily. If you enjoyed this episode, please subscribe, share it with friends and colleagues in Budapest, and drop us a review wherever you listen — it really helps. I'm Ray, and I'll see you tomorrow. Viszlát!"
+    7. When trimming, NEVER cut the closing CTA or sign-off — trim from the middle of news stories instead.
+    8. DO NOT list or enumerate the target audience by name anywhere in the script. Remove any phrases like "our community of foreign professionals, expats, digital nomads, and international executives" — replace them with direct address to the listener ("you").
 
     HERE IS THE CURRENT SCRIPT:
     ---
