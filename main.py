@@ -141,11 +141,11 @@ if __name__ == "__main__":
     # ── Step 5: Publish ─────────────────────────────────────────────
     print("\n📢 Step 5/5: Publishing content...")
 
-    # 5a. Newsletter
+    # 5a. Newsletter (pass events_data so the email includes a Budapest events section)
     try:
         with open("script.txt", "r", encoding="utf-8") as f:
             script_text = f.read()
-        html_content = reformat_for_newsletter(script_text)
+        html_content = reformat_for_newsletter(script_text, events_data=events_data)
         subject = f"The Hungarian Daily — {today_str}"
         send_newsletter(subject, html_content)
     except Exception as e:
