@@ -86,13 +86,11 @@ jobs:
           echo "==== Updating RSS Feed ===="
           URL="https://github.com/${{ github.repository }}/releases/download/ep-${TODAY}/HungaryDaily_Podcast_Final.mp3"
 
-          # Read the AI-generated concise summary
-          SUMMARY=$(cat summary.txt | tr -d '"' | tr -d "'")
-          if [ -z "$SUMMARY" ]; then SUMMARY="Today's top news and updates from Hungary for expats and international professionals."; fi
-
+          # summary.txt is written by script_generator.py during the pipeline run.
+          # We pass it as a file path to avoid shell quoting / length issues with long descriptions.
           python core/rss_generator.py \
             --title "The Hungarian Daily — ${TODAY}" \
-            --summary "$SUMMARY" \
+            --summary-file summary.txt \
             --date "$ISO_DATE" \
             --url "$URL" \
             --duration "$FORMATTED_DURATION" \
