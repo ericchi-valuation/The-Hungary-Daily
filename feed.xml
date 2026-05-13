@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 12 May 2026 06:45:23 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2026 20:50:51 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 12 May 2026 08:45:19 +0200</pubDate>
+    <pubDate>Wed, 13 May 2026 22:50:48 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -219,6 +219,14 @@
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-12/HungaryDaily_Podcast_Final.mp3" length="20458936" type="audio/mpeg"/>
       <itunes:duration>14:12</itunes:duration>
       <pubDate>Tue, 12 May 2026 08:45:19 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-05-13</title>
+      <description><![CDATA[Today's Hungarian Daily covers faculty at Corvinus University pushing back against the foundation model, the new Hungarian government's policy plans, and lessons from Hungary on Europe’s democratic security future. Péter Magyar claims a clemency case dossier could be public soon, and Budapest has condemned strikes on Zakarpattia, summoning the Russian Ambassador. For local events, test your Hungarian with a quiz on misspelled words or explore the history of picnics, from muses to social change. Tune in tomorrow for more essential news and insights!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-13/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-13/HungaryDaily_Podcast_Final.mp3" length="16990710" type="audio/mpeg"/>
+      <itunes:duration>11:47</itunes:duration>
+      <pubDate>Wed, 13 May 2026 22:50:48 +0200</pubDate>
     </item>
   </channel>
 </rss>
