@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 15 May 2026 07:31:44 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 16 May 2026 06:28:19 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Fri, 15 May 2026 09:31:40 +0200</pubDate>
+    <pubDate>Sat, 16 May 2026 08:28:17 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -243,6 +243,14 @@
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-15/HungaryDaily_Podcast_Final.mp3" length="18240199" type="audio/mpeg"/>
       <itunes:duration>12:39</itunes:duration>
       <pubDate>Fri, 15 May 2026 09:31:40 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-05-16</title>
+      <description><![CDATA[Hungary's incoming Tisza government plans to freeze new guest worker admissions from June 1st, a move alarming businesses and set to reshape the labor market. Meanwhile, Magyar Péter's leadership is sparking a potential revival of the Visegrád Cooperation, with his first foreign trip to Warsaw signaling a new, Europe-centric foreign policy, though challenges remain with Slovakia over historical decrees. Other news includes the completion of the ministerial handover and symbolic fence removal, and the dismissal of former state secretaries. Today's Budapest events include visiting '7 special chapels in the Danube Bend' for a scenic day trip and exploring 'Papp Jancsi: the life of the punchline-killer legend' for a cultural dive into Hungarian humor. Tune in for detailed analysis and more.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-16/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-16/HungaryDaily_Podcast_Final.mp3" length="20697799" type="audio/mpeg"/>
+      <itunes:duration>14:22</itunes:duration>
+      <pubDate>Sat, 16 May 2026 08:28:17 +0200</pubDate>
     </item>
   </channel>
 </rss>
