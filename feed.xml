@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 18 May 2026 08:13:07 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 May 2026 07:55:35 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 18 May 2026 10:13:03 +0200</pubDate>
+    <pubDate>Tue, 19 May 2026 09:55:31 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -267,6 +267,14 @@
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-18/HungaryDaily_Podcast_Final.mp3" length="22851334" type="audio/mpeg"/>
       <itunes:duration>15:52</itunes:duration>
       <pubDate>Mon, 18 May 2026 10:13:03 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-05-19</title>
+      <description><![CDATA[Today's Hungarian Daily reports on the monumental political shift as Péter Magyar embarks on his first foreign trip as Prime Minister to Poland, aiming to reset EU ties and distance Hungary from past policies. This significant development is already prompting Chinese companies in Hungary to adjust to a 'post-Orban era'. Additionally, the Magyar government is set to decide on the fate of non-EU guest workers next week, while the Forint's strength is causing concern among business owners. Tune in for the Budapest Wagner Days at Müpa, featuring a double Ring cycle, and for rock fans, Anthrax is dropping a new song ahead of their Budapest concert. Join Ray for all the essential news and lifestyle updates.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-19/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-19/HungaryDaily_Podcast_Final.mp3" length="19857074" type="audio/mpeg"/>
+      <itunes:duration>13:47</itunes:duration>
+      <pubDate>Tue, 19 May 2026 09:55:31 +0200</pubDate>
     </item>
   </channel>
 </rss>
