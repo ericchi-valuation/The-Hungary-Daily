@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 19 May 2026 07:55:35 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2026 07:54:34 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 19 May 2026 09:55:31 +0200</pubDate>
+    <pubDate>Wed, 20 May 2026 09:54:30 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -275,6 +275,14 @@
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-19/HungaryDaily_Podcast_Final.mp3" length="19857074" type="audio/mpeg"/>
       <itunes:duration>13:47</itunes:duration>
       <pubDate>Tue, 19 May 2026 09:55:31 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-05-20</title>
+      <description><![CDATA[Today's Hungarian Daily features BMW's Debrecen plant receiving 50,000 orders for its iX3, signaling a strong future for Hungary's EV sector. We also delve into the new Tisza-kormány's political maneuvers, including Prime Minister Péter Magyar's transparency efforts regarding the pardon case and his first foreign trip to Poland. Chinese companies in Hungary are actively adjusting to the evolving political landscape under the new administration. For events, don't miss the fascinating Freddie Mercury Exhibition at the House of Music and the Rádió 1 Birthday Festival at Budapest Park on May 24th. Tune in for these stories and more insights into life in Budapest!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-20/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-20/HungaryDaily_Podcast_Final.mp3" length="19500346" type="audio/mpeg"/>
+      <itunes:duration>13:32</itunes:duration>
+      <pubDate>Wed, 20 May 2026 09:54:30 +0200</pubDate>
     </item>
   </channel>
 </rss>
