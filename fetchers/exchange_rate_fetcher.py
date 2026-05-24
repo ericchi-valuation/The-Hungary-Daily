@@ -40,6 +40,8 @@ def get_exchange_rates():
         "eur_change_pct": None,
         "usd_change_pct": None,
         "high_volatility": False,
+        "rate_date":      None,   # The settled trading day these rates are from (typically yesterday)
+        "prev_date":      None,   # The prior business day used for comparison
         "summary": "Exchange rate data is currently unavailable."
     }
 
@@ -57,8 +59,9 @@ def get_exchange_rates():
         eur_usd = rates.get("USD")
 
         if eur_huf and eur_usd:
-            result["eur_huf"] = eur_huf
-            result["usd_huf"] = round(eur_huf / eur_usd, 2)
+            result["eur_huf"]   = eur_huf
+            result["usd_huf"]   = round(eur_huf / eur_usd, 2)
+            result["rate_date"] = latest_date  # Store the settled date in the result
             print(f"  ✔️  Latest ({latest_date}): 1 EUR = {result['eur_huf']} HUF | 1 USD = {result['usd_huf']} HUF")
 
     except Exception as e:
@@ -94,6 +97,7 @@ def get_exchange_rates():
         if eur_huf_prev and eur_usd_prev:
             result["eur_huf_prev"] = eur_huf_prev
             result["usd_huf_prev"] = round(eur_huf_prev / eur_usd_prev, 2)
+            result["prev_date"]    = prev_day_str  # Store the prior date in the result
             print(f"  ✔️  Prev day: 1 EUR = {result['eur_huf_prev']} HUF | 1 USD = {result['usd_huf_prev']} HUF")
 
     except Exception as e:
@@ -128,9 +132,12 @@ def get_exchange_rates():
             sign = "+" if result["usd_change_pct"] >= 0 else ""
             trend_usd = f" ({sign}{result['usd_change_pct']}% vs prev day)"
 
+        # Label: include the date so the broadcast script can say "as of [date]'s close"
+        date_label = f" [as of {result['rate_date']}'s close]" if result["rate_date"] else ""
+        prev_label = f" [prev: {result['prev_date']}]" if result["prev_date"] else ""
         result["summary"] = (
-            f"1 EUR = {result['eur_huf']} HUF{trend_eur} | "
-            f"1 USD = {result['usd_huf']} HUF{trend_usd}"
+            f"1 EUR = {result['eur_huf']} HUF{trend_eur}{date_label} | "
+            f"1 USD = {result['usd_huf']} HUF{trend_usd}{prev_label}"
         )
         volatility_label = "⚠️  HIGH VOLATILITY" if result["high_volatility"] else "✅ Low volatility"
         print(f"  {volatility_label} — {result['summary']}")
