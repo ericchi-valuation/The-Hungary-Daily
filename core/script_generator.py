@@ -89,7 +89,8 @@ def score_and_sort_articles(client, news_data):
     }
 
     # 評分用的備援模型清單（依照 API Key 診斷結果排列）
-    scoring_models = ['gemini-2.5-flash', 'gemini-2.0-flash-001', 'gemini-2.5-flash-lite']
+    # 已移除: gemini-2.0-flash-001 (已下架 404)
+    scoring_models = ['gemini-2.5-flash', 'gemini-3.5-flash', 'gemini-2.5-flash-lite']
     scores = None
 
     for scoring_model in scoring_models:
@@ -220,10 +221,19 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
 
     ### MANDATORY SECTION — SMART CURRENCY CORNER ###
     Next, include the "Currency Corner".
+    - CRITICAL TIMING CONTEXT: The exchange rates provided come from the Frankfurter API's 'latest'
+      endpoint, which reflects the MOST RECENTLY SETTLED trading day's closing rates — this is
+      typically the last available business day's rates, NOT real-time. The rate_date field in the data tells you exactly
+      which day's closing rate it is. The change percentage compares that day vs. the business day
+      before it.
+    - When announcing rates, always frame it accurately, e.g.: "As of the last market close," or
+      "The latest settled closing rate showed" or "The latest available rate, from [date]'s close, is..."
+      NEVER say "Today's exchange rate is X" or "right now" because these are NOT live rates.
     - Report the exact HUF/EUR and HUF/USD rates provided.
-    - SMART LOGIC: Check the source materials. If "High Volatility: YES" is present, you MUST provide a deeper analysis 
-      of the recent 1%+ swing, explaining why it happened (if evident in news) and what it means for expats' purchasing power.
-      If "High Volatility: NO", keep it VERY brief. Just state the rates and say "The Forint is stable today." DO NOT give a long analysis if it's stable.
+    - SMART LOGIC: Check the source materials. If "High Volatility: YES" is present, you MUST provide
+      a deeper analysis of the recent 1%+ swing, explaining why it happened (if evident in news) and
+      what it means for expats' purchasing power. If "High Volatility: NO", keep it VERY brief.
+      Just state the rates and say "The Forint is stable." DO NOT give a long analysis if it's stable.
 
     ### EDITORIAL GUIDELINES ###
     1. PRIORITIZATION: Maintain the order of the pre-sorted news items.
@@ -234,6 +244,14 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
     6. CALL TO ACTION (CTA): MANDATORY. After the social media segment, you MUST say: "That's all for today's Hungarian Daily. If you enjoyed this episode, please subscribe, share it with friends and colleagues in Budapest, and drop us a review wherever you listen — it really helps. I'm Ray, and I'll see you tomorrow. Viszlát!" This closing MUST be the very last thing in the script. The script is NOT complete without it.
     7. TONE: Think "NPR Up First". Fast-paced, insightful, and end with a smile.
     8. LENGTH: The full script MUST be between 1800 and 2400 words. Pad with background on Hungary's economic situation if short. ALWAYS finish the full closing before hitting the word limit — never truncate the CTA or sign-off.
+    9. POLITICAL TITLES — CRITICAL FACT-CHECK RULE: NEVER assume or repeat a person's political title
+       from your training data or memory. ONLY use titles (e.g. "Prime Minister", "Minister of Finance")
+       that are EXPLICITLY stated in TODAY's provided source materials. If a source calls someone
+       "Prime Minister X" but another source or general knowledge suggests they may no longer hold
+       that role, use their NAME ONLY (e.g. "Viktor Orbán stated...") and add context such as
+       "according to [source name]". This rule applies to ALL political figures.
+       SPECIFIC NOTE: Do NOT refer to Viktor Orbán as Hungary's Prime Minister unless today's
+       source materials explicitly confirm he currently holds that office.
 
     ### STRICT PROHIBITIONS ###
     - DO NOT include Hungarian language lessons.
@@ -273,10 +291,10 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
 
     prompt_content = f"Here are today's materials. Please write the script and a summary:\n\n{sources_text}"
 
-    # 主要生成模型清單（依照 API Key 診斷結果排列）
+    # 主要生成模型清單（已移除下架的 gemini-2.0-flash-001）
     models_to_try = [
         'gemini-2.5-flash',
-        'gemini-2.0-flash-001',
+        'gemini-3.5-flash',
         'gemini-2.5-flash-lite',
     ]
     response = None
@@ -383,8 +401,9 @@ def review_and_improve_script(script: str, client=None) -> str:
         action = "EXPAND"
         instruction = (
             f"The current script is only {word_count} words, which is far too short for an 8–12 minute podcast. "
-            "You MUST expand it to at least 1800 words. Add deeper analysis, expat context, and historical "
-            "background to each major story. Do NOT add filler, repetition, or new topics not in the original."
+            "You MUST expand it to between 1800 and 2200 words. Add deeper analysis, expat context, and historical "
+            "background to each major story. Do NOT add filler, repetition, or new topics not in the original. "
+            "CRITICAL: Do NOT exceed 2200 words under any circumstances."
         )
     else:
         action = "TRIM"
@@ -416,7 +435,9 @@ def review_and_improve_script(script: str, client=None) -> str:
     ---
     """
 
-    editor_models = ['gemini-2.5-flash', 'gemini-2.0-flash-001', 'gemini-2.5-flash-lite']
+    editor_models = ['gemini-2.5-flash', 'gemini-3.5-flash', 'gemini-2.5-flash-lite']
+    revised = None
+    used_model = None
     for model_name in editor_models:
         try:
             response = client.models.generate_content(
@@ -425,15 +446,60 @@ def review_and_improve_script(script: str, client=None) -> str:
                 config=types.GenerateContentConfig(temperature=0.4)
             )
             revised = _clean_script_formatting(response.text.strip())
+            used_model = model_name
             new_word_count = len(revised.split())
             print(f"  ✔️ [AI Editor] 審稿完成 (使用 {model_name})，修訂後字數: {new_word_count} 字")
-            return revised
+            break
         except Exception as e:
             print(f"  ⚠️ [AI Editor] {model_name} 失敗: {e}")
             time.sleep(15)
 
-    print("  ⚠️ [AI Editor] 所有模型均失敗，回傳格式清理後的原稿。")
-    return script
+    if revised is None:
+        print("  ⚠️ [AI Editor] 所有模型均失敗，回傳格式清理後的原稿。")
+        return script
+
+    # ── Second-pass trim: if expansion overshot the 2400-word target, trim it ─
+    post_edit_count = len(revised.split())
+    if needs_expansion and post_edit_count > 2600:
+        print(f"  ⚠️ [AI Editor] 展開後字數 ({post_edit_count}) 超過上限 2600，啟動第二輪自動裁剪...")
+        trim_instruction = (
+            f"The current script is {post_edit_count} words, which is too long for a 10-minute podcast. "
+            "Trim it to under 2400 words by removing redundant sentences and over-explained passages, "
+            "but keep ALL main stories, the weather briefing, currency corner, events, and the full closing CTA intact."
+        )
+        trim_prompt = f"""
+    You are a senior podcast editor for "The Hungarian Daily", an English-language daily news podcast.
+
+    {trim_instruction}
+
+    STRICT RULES:
+    1. Output ONLY the revised script text. No JSON, no markdown, no explanation.
+    2. Do NOT add any Markdown formatting (no #, ##, **, *, ---).
+    3. NEVER cut the closing CTA or "Viszlát!" sign-off — trim from the middle of news stories instead.
+    4. Maintain the same host voice and NPR-style tone.
+
+    HERE IS THE CURRENT SCRIPT:
+    ---
+    {revised}
+    ---
+    """
+        for model_name in editor_models:
+            try:
+                resp2 = client.models.generate_content(
+                    model=model_name,
+                    contents=trim_prompt,
+                    config=types.GenerateContentConfig(temperature=0.3)
+                )
+                trimmed = _clean_script_formatting(resp2.text.strip())
+                final_count = len(trimmed.split())
+                print(f"  ✔️ [AI Editor] 第二輪裁剪完成 (使用 {model_name})，最終字數: {final_count} 字")
+                return trimmed
+            except Exception as e:
+                print(f"  ⚠️ [AI Editor] 第二輪裁剪失敗 ({model_name}): {e}")
+                time.sleep(10)
+        print("  ⚠️ [AI Editor] 第二輪裁剪所有模型均失敗，使用第一輪結果。")
+
+    return revised
 
 
 def _clean_script_formatting(script: str) -> str:
