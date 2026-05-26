@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 25 May 2026 08:27:32 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 May 2026 08:03:52 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 25 May 2026 10:27:28 +0200</pubDate>
+    <pubDate>Tue, 26 May 2026 10:03:48 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -323,6 +323,14 @@
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-25/HungaryDaily_Podcast_Final.mp3" length="17358723" type="audio/mpeg"/>
       <itunes:duration>12:03</itunes:duration>
       <pubDate>Mon, 25 May 2026 10:27:28 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-05-26</title>
+      <description><![CDATA[Today we cover PM Péter Magyar's ambitious legislative agenda targeting concessions and battery regulations, a new Publicus poll showing a major shift in public sentiment regarding Viktor Orbán, and McKinsey's forecast on how artificial intelligence could boost Hungary's GDP by up to seven percent. We also highlight upcoming local events: the Rosalia Borpiknik, a four-day outdoor wine and food celebration in City Park, and the Belvárosi Fesztivál, which brings free live concerts and cultural activities to the heart of District Five. Tune in to stay informed on the latest political, economic, and lifestyle developments in Budapest.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-26/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-26/HungaryDaily_Podcast_Final.mp3" length="18974345" type="audio/mpeg"/>
+      <itunes:duration>13:10</itunes:duration>
+      <pubDate>Tue, 26 May 2026 10:03:48 +0200</pubDate>
     </item>
   </channel>
 </rss>
