@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 26 May 2026 08:03:52 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2026 08:11:03 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 26 May 2026 10:03:48 +0200</pubDate>
+    <pubDate>Wed, 27 May 2026 10:10:59 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -331,6 +331,14 @@
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-26/HungaryDaily_Podcast_Final.mp3" length="18974345" type="audio/mpeg"/>
       <itunes:duration>13:10</itunes:duration>
       <pubDate>Tue, 26 May 2026 10:03:48 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-05-27</title>
+      <description><![CDATA[Today's Hungarian Daily covers the MNB's decision to keep the base rate at 6.25% amidst an improving inflation outlook, bolstered by a strong Forint, though caution remains. We also delve into the political stir caused by Péter Magyar's emergence, the Tisza party's proposal for an 8-year term limit for the Hungarian premiership, and a former Budapest mayor's push to unfreeze EU funds. Budapest events include the Cziniel Római, a perfect bike-friendly cafe on the Római Embankment, and preparations for a major football final, causing road closures and airport congestion. Tune in for more insights on Hungary's economic and political landscape.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-27/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-27/HungaryDaily_Podcast_Final.mp3" length="17878456" type="audio/mpeg"/>
+      <itunes:duration>12:24</itunes:duration>
+      <pubDate>Wed, 27 May 2026 10:10:59 +0200</pubDate>
     </item>
   </channel>
 </rss>
