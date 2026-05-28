@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 27 May 2026 08:11:03 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 May 2026 08:09:55 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Wed, 27 May 2026 10:10:59 +0200</pubDate>
+    <pubDate>Thu, 28 May 2026 10:09:52 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -339,6 +339,14 @@
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-27/HungaryDaily_Podcast_Final.mp3" length="17878456" type="audio/mpeg"/>
       <itunes:duration>12:24</itunes:duration>
       <pubDate>Wed, 27 May 2026 10:10:59 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-05-28</title>
+      <description><![CDATA[Today's Hungarian Daily covers the MNB's decision to keep its base rate at 6.25% due to an improved inflation outlook, and the upcoming EU customs reform ending duty-free small packages from outside the EU, impacting platforms like Shein and Temu. We also discuss a high-level Indian business delegation in Budapest aiming to deepen commercial ties. Our Budapest events include the Continental Citygolf Club, offering a community space for golfers, and various fan zones and programs for the 2026 UEFA Champions League Final. Tune in for more on these stories and a look at social media trends.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-28/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-28/HungaryDaily_Podcast_Final.mp3" length="19521662" type="audio/mpeg"/>
+      <itunes:duration>13:33</itunes:duration>
+      <pubDate>Thu, 28 May 2026 10:09:52 +0200</pubDate>
     </item>
   </channel>
 </rss>
