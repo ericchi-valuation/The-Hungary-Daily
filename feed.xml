@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 30 May 2026 06:53:21 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 31 May 2026 07:51:43 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sat, 30 May 2026 08:53:18 +0200</pubDate>
+    <pubDate>Sun, 31 May 2026 09:51:40 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -363,6 +363,14 @@
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-30/HungaryDaily_Podcast_Final.mp3" length="19551128" type="audio/mpeg"/>
       <itunes:duration>13:34</itunes:duration>
       <pubDate>Sat, 30 May 2026 08:53:18 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-05-31</title>
+      <description><![CDATA[Today's Hungarian Daily covers a significant migration clash in the Hungarian parliament over the EU pact, positive economic news with factory prices barely rising and falling export costs, and the continued political rise of Péter Magyar after a key Brussels announcement. We also look at a new S+P rating praising Hungary's eurozone integration efforts and the challenges of green energy implementation. Tune in for details on an exhibition about Dünn Alice, a former salon owner with a powerful survival story, and the return of free open-air cinema in Városliget. Join us to stay informed on Budapest's dynamic landscape.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-31/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-31/HungaryDaily_Podcast_Final.mp3" length="19267752" type="audio/mpeg"/>
+      <itunes:duration>13:22</itunes:duration>
+      <pubDate>Sun, 31 May 2026 09:51:40 +0200</pubDate>
     </item>
   </channel>
 </rss>
