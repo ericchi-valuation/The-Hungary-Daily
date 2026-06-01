@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 31 May 2026 07:51:43 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jun 2026 09:40:04 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 31 May 2026 09:51:40 +0200</pubDate>
+    <pubDate>Mon, 01 Jun 2026 11:40:00 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -371,6 +371,14 @@
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-05-31/HungaryDaily_Podcast_Final.mp3" length="19267752" type="audio/mpeg"/>
       <itunes:duration>13:22</itunes:duration>
       <pubDate>Sun, 31 May 2026 09:51:40 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-06-01</title>
+      <description><![CDATA[On today's Hungarian Daily, we cover the escalating political tensions surrounding President Tamás Sulyok and Péter Magyar's actions, with sharp criticism from Fidesz regarding the potential removal of the President. We also touch on the government's decision not to support further expansion of the CATL plant and a shrinking trade surplus due to surging imports. Today's Budapest events include the personal inauguration of the renewed Nobu Budapest by Nobu Matsuhisa and a more abstract event titled 'Just dive in. Don't overthink it.' Tune in for your daily dose of news and insights.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-01/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-01/HungaryDaily_Podcast_Final.mp3" length="24033114" type="audio/mpeg"/>
+      <itunes:duration>16:41</itunes:duration>
+      <pubDate>Mon, 01 Jun 2026 11:40:00 +0200</pubDate>
     </item>
   </channel>
 </rss>
