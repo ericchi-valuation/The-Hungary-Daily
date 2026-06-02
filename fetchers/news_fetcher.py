@@ -131,6 +131,27 @@ def get_daily_news(items_per_source=2):
             'https://news.google.com/rss/search?q=Hungary+Orban+EU+Visegrad+when:2d'
             '&hl=en&gl=US&ceid=US:en'
         ),
+
+        # --- Immigration, visa & expat life (dedicated feeds) ---------------
+        # These are given extra weight in scoring to serve the expat audience.
+        'Google News – Hungary Visa & Residency': (
+            'https://news.google.com/rss/search'
+            '?q=Hungary+(visa+OR+residency+OR+residence+permit+OR+golden+visa'
+            '+OR+"guest+investor"+OR+work+permit+OR+immigration)+when:3d'
+            '&hl=en&gl=HU&ceid=HU:en'
+        ),
+        'Google News – Hungary Immigration Policy': (
+            'https://news.google.com/rss/search'
+            '?q=Hungary+(immigration+law+OR+migration+pact+OR+Schengen+OR'
+            '+border+control+OR+asylum+OR+refugee)+when:2d'
+            '&hl=en&gl=HU&ceid=HU:en'
+        ),
+        'Google News – Expat Life Budapest': (
+            'https://news.google.com/rss/search'
+            '?q=(expat+OR+"foreign+nationals"+OR+"moving+to+Hungary"'
+            '+OR+"living+in+Budapest")+when:7d'
+            '&hl=en&gl=HU&ceid=HU:en'
+        ),
     }
 
     all_news = {}
