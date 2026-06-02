@@ -57,7 +57,8 @@ def score_and_sort_articles(client, news_data):
     Score the following news articles from 1 to 10 based on their importance for international professionals and expats in Hungary.
     
     SCORING CRITERIA:
-    - 8-10: Major economic shifts (HUF exchange rate, inflation), EU-Hungary political disputes (funding, rule of law), major foreign investments (BMW, CATL, battery plants), residency/visa rule changes.
+    - 9-10: CRITICAL FOR EXPATS: Immigration policy updates, new visa rules, residency permit changes (e.g. Golden Visa, guest worker laws), Schengen border control changes, and anything directly impacting expats living in Hungary.
+    - 8-10: Major economic shifts (HUF exchange rate, inflation), EU-Hungary political disputes (funding, rule of law), major foreign investments (BMW, CATL, battery plants).
     - 5-7: Significant tech/business news, major Budapest infrastructure updates, high-impact cultural events.
     - 1-4: Minor local news, general interest, lifestyle stories.
     
@@ -237,13 +238,14 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
 
     ### EDITORIAL GUIDELINES ###
     1. PRIORITIZATION: Maintain the order of the pre-sorted news items.
-    2. DEPTH: Devote significantly more time to higher-scoring stories.
-    3. FACT-CHECKING: For news items, check the publication dates in your mind. Do NOT say "tomorrow's vote" if the event has already passed.
-    4. EVENTS: After the news, feature 1-2 interesting Budapest events from the provided sources. Describe them briefly to add "lifestyle flavor".
-    5. SOCIAL MEDIA: Include 1 quirky social media topic after events.
-    6. CALL TO ACTION (CTA): MANDATORY. After the social media segment, you MUST say: "That's all for today's Hungarian Daily. If you enjoyed this episode, please subscribe, share it with friends and colleagues in Budapest, and drop us a review wherever you listen — it really helps. I'm Ray, and I'll see you tomorrow. Viszlát!" This closing MUST be the very last thing in the script. The script is NOT complete without it.
-    7. TONE: Think "NPR Up First". Fast-paced, insightful, and end with a smile.
-    8. LENGTH: The full script MUST be between 1800 and 2400 words. Pad with background on Hungary's economic situation if short. ALWAYS finish the full closing before hitting the word limit — never truncate the CTA or sign-off.
+    2. IMMIGRATION & EXPAT FOCUS: If there is ANY news regarding immigration, visas, residency permits, or border control, you MUST dedicate a distinct, prominent segment to it. Treat this as the most critical information for your foreign audience.
+    3. DEPTH: Devote significantly more time to higher-scoring stories (especially immigration and economy).
+    4. FACT-CHECKING: For news items, check the publication dates in your mind. Do NOT say "tomorrow's vote" if the event has already passed.
+    5. EVENTS: After the news, feature 1-2 interesting Budapest events from the provided sources. Describe them briefly to add "lifestyle flavor".
+    6. SOCIAL MEDIA: Include 1 quirky social media topic after events.
+    7. CALL TO ACTION (CTA): MANDATORY. After the social media segment, you MUST say: "That's all for today's Hungarian Daily. If you enjoyed this episode, please subscribe, share it with friends and colleagues in Budapest, and drop us a review wherever you listen — it really helps. I'm Ray, and I'll see you tomorrow. Viszlát!" This closing MUST be the very last thing in the script. The script is NOT complete without it.
+    8. TONE: Think "NPR Up First". Fast-paced, insightful, and end with a smile.
+    9. LENGTH: The full script MUST be between 1800 and 2400 words. Pad with background on Hungary's economic situation if short. ALWAYS finish the full closing before hitting the word limit — never truncate the CTA or sign-off.
     9. POLITICAL TITLES — CRITICAL FACT-CHECK RULE: NEVER assume or repeat a person's political title
        from your training data or memory. ONLY use titles (e.g. "Prime Minister", "Minister of Finance")
        that are EXPLICITLY stated in TODAY's provided source materials. If a source calls someone
