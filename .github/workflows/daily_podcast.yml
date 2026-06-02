@@ -2,11 +2,11 @@ name: The Hungarian Daily — Auto Podcast Generator
 
 on:
   schedule:
-    # 04:00 UTC = 06:00 Budapest Summer Time (CEST = UTC+2)
-    # 前置 30 分鐘起跟，补償 GitHub Actions 排隊延遲 (15–30 min)、API 超時重試 (503 retry)
-    # ✔ 夏令時 (CEST = UTC+2): 04:00 UTC = 06:00 Budapest → 預期範封 07:00
-    # ⚠️ 冬令時 (CET  = UTC+1): 請改為 '00 05 * * *' (十月下旬從)
-    - cron: '0 4 * * *'
+    # 00:00 UTC = 02:00 Budapest Summer Time (CEST = UTC+2)
+    # Pipeline takes ~5-10 min (Kokoro TTS). Expected completion: 02:10-02:30 Budapest.
+    # ✔ 夏令時 (CEST = UTC+2): 00:00 UTC = 02:00 Budapest
+    # ⚠️ 冬令時 (CET  = UTC+1): 請改為 '0 1 * * *' (十月最後一個週日起)
+    - cron: '0 0 * * *'
   workflow_dispatch: # Allow manual trigger from the GitHub Actions UI
 
 jobs:
@@ -30,10 +30,13 @@ jobs:
       - name: ⚙️ Verify ffmpeg
         run: ffmpeg -version
 
+      - name: 🔊 Install espeak-ng (required for Kokoro TTS phoneme engine)
+        run: sudo apt-get install -y espeak-ng
+
       - name: 📦 Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install requests beautifulsoup4 feedparser python-dotenv google-genai edge-tts pydub audioop-lts podgen
+          python -m pip install requests beautifulsoup4 feedparser python-dotenv google-genai edge-tts pydub audioop-lts podgen soundfile numpy "kokoro>=0.9.4"
 
       - name: 🎙️ Run main pipeline (scrape → AI script → AI editor → TTS → mix → email → Threads)
         timeout-minutes: 30
