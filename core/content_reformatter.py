@@ -92,16 +92,17 @@ def reformat_for_threads(podcast_script):
     print("🤖 正在使用 AI 萃取 Threads 貼文精華短語...")
     
     # 強化版 Prompt：強制 AI 抓出具體新聞事件 (針對匈牙利頻道客製化)
+    SPOTIFY_URL = "https://open.spotify.com/show/7zU2b8xDgRL8D7b9T9kjiE"
     prompt = f"""
     You are a witty, professional social media manager for an English-language news podcast about Hungary.
     Read the following podcast script and create a single post for Threads.
     
     CRITICAL REQUIREMENTS:
     1. You MUST include 2 or 3 bullet points summarizing the actual news headlines from the script (e.g., EU updates, HUF exchange rates, local tech). Do NOT just write generic teasers. Give me the facts.
-    2. The entire output MUST be strictly UNDER 450 characters.
+    2. The entire output MUST be strictly UNDER 380 characters (we will add a Spotify link after).
     3. Use 1 or 2 relevant emojis.
     4. Do NOT use HTML formatting. Use plain text and line breaks.
-    5. End the post with: "Listen to the full episode on our feed! 🎧".
+    5. End the post with: "Listen now on Spotify 🎧" — that's the final line, no URL needed (we add it automatically).
     6. Do not include any title like "Threads Post:". Just return the text.
     
     Here is the podcast script:
@@ -118,10 +119,16 @@ def reformat_for_threads(podcast_script):
         )
         result_text = response.text.strip()
         
+        # 程式端附上 Spotify 連結（不靠AI，確保連結一定出現且正確）
+        # 移除 AI 可能自行附上的連結重複字樣，再統一在結尾加上
+        result_text = result_text.replace(SPOTIFY_URL, "").rstrip()
+        result_text = f"{result_text}\n{SPOTIFY_URL}"
+        
         # [Debug] 直接在 GitHub Log 印出來，方便我們抓蟲
         print("\n👀 [Debug] Gemini 生成的 Threads 貼文結果如下：")
         print("-" * 30)
         print(result_text)
+        print(f"  (Total chars: {len(result_text)})")
         print("-" * 30 + "\n")
         
         return result_text

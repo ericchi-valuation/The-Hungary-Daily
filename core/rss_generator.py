@@ -9,8 +9,19 @@ FEED_FILE = "feed.xml"
 
 # Podcast Metadata
 PODCAST_NAME = "The Hungarian Daily"
-PODCAST_DESC = "Your essential daily English-language briefing on Hungarian politics, business, and culture."
-PODCAST_WEBSITE = "https://github.com/ericchi-valuation/The-Hungary-Daily"
+PODCAST_DESC = (
+    "Your essential morning briefing on life, business, and politics in Hungary — "
+    "produced fresh every day by AI, hosted by Ray. "
+    "Each episode scans 10+ trusted Hungarian and international sources including "
+    "Hungary Today, Portfolio.hu, Budapest Business Journal, The Budapest Times, "
+    "Telex, Daily News Hungary, and more. "
+    "We cover ranked top stories, Budapest weather, Forint exchange rates "
+    "(EUR/HUF and USD/HUF vs the previous business day's close), "
+    "local events around the city, and what the expat community is talking about on Reddit r/budapest. "
+    "Episodes run 8–12 minutes. New episode every morning. "
+    "Perfect for expats, international professionals, and anyone curious about Central Europe."
+)
+PODCAST_WEBSITE = "https://open.spotify.com/show/7zU2b8xDgRL8D7b9T9kjiE"
 PODCAST_EXPLICIT = False
 PODCAST_IMAGE_URL = "https://ericchi-valuation.github.io/The-Hungary-Daily/cover.jpg"
 AUTHOR_NAME = "Eric Chi"
