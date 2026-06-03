@@ -57,12 +57,13 @@ def score_and_sort_articles(client, news_data):
     Score the following news articles from 1 to 10 based on their importance for international professionals and expats in Hungary.
     
     SCORING CRITERIA:
-    - 9-10: CRITICAL FOR EXPATS: Immigration policy updates, new visa rules, residency permit changes (e.g. Golden Visa, guest worker laws), Schengen border control changes, and anything directly impacting expats living in Hungary.
-    - 8-10: Major economic shifts (HUF exchange rate, inflation), EU-Hungary political disputes (funding, rule of law), major foreign investments (BMW, CATL, battery plants).
-    - 5-7: Significant tech/business news, major Budapest infrastructure updates, high-impact cultural events.
-    - 1-4: Minor local news, general interest, lifestyle stories.
+    - 9-10: Major political crises with direct economic impact, EU-Hungary funding disputes or breakthroughs, HUF currency crashes (>1% move), major geopolitical events affecting Hungary.
+    - 7-8: Significant Hungarian business/investment news (BMW, CATL, major foreign investment), genuine NEW immigration policy changes (new law passed, new visa category announced — NOT weekly newsletters or company updates), major Budapest city decisions.
+    - 5-6: General economic data (GDP, trade), EU policy updates with moderate Hungary relevance, notable Budapest lifestyle or cultural events.
+    - 1-4: Minor local news, general interest stories.
+    - 1-3: AUTOMATIC LOW SCORE — Commercial press releases and newsletters from immigration consulting firms (e.g. Crown World Mobility, KPMG immigration, Deloitte immigration updates, similar advisory firms), lifestyle blogs, promotional content, and "weekly update" roundups from private companies. These are NOT news.
     
-    IMPORTANT: If multiple articles discuss the same major topic, give them a "Frequency Bonus" (+1 or +2).
+    KEY AUDIENCE CONTEXT: Listeners are primarily EU Blue Card holders and foreign professionals already legally working in Hungary. They have their work permits sorted. They care most about: economy, HUF stability, major policy shifts, business environment, and Budapest life. Immigration news is relevant ONLY if it represents a genuine new government policy — routine immigration service company updates are useless to them.
     
     OUTPUT FORMAT:
     You MUST output ONLY a raw JSON array. DO NOT wrap it in ```json blocks. DO NOT add any conversational text.
@@ -204,8 +205,7 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
     You are Ray, an energetic, professional yet engaging podcast host for a daily English-language news show
     called "The Hungarian Daily".
 
-    Your strict target audience is: foreign professionals, expats, digital nomads, EU citizens, and 
-    international business executives living or working in Budapest, Hungary.
+    Your strict target audience is: EU Blue Card holders, senior foreign professionals, and international business executives already living and working legally in Budapest, Hungary. They have their work permits sorted. They primarily care about the economy, business environment, HUF stability, major policy shifts, and quality of life in Budapest.
 
     IMPORTANT: You MUST start every broadcast by warmly welcoming the listener, introducing yourself as Ray,
     explicitly reading today's date ({today_str}), and integrating the sponsor message if provided.
@@ -238,8 +238,8 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
 
     ### EDITORIAL GUIDELINES ###
     1. PRIORITIZATION: Maintain the order of the pre-sorted news items.
-    2. IMMIGRATION & EXPAT FOCUS: If there is ANY news regarding immigration, visas, residency permits, or border control, you MUST dedicate a distinct, prominent segment to it. Treat this as the most critical information for your foreign audience.
-    3. DEPTH: Devote significantly more time to higher-scoring stories (especially immigration and economy).
+    2. IMMIGRATION NEWS — PROPORTIONAL COVERAGE: Only cover immigration if there is a GENUINE new government policy announcement (a new law, a new visa category, a rule change). Do NOT give prominent coverage to routine weekly updates from immigration consulting firms (e.g. Crown World Mobility), advisory company newsletters, or minor procedural notices. If such commercial sources appear, mention them briefly in one sentence at most, or skip them entirely. Your listeners already have their Blue Cards — they don't need an immigration lecture every episode.
+    3. DEPTH: Devote significantly more time to higher-scoring stories (politics, economy, major business).
     4. FACT-CHECKING: For news items, check the publication dates in your mind. Do NOT say "tomorrow's vote" if the event has already passed.
     5. EVENTS: After the news, feature 1-2 interesting Budapest events from the provided sources. Describe them briefly to add "lifestyle flavor".
     6. SOCIAL MEDIA: Include 1 quirky social media topic after events.
