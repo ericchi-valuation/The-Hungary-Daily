@@ -2,16 +2,16 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
   <channel>
     <title>The Hungarian Daily</title>
-    <link>https://github.com/ericchi-valuation/The-Hungary-Daily</link>
-    <description>Your essential daily English-language briefing on Hungarian politics, business, and culture.</description>
+    <link>https://open.spotify.com/show/7zU2b8xDgRL8D7b9T9kjiE</link>
+    <description>Your essential morning briefing on life, business, and politics in Hungary — produced fresh every day by AI, hosted by Ray. Each episode scans 10+ trusted Hungarian and international sources including Hungary Today, Portfolio.hu, Budapest Business Journal, The Budapest Times, Telex, Daily News Hungary, and more. We cover ranked top stories, Budapest weather, Forint exchange rates (EUR/HUF and USD/HUF vs the previous business day's close), local events around the city, and what the expat community is talking about on Reddit r/budapest. Episodes run 8–12 minutes. New episode every morning. Perfect for expats, international professionals, and anyone curious about Central Europe.</description>
     <itunes:explicit>no</itunes:explicit>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 02 Jun 2026 08:46:39 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2026 21:09:55 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 02 Jun 2026 10:46:36 +0200</pubDate>
+    <pubDate>Wed, 03 Jun 2026 23:09:51 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -387,6 +387,14 @@
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-02/HungaryDaily_Podcast_Final.mp3" length="18067791" type="audio/mpeg"/>
       <itunes:duration>12:32</itunes:duration>
       <pubDate>Tue, 02 Jun 2026 10:46:36 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-06-03</title>
+      <description><![CDATA[Today's Hungarian Daily features critical updates on immigration, including weekly policy changes and insights into Residency-by-Investment programs, alongside the EU's new 'return hubs' deal. We also delve into Péter Magyar's significant political moves, from a potential deal to lift Hungary's veto on Ukraine's EU accession to efforts to rebuild the Visegrád Group, and his role in unlocking billions in EU funds. The economy shows strong Q1 growth driven by consumption and a climbing services surplus, despite the Forint's slight dip due to global factors. For events, check out a fascinating exhibition celebrating legendary Hungarian magician Rodolfo and the reopening of the historic Haggenmacher Beer Hall in Budafok. Tune in for all the essential news and lifestyle insights for Budapest's international community.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-03/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-03/HungaryDaily_Podcast_Final.mp3" length="17872187" type="audio/mpeg"/>
+      <itunes:duration>12:24</itunes:duration>
+      <pubDate>Wed, 03 Jun 2026 23:09:51 +0200</pubDate>
     </item>
   </channel>
 </rss>
