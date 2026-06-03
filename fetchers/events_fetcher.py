@@ -5,9 +5,13 @@ Fetches today's cultural, sports, and city events in Budapest from multiple
 free/public sources. Returns a short list of highlights for the podcast script.
 
 Sources used (all free, no API key required):
-  1. We Love Budapest RSS        – Popular local lifestyle & events site
-  2. Budapest.com Events RSS     – City event aggregator
-  3. Google News (fallback)      – Search-based event discovery
+  1. Funzine.hu              – English-language Budapest events & lifestyle guide
+  2. Budapest.com Events     – City event aggregator
+  3. Google News: Concerts   – Live performances, opera, classical
+  4. Google News: Culture    – Exhibitions, museum openings, galleries
+  5. Google News: Lifestyle  – Food, festivals, outdoor events
+  6. Hungary Today Culture   – Cultural & social news from Hungary Today
+  7. Pestbuda.hu             – Historical & cultural events around the city
 """
 
 import feedparser
@@ -18,16 +22,15 @@ import time
 BUDAPEST_TZ = pytz.timezone("Europe/Budapest")
 
 
-def _is_today_or_upcoming(entry, days_ahead=2):
+def _is_today_or_upcoming(entry, days_ahead=3):
     """
     Check if a feed entry is for today or within the next `days_ahead` days.
     Falls back to True if the entry has no parseable date (to avoid over-filtering).
     """
     now_budapest = datetime.now(BUDAPEST_TZ)
-    cutoff_past  = now_budapest - timedelta(hours=12)  # allow events that started tonight
+    cutoff_past   = now_budapest - timedelta(hours=12)   # allow events that started last night
     cutoff_future = now_budapest + timedelta(days=days_ahead)
 
-    # feedparser provides published_parsed / updated_parsed as UTC struct_time
     for attr in ('published_parsed', 'updated_parsed'):
         t = getattr(entry, attr, None)
         if t is None:
@@ -42,11 +45,11 @@ def _is_today_or_upcoming(entry, days_ahead=2):
     return True  # no date info → include by default
 
 
-def _parse_feed(url, limit=4, label=""):
+def _parse_feed(url, limit=3, label=""):
     """Fetch an RSS feed and return a list of event dicts."""
     events = []
     try:
-        feed = feedparser.parse(url)
+        feed = feedparser.parse(url, request_headers={"User-Agent": "Mozilla/5.0"})
         for entry in feed.entries:
             if len(events) >= limit:
                 break
@@ -57,6 +60,9 @@ def _parse_feed(url, limit=4, label=""):
             link    = entry.get("link", "")
             if not title:
                 continue
+            # Strip HTML tags from summary for clean podcast script
+            import re
+            summary = re.sub(r'<[^>]+>', '', summary)
             events.append({
                 "title":   title,
                 "summary": summary[:200] if summary else "",
@@ -70,51 +76,80 @@ def _parse_feed(url, limit=4, label=""):
 
 def get_budapest_events(limit=3):
     """
-    Aggregate today's Budapest events from multiple free RSS/web sources.
+    Aggregate today's Budapest events from multiple diverse free RSS sources.
     Returns up to `limit` events suitable for inclusion in the podcast script.
 
-    Each event dict has:
-        title, summary, link, source
+    Strategy: Pull from varied sources so no single site dominates the output.
+    We deliberately avoid single-source dominance to keep coverage balanced.
+
+    Each event dict has: title, summary, link, source
     """
     print("🎭 Fetching Budapest daily events...")
     all_events = []
-   
-    # ── Source 1: We Love Budapest (English lifestyle & events) ─────────────
-    all_events.extend(_parse_feed(
-        "https://welovebudapest.com/feed/",
-        limit=4,
-        label="We Love Budapest"
-    ))
-    time.sleep(0.5)
 
-    # ── Source 2: Pestbuda.hu English section ────────────────────────────────
+    # ── Source 1: Funzine.hu (English Budapest events guide) ─────────────────
+    # Funzine is the premier English-language event guide for Budapest expats
     all_events.extend(_parse_feed(
-        "https://pestbuda.hu/feed/",
+        "https://funzine.hu/feed/",
         limit=3,
-        label="Pestbuda"
+        label="Funzine Budapest"
     ))
     time.sleep(0.5)
 
-    # ── Source 3: Google News (Hungarian Local Events) ───────────────────────
+    # ── Source 2: Budapest.com Events ────────────────────────────────────────
+    all_events.extend(_parse_feed(
+        "https://www.budapest.com/events/feed/",
+        limit=2,
+        label="Budapest.com"
+    ))
+    time.sleep(0.5)
+
+    # ── Source 3: Google News — Live performances (concerts, opera, shows) ───
+    concerts_url = (
+        "https://news.google.com/rss/search"
+        "?q=Budapest+(concert+OR+opera+OR+performance+OR+show+OR+theatre)+when:3d"
+        "&hl=en-HU&gl=HU&ceid=HU:en"
+    )
+    all_events.extend(_parse_feed(concerts_url, limit=2, label="Budapest Concerts"))
+    time.sleep(0.5)
+
+    # ── Source 4: Google News — Cultural events (exhibitions, galleries) ──────
+    culture_url = (
+        "https://news.google.com/rss/search"
+        "?q=Budapest+(exhibition+OR+museum+OR+gallery+OR+opening)+when:3d"
+        "&hl=en-HU&gl=HU&ceid=HU:en"
+    )
+    all_events.extend(_parse_feed(culture_url, limit=2, label="Budapest Culture"))
+    time.sleep(0.5)
+
+    # ── Source 5: Google News — Lifestyle (food, festivals, outdoor) ──────────
+    lifestyle_url = (
+        "https://news.google.com/rss/search"
+        "?q=Budapest+(festival+OR+market+OR+outdoor+OR+food+event)+when:3d"
+        "&hl=en-HU&gl=HU&ceid=HU:en"
+    )
     if len(all_events) < 4:
-        google_url_hu = (
-            "https://news.google.com/rss/search"
-            "?q=Budapest+AND+(program+OR+kiállítás+OR+koncert+OR+fesztivál)+when:2d"
-            "&hl=hu&gl=HU&ceid=HU:hu"
-        )
-        all_events.extend(_parse_feed(google_url_hu, limit=3, label="Local Events (HU)"))
+        all_events.extend(_parse_feed(lifestyle_url, limit=2, label="Budapest Events"))
+    time.sleep(0.5)
+
+    # ── Source 6: Hungary Today — Culture section ─────────────────────────────
+    if len(all_events) < 3:
+        all_events.extend(_parse_feed(
+            "https://hungarytoday.hu/category/culture/feed/",
+            limit=2,
+            label="Hungary Today"
+        ))
         time.sleep(0.5)
 
-    # ── Source 4: Google News fallback (English) ─────────────────────────────
-    if len(all_events) < 2:
-        google_url = (
-            "https://news.google.com/rss/search"
-            "?q=Budapest+event+concert+exhibition+festival+today"
-            "&hl=en-HU&gl=HU&ceid=HU:en"
-        )
-        all_events.extend(_parse_feed(google_url, limit=2, label="Google News (EN)"))
+    # ── Source 7: Pestbuda.hu (historical & architectural events) ────────────
+    if len(all_events) < 4:
+        all_events.extend(_parse_feed(
+            "https://pestbuda.hu/feed/",
+            limit=2,
+            label="Pestbuda"
+        ))
 
-    # ── Deduplicate by title (case-insensitive) ───────────────────────────────
+    # ── Deduplicate by title (case-insensitive, first 60 chars) ──────────────
     seen   = set()
     unique = []
     for ev in all_events:
