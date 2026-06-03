@@ -104,6 +104,7 @@ def reformat_for_threads(podcast_script):
     4. Do NOT use HTML formatting. Use plain text and line breaks.
     5. End the post with: "Listen now on Spotify 🎧" — that's the final line, no URL needed (we add it automatically).
     6. Do not include any title like "Threads Post:". Just return the text.
+    7. IMPORTANT: Always say "today" not "this week". This is a DAILY podcast published every morning.
     
     Here is the podcast script:
     {podcast_script}
