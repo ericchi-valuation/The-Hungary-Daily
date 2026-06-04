@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 03 Jun 2026 21:33:14 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jun 2026 03:58:28 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Wed, 03 Jun 2026 23:33:13 +0200</pubDate>
+    <pubDate>Thu, 04 Jun 2026 05:58:25 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -395,6 +395,14 @@
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-03/HungaryDaily_Podcast_Final.mp3" length="22418120" type="audio/mpeg"/>
       <itunes:duration>15:34</itunes:duration>
       <pubDate>Wed, 03 Jun 2026 23:33:13 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-06-04</title>
+      <description><![CDATA[Today's Hungarian Daily covers significant economic news, with the Hungary finance minister announcing that EU funds will boost the economy and cut debt, aligning with Brussels' calls for competitiveness reforms. We also delve into EU-Hungary relations, as an EU Commissioner visits Budapest to discuss "Rule of Law Reforms" by PM Magyar, who has also vowed an absolute ban on illegal migration. For your lifestyle, explore Budapest's night programs and the hidden gems of Kőbánya. Tune in for more insights!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-04/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-04/HungaryDaily_Podcast_Final.mp3" length="18714166" type="audio/mpeg"/>
+      <itunes:duration>12:59</itunes:duration>
+      <pubDate>Thu, 04 Jun 2026 05:58:25 +0200</pubDate>
     </item>
   </channel>
 </rss>
