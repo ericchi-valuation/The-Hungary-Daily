@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 09 Jun 2026 03:05:43 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2026 03:46:59 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 09 Jun 2026 05:05:38 +0200</pubDate>
+    <pubDate>Wed, 10 Jun 2026 05:46:55 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -443,6 +443,14 @@
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-09/HungaryDaily_Podcast_Final.mp3" length="17049644" type="audio/mpeg"/>
       <itunes:duration>11:50</itunes:duration>
       <pubDate>Tue, 09 Jun 2026 05:05:38 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-06-10</title>
+      <description><![CDATA[Today we cover the Hungarian government's major 110-page draft bill aimed at reclaiming frozen EU funds by dissolving several public trust funds, the growing concerns among local employers over a potential guest worker ban, and May's inflation rate falling below expectations to 1.8 percent. For local events, we highlight a free Sunday play paradise for children and the massive Rammstein concert at the Puskas Arena. Tune in to stay informed on the latest economic, policy, and lifestyle updates in Budapest.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-10/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-10/HungaryDaily_Podcast_Final.mp3" length="16880370" type="audio/mpeg"/>
+      <itunes:duration>11:43</itunes:duration>
+      <pubDate>Wed, 10 Jun 2026 05:46:55 +0200</pubDate>
     </item>
   </channel>
 </rss>
