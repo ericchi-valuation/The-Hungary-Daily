@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 10 Jun 2026 03:46:59 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jun 2026 03:54:33 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Wed, 10 Jun 2026 05:46:55 +0200</pubDate>
+    <pubDate>Thu, 11 Jun 2026 05:54:27 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -451,6 +451,14 @@
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-10/HungaryDaily_Podcast_Final.mp3" length="16880370" type="audio/mpeg"/>
       <itunes:duration>11:43</itunes:duration>
       <pubDate>Wed, 10 Jun 2026 05:46:55 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-06-11</title>
+      <description><![CDATA[Today's Hungarian Daily covers significant policy discussions from Magyar Péter, including the potential removal of the National Creed from public institutions, the introduction of a wealth tax, and the decriminalization of cryptocurrencies. We also delve into the global impact of escalating US-Iran tensions on markets, and the positive news of BYD pivoting its $1 billion EV plant investment to Hungary. For local events, explore the Badacsony region's wines and nature, or enjoy free jazz evenings in Újlipótváros. Tune in for more essential news and lifestyle insights from Budapest!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-11/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-11/HungaryDaily_Podcast_Final.mp3" length="16683511" type="audio/mpeg"/>
+      <itunes:duration>11:35</itunes:duration>
+      <pubDate>Thu, 11 Jun 2026 05:54:27 +0200</pubDate>
     </item>
   </channel>
 </rss>
