@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 11 Jun 2026 03:54:33 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jun 2026 03:55:54 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Thu, 11 Jun 2026 05:54:27 +0200</pubDate>
+    <pubDate>Fri, 12 Jun 2026 05:55:51 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -459,6 +459,14 @@
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-11/HungaryDaily_Podcast_Final.mp3" length="16683511" type="audio/mpeg"/>
       <itunes:duration>11:35</itunes:duration>
       <pubDate>Thu, 11 Jun 2026 05:54:27 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-06-12</title>
+      <description><![CDATA[Today's Hungarian Daily covers billions in EU funding for energy upgrades, signaling significant economic investment and a greener future for Hungary. We also discuss the Forint's stable closing rates, alongside an interesting intra-day strengthening reported by Portfolio.hu following a geopolitical announcement. Plus, we delve into Péter Magyar's comments on restricting guest workers and the implications for Hungary's labor market. For events, explore 'Nyári élménykalauz Pátyon' for a charming local escape and catch the 'UIPM Pentathlon World Cup: Women's Final' for top-tier sports action. Tune in for these stories and more insights into Budapest life.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-12/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-12/HungaryDaily_Podcast_Final.mp3" length="20514107" type="audio/mpeg"/>
+      <itunes:duration>14:14</itunes:duration>
+      <pubDate>Fri, 12 Jun 2026 05:55:51 +0200</pubDate>
     </item>
   </channel>
 </rss>
