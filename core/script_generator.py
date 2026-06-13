@@ -57,13 +57,15 @@ def score_and_sort_articles(client, news_data):
     Score the following news articles from 1 to 10 based on their importance for international professionals and expats in Hungary.
     
     SCORING CRITERIA:
-    - 9-10: Major political crises with direct economic impact, EU-Hungary funding disputes or breakthroughs, HUF currency crashes (>1% move), major geopolitical events affecting Hungary.
+    - 9-10: Major political crises with direct economic impact on Hungary, EU-Hungary funding disputes or breakthroughs, HUF currency crashes (>1% move), major geopolitical events WITH DIRECT HUNGARY NEXUS.
     - 7-8: Significant Hungarian business/investment news (BMW, CATL, major foreign investment), genuine NEW immigration policy changes (new law passed, new visa category announced — NOT weekly newsletters or company updates), major Budapest city decisions.
     - 5-6: General economic data (GDP, trade), EU policy updates with moderate Hungary relevance, notable Budapest lifestyle or cultural events.
-    - 1-4: Minor local news, general interest stories.
-    - 1-3: AUTOMATIC LOW SCORE — Commercial press releases and newsletters from immigration consulting firms (e.g. Crown World Mobility, KPMG immigration, Deloitte immigration updates, similar advisory firms), lifestyle blogs, promotional content, and "weekly update" roundups from private companies. These are NOT news.
+    - 2-4: Minor local news, general interest stories.
+    - 1-3: AUTOMATIC LOW SCORE — (a) Commercial press releases from immigration consulting firms (Crown World Mobility, KPMG, Deloitte immigration newsletters, etc.) (b) Global geopolitical conflicts with NO direct Hungary connection (e.g. Israel-Iran war, US domestic politics, Middle East tensions) — mention these only briefly as international context, never as a top story. (c) "Weekly update" roundups from private companies. These are NOT primary news.
     
-    KEY AUDIENCE CONTEXT: Listeners are primarily EU Blue Card holders and foreign professionals already legally working in Hungary. They have their work permits sorted. They care most about: economy, HUF stability, major policy shifts, business environment, and Budapest life. Immigration news is relevant ONLY if it represents a genuine new government policy — routine immigration service company updates are useless to them.
+    KEY AUDIENCE CONTEXT: Listeners are EU Blue Card holders and senior foreign professionals already living and working legally in Budapest. They care most about: Hungary economy, HUF stability, major policy shifts, business environment, and Budapest life. Global conflict news that doesn't directly affect Hungary should be ONE brief sentence of context, not a lead story.
+    
+    IMPORTANT: If multiple articles discuss the same major topic, give them a "Frequency Bonus" (+1 or +2).
     
     OUTPUT FORMAT:
     You MUST output ONLY a raw JSON array. DO NOT wrap it in ```json blocks. DO NOT add any conversational text.
@@ -222,38 +224,56 @@ def generate_podcast_script(news_data, social_data, weather_data=None, exchange_
 
     ### MANDATORY SECTION — SMART CURRENCY CORNER ###
     Next, include the "Currency Corner".
-    - CRITICAL TIMING CONTEXT: The exchange rates provided come from the Frankfurter API's 'latest'
-      endpoint, which reflects the MOST RECENTLY SETTLED trading day's closing rates — this is
-      typically the last available business day's rates, NOT real-time. The rate_date field in the data tells you exactly
-      which day's closing rate it is. The change percentage compares that day vs. the business day
-      before it.
-    - When announcing rates, always frame it accurately, e.g.: "As of the last market close," or
-      "The latest settled closing rate showed" or "The latest available rate, from [date]'s close, is..."
-      NEVER say "Today's exchange rate is X" or "right now" because these are NOT live rates.
+    - CRITICAL TIMING CONTEXT: The exchange rates come from the last available settled trading day's closing rates — NOT real-time.
+    - When announcing rates, always frame accurately: "As of the last market close" or "The latest settled closing rate from [date]."
+      NEVER say "Today's exchange rate is X" or "right now."
     - Report the exact HUF/EUR and HUF/USD rates provided.
-    - SMART LOGIC: Check the source materials. If "High Volatility: YES" is present, you MUST provide
-      a deeper analysis of the recent 1%+ swing, explaining why it happened (if evident in news) and
-      what it means for expats' purchasing power. If "High Volatility: NO", keep it VERY brief.
-      Just state the rates and say "The Forint is stable." DO NOT give a long analysis if it's stable.
+    - SMART LOGIC: If "High Volatility: YES" — give deeper analysis of the swing and its impact. If "High Volatility: NO" — keep it VERY brief: state the rates and say "The Forint is stable."
+    - SUNDAY RULE: If the exchange rate summary says "SUNDAY_NO_RATES", SKIP the Currency Corner segment entirely. Do not mention exchange rates at all. Sunday markets are closed.
+    - MONDAY RULE: If "is_monday: True" and a week-over-week comparison is provided, frame it as: "Looking back at the week, the Forint ended last Friday at [rate], compared to [rate] the Friday before — a [X]% move over the week." This gives listeners a weekly performance overview instead of a daily blip.
 
     ### EDITORIAL GUIDELINES ###
     1. PRIORITIZATION: Maintain the order of the pre-sorted news items.
-    2. IMMIGRATION NEWS — PROPORTIONAL COVERAGE: Only cover immigration if there is a GENUINE new government policy announcement (a new law, a new visa category, a rule change). Do NOT give prominent coverage to routine weekly updates from immigration consulting firms (e.g. Crown World Mobility), advisory company newsletters, or minor procedural notices. If such commercial sources appear, mention them briefly in one sentence at most, or skip them entirely. Your listeners already have their Blue Cards — they don't need an immigration lecture every episode.
-    3. DEPTH: Devote significantly more time to higher-scoring stories (politics, economy, major business).
-    4. FACT-CHECKING: For news items, check the publication dates in your mind. Do NOT say "tomorrow's vote" if the event has already passed.
-    5. EVENTS: After the news, feature 1-2 interesting Budapest events from the provided sources. Describe them briefly to add "lifestyle flavor".
-    6. SOCIAL MEDIA: Include 1 quirky social media topic after events.
-    7. CALL TO ACTION (CTA): MANDATORY. After the social media segment, you MUST say: "That's all for today's Hungarian Daily. If you enjoyed this episode, please subscribe, share it with friends and colleagues in Budapest, and drop us a review wherever you listen — it really helps. I'm Ray, and I'll see you tomorrow. Viszlát!" This closing MUST be the very last thing in the script. The script is NOT complete without it.
-    8. TONE: Think "NPR Up First". Fast-paced, insightful, and end with a smile.
-    9. LENGTH: The full script MUST be between 1800 and 2400 words. Pad with background on Hungary's economic situation if short. ALWAYS finish the full closing before hitting the word limit — never truncate the CTA or sign-off.
-    9. POLITICAL TITLES — CRITICAL FACT-CHECK RULE: NEVER assume or repeat a person's political title
-       from your training data or memory. ONLY use titles (e.g. "Prime Minister", "Minister of Finance")
-       that are EXPLICITLY stated in TODAY's provided source materials. If a source calls someone
-       "Prime Minister X" but another source or general knowledge suggests they may no longer hold
-       that role, use their NAME ONLY (e.g. "Viktor Orbán stated...") and add context such as
-       "according to [source name]". This rule applies to ALL political figures.
-       SPECIFIC NOTE: Do NOT refer to Viktor Orbán as Hungary's Prime Minister unless today's
-       source materials explicitly confirm he currently holds that office.
+    
+    2. IMMIGRATION NEWS — PROPORTIONAL COVERAGE: Only cover immigration if there is a GENUINE new government policy announcement (a new law, a new visa category, a rule change). Do NOT give prominent coverage to routine weekly updates from immigration consulting firms (e.g. Crown World Mobility), advisory company newsletters, or minor procedural notices. Mention such sources in one sentence at most, or skip them entirely.
+    
+    3. GLOBAL NEWS WITHOUT HUNGARY NEXUS — BRIEF ONLY: If a top story is a global conflict or geopolitical event with NO direct Hungary connection (e.g. Israel-Iran war, US elections, Middle East tensions), cover it in 2-3 sentences maximum as an "international briefing" context note. Do NOT build it into a full segment or lead story. Always connect it back to Hungary: "For context, global oil prices may affect Hungary's energy costs..."
+    
+    4. NO REPETITIVE ANALYSIS — CRITICAL RULE: Each news story gets ONE clear, concise treatment. Structure: (a) What happened, (b) What it means for the listener — maximum 4 sentences total per story. DO NOT write a second paragraph that restates the same analysis with slightly different wording. DO NOT add a "historical context" paragraph that just repeats what you just said. This is the most common AI padding mistake and it is BANNED.
+    
+    5. MISSING EXCHANGE RATE DATA: If today's exchange rate data is unavailable, do NOT say "we have no data" on air. Instead say: "The Forint continues to trade in the range we saw earlier this week — we'll bring you the latest settled figures as soon as markets close." Keep it professional and brief.
+    
+    6. DEPTH: Devote more time to high-scoring stories through genuine analysis, not through repetition.
+    
+    7. FACT-CHECKING — STALE NEWS: Check publication dates. If an event already happened (e.g. a concert that ended 3 days ago, a competition that concluded last week), do NOT present it as upcoming or current. Either skip it or use past tense: "Budapest hosted..."
+    
+    8. EVENTS: After the news, feature 1-2 interesting Budapest events. Only include UPCOMING or CURRENT events, never past events. Describe them briefly.
+    
+    9. SOCIAL MEDIA: Include 1 quirky social media topic after events.
+    
+    10. CALL TO ACTION (CTA): MANDATORY closing: "That's all for today's Hungarian Daily. If you enjoyed this episode, please subscribe, share it with friends and colleagues in Budapest, and drop us a review wherever you listen — it really helps. I'm Ray, and I'll see you tomorrow. Viszlát!"
+    
+    11. TONE: Think "NPR Up First". Fast-paced, punchy, confident. Say things once, say them well.
+    
+    12. LENGTH: The full script MUST be between 1800 and 2400 words. To add length WITHOUT repeating yourself: add genuine analysis, explain the wider economic implications, or give relevant background on Hungary. NEVER pad by repeating the same story twice in different words.
+    13. POLITICAL TITLES — TWO-TIER FACT-CHECK RULE:
+
+        TIER 1 — VERIFIED CURRENT LEADERS LIST (use these titles even if a source has an error):
+        The following leaders are confirmed in office as of early 2025 and should retain their titles
+        unless today's source material EXPLICITLY says they resigned or were removed:
+          • Donald Trump = "US President" or "President Trump" (47th US President, inaugurated Jan 20, 2025).
+            NEVER call him "former President" — that is factually wrong as of 2025-2026.
+          • Friedrich Merz = "German Chancellor" (took office February 2025).
+          • Emmanuel Macron = "French President".
+          • Ursula von der Leyen = "European Commission President".
+
+        TIER 2 — ALL OTHER POLITICAL FIGURES: NEVER assume a title from training data.
+        ONLY use titles (e.g. "Prime Minister", "Minister of Finance") that are EXPLICITLY stated
+        in TODAY's provided source materials. If a source calls someone "Prime Minister X" but
+        other signals suggest they may no longer hold that role, use their NAME ONLY
+        (e.g. "Viktor Orbán stated...") and note "according to [source]."
+        SPECIFIC NOTE: Do NOT refer to Viktor Orbán as Hungary's Prime Minister unless today's
+        source materials explicitly confirm he currently holds that office.
 
     ### STRICT PROHIBITIONS ###
     - DO NOT include Hungarian language lessons.
