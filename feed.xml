@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 13 Jun 2026 03:42:10 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2026 04:05:02 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sat, 13 Jun 2026 05:42:08 +0200</pubDate>
+    <pubDate>Sun, 14 Jun 2026 06:04:58 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -475,6 +475,14 @@
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-13/HungaryDaily_Podcast_Final.mp3" length="17412014" type="audio/mpeg"/>
       <itunes:duration>12:05</itunes:duration>
       <pubDate>Sat, 13 Jun 2026 05:42:08 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-06-14</title>
+      <description><![CDATA[Today's Hungarian Daily reports on China's commitment to strong ties with Hungary's new TISZA-led government, signaling continuity for businesses and investors. We also cover Viktor Orbán's re-election as Fidesz party leader despite recent election losses, reshaping Hungary's political dynamics. Additionally, the new European Migration Pact has entered into force, impacting Hungary's approach to migration. For local events, explore the idyllic Pilis lake at sunset and catch the Metallica Exhibition featuring rare memorabilia. Tune in for more insights on Hungary's economy, policy, and quality of life.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-14/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-14/HungaryDaily_Podcast_Final.mp3" length="22682062" type="audio/mpeg"/>
+      <itunes:duration>15:45</itunes:duration>
+      <pubDate>Sun, 14 Jun 2026 06:04:58 +0200</pubDate>
     </item>
   </channel>
 </rss>
