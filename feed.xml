@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 14 Jun 2026 04:05:02 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jun 2026 04:14:57 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 14 Jun 2026 06:04:58 +0200</pubDate>
+    <pubDate>Mon, 15 Jun 2026 06:14:54 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -483,6 +483,14 @@
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-14/HungaryDaily_Podcast_Final.mp3" length="22682062" type="audio/mpeg"/>
       <itunes:duration>15:45</itunes:duration>
       <pubDate>Sun, 14 Jun 2026 06:04:58 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-06-15</title>
+      <description><![CDATA[Today's Hungarian Daily covers the Fidesz party's congress, Péter Magyar's allegations regarding a refugee camp, and the government's public media overhaul bill. We also delve into the Forint's rally, driven by global market reactions to the US President's announcement regarding Iran, and discuss the surge in Hungarian online spending, with foreign retailers taking the lead. There are no specific upcoming events to highlight in Budapest today, but we look at social media trends regarding the upcoming heatwave. Tune in for more daily news and insights.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-15/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-15/HungaryDaily_Podcast_Final.mp3" length="13852883" type="audio/mpeg"/>
+      <itunes:duration>09:37</itunes:duration>
+      <pubDate>Mon, 15 Jun 2026 06:14:54 +0200</pubDate>
     </item>
   </channel>
 </rss>
