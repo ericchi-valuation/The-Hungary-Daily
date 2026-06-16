@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 15 Jun 2026 04:14:57 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2026 04:05:03 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 15 Jun 2026 06:14:54 +0200</pubDate>
+    <pubDate>Tue, 16 Jun 2026 06:04:59 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -491,6 +491,14 @@
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-15/HungaryDaily_Podcast_Final.mp3" length="13852883" type="audio/mpeg"/>
       <itunes:duration>09:37</itunes:duration>
       <pubDate>Mon, 15 Jun 2026 06:14:54 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-06-16</title>
+      <description><![CDATA[Today's Hungarian Daily focuses on the new EU migration and asylum rules entering application, posing significant policy challenges for Hungary, which has yet to outline a national implementation plan. We also cover a 2.3% month-on-month fall in Hungary's housing prices in May and the trend of Hungarians spending more online, with foreign retailers dominating. Additionally, Fidesz leader Viktor Orbán was re-elected. For events, enjoy free concerts in Budapest's beautiful parks and lively festivals in Veszprém. Tune in tomorrow for more news and analysis.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-16/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-16/HungaryDaily_Podcast_Final.mp3" length="17951182" type="audio/mpeg"/>
+      <itunes:duration>12:27</itunes:duration>
+      <pubDate>Tue, 16 Jun 2026 06:04:59 +0200</pubDate>
     </item>
   </channel>
 </rss>
