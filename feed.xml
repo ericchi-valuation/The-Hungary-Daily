@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 23 Jun 2026 03:14:03 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jun 2026 03:37:23 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 23 Jun 2026 05:13:58 +0200</pubDate>
+    <pubDate>Wed, 24 Jun 2026 05:37:20 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -557,6 +557,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-23/HungaryDaily_Podcast_Final.mp3" length="18276563" type="audio/mpeg"/>
       <itunes:duration>12:41</itunes:duration>
       <pubDate>Tue, 23 Jun 2026 05:13:58 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-06-24</title>
+      <description><![CDATA[Today on The Hungarian Daily, Hungary blocked the next procedural step in Ukraine and Moldova's EU membership talks, signaling continued diplomatic hurdles. We also discussed a proposed constitutional overhaul aiming to dismantle Orbán-era power structures and the relaunch of the Visegrád Group alliance in Gödöllő. For events, Funzine highlights '5+1 ingyenes sportprogram Budapesten' for free summer sports and 'Biciklivel a Balatonnál' for exploring Lake Balaton by bike. Tune in for more essential news impacting foreign professionals in Hungary.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-24/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-24/HungaryDaily_Podcast_Final.mp3" length="24297056" type="audio/mpeg"/>
+      <itunes:duration>16:52</itunes:duration>
+      <pubDate>Wed, 24 Jun 2026 05:37:20 +0200</pubDate>
     </item>
   </channel>
 </rss>
