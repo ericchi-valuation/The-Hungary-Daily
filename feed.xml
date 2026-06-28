@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 27 Jun 2026 03:05:08 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jun 2026 03:46:55 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sat, 27 Jun 2026 05:05:05 +0200</pubDate>
+    <pubDate>Sun, 28 Jun 2026 05:46:52 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -589,6 +589,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-27/HungaryDaily_Podcast_Final.mp3" length="19959893" type="audio/mpeg"/>
       <itunes:duration>13:51</itunes:duration>
       <pubDate>Sat, 27 Jun 2026 05:05:05 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-06-28</title>
+      <description><![CDATA[Today's Hungarian Daily covers prominent businessmen resigning from university foundation boards, a key step towards unlocking EU funds and stabilizing Hungary's economy. We also delve into the historic Budapest Pride march, marking a significant shift in the country's social and political landscape, and the government's pledge to declassify documents related to the Budapest-Belgrade railway project, signaling a move towards greater transparency. Plus, we'll guide you through over 40 invigorating summer programs in Budapest for July, designed to help you beat the heat, and explore the buzz around Michelin-starred dining on social media. Tune in for these stories and more to stay informed on life in Budapest.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-28/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-28/HungaryDaily_Podcast_Final.mp3" length="18779995" type="audio/mpeg"/>
+      <itunes:duration>13:02</itunes:duration>
+      <pubDate>Sun, 28 Jun 2026 05:46:52 +0200</pubDate>
     </item>
   </channel>
 </rss>
