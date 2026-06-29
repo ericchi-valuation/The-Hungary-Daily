@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 28 Jun 2026 03:46:55 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2026 03:53:46 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 28 Jun 2026 05:46:52 +0200</pubDate>
+    <pubDate>Mon, 29 Jun 2026 05:53:42 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -597,6 +597,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-28/HungaryDaily_Podcast_Final.mp3" length="18779995" type="audio/mpeg"/>
       <itunes:duration>13:02</itunes:duration>
       <pubDate>Sun, 28 Jun 2026 05:46:52 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-06-29</title>
+      <description><![CDATA[Today's Hungarian Daily covers a significant administrative overhaul by the Tisza-kormány and Hungary's blockage of accelerated EU integration for Ukraine and Moldova. We also delve into major political announcements, including a new Prime Minister, Magyar Péter, discussing Hungary's potential Eurozone accession, and the immediate shutdown of a polluting factory in Debrecen. For events, we highlight '5 hangulatos, kiülős étterem Budapesten, mely a Duna partjára csábít,' a list of five charming riverside restaurants in Budapest. Tune in for insights on Hungary's economic, political, and social shifts.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-29/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-29/HungaryDaily_Podcast_Final.mp3" length="24521500" type="audio/mpeg"/>
+      <itunes:duration>17:01</itunes:duration>
+      <pubDate>Mon, 29 Jun 2026 05:53:42 +0200</pubDate>
     </item>
   </channel>
 </rss>
