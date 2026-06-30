@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 29 Jun 2026 03:53:46 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 03:38:52 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 29 Jun 2026 05:53:42 +0200</pubDate>
+    <pubDate>Tue, 30 Jun 2026 05:38:49 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -605,6 +605,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-29/HungaryDaily_Podcast_Final.mp3" length="24521500" type="audio/mpeg"/>
       <itunes:duration>17:01</itunes:duration>
       <pubDate>Mon, 29 Jun 2026 05:53:42 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-06-30</title>
+      <description><![CDATA[Today's Hungarian Daily reports on Prime Minister Péter Magyar's assertion that the national budget is in a 'dramatically bad state' post-handover, signaling potential fiscal tightening. We also cover the impact of a strengthening Forint on industrial companies' profitability and the significance of Budapest's first post-Orbán Pride event. Additionally, we discuss new government appointments including the head of NAV, expanded night transport, and mass layoffs at a pharmaceutical giant. Tune in for essential insights into Hungary's economic and social landscape.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-30/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-06-30/HungaryDaily_Podcast_Final.mp3" length="12839123" type="audio/mpeg"/>
+      <itunes:duration>08:54</itunes:duration>
+      <pubDate>Tue, 30 Jun 2026 05:38:49 +0200</pubDate>
     </item>
   </channel>
 </rss>
