@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 07 Jul 2026 03:06:52 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 02:43:38 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 07 Jul 2026 05:06:49 +0200</pubDate>
+    <pubDate>Wed, 08 Jul 2026 04:43:33 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -669,6 +669,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-07-07/HungaryDaily_Podcast_Final.mp3" length="17727364" type="audio/mpeg"/>
       <itunes:duration>12:18</itunes:duration>
       <pubDate>Tue, 07 Jul 2026 05:06:49 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-07-08</title>
+      <description><![CDATA[Today on The Hungarian Daily, we delve into the dramatic overhaul of state broadcaster M1, marking a significant 'post-Orbán purge' and a new era for media freedom in Hungary. We also cover Economy Minister Kapitány's shake-up of the state energy giant and K&H Bank's report of a sharply strengthening corporate outlook post-election. Plus, we'll tell you about Parno Graszt bringing a true Roma celebration to Budapest Park. Tune in for all the details!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-07-08/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-07-08/HungaryDaily_Podcast_Final.mp3" length="23809297" type="audio/mpeg"/>
+      <itunes:duration>16:32</itunes:duration>
+      <pubDate>Wed, 08 Jul 2026 04:43:33 +0200</pubDate>
     </item>
   </channel>
 </rss>
