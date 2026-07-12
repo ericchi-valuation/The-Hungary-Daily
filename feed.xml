@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 11 Jul 2026 02:38:34 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jul 2026 02:44:35 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sat, 11 Jul 2026 04:38:30 +0200</pubDate>
+    <pubDate>Sun, 12 Jul 2026 04:44:33 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -701,6 +701,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-07-11/HungaryDaily_Podcast_Final.mp3" length="17444615" type="audio/mpeg"/>
       <itunes:duration>12:06</itunes:duration>
       <pubDate>Sat, 11 Jul 2026 04:38:30 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-07-12</title>
+      <description><![CDATA[Today on The Hungarian Daily, we delve into reports of Hungary's premier escalating pressure on the president, signaling potential shifts in the political landscape. We also examine new survey findings revealing strong Hungarian public sentiment for strict migration policies and reservations about guest workers, alongside an in-depth look at the realities of Hungary's 'golden visa' program. For your cultural calendar, keep an ear out for Metallica's 'Ride The Lightning' performing in Budapest as an electrifying tribute concert. Tune in for these stories and more insights into Hungary's economy, business environment, and quality of life.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-07-12/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-07-12/HungaryDaily_Podcast_Final.mp3" length="19509751" type="audio/mpeg"/>
+      <itunes:duration>13:32</itunes:duration>
+      <pubDate>Sun, 12 Jul 2026 04:44:33 +0200</pubDate>
     </item>
   </channel>
 </rss>
