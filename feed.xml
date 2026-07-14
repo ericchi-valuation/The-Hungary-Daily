@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 13 Jul 2026 02:46:34 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 02:24:38 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 13 Jul 2026 04:46:31 +0200</pubDate>
+    <pubDate>Tue, 14 Jul 2026 04:24:34 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -717,6 +717,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-07-13/HungaryDaily_Podcast_Final.mp3" length="19223867" type="audio/mpeg"/>
       <itunes:duration>13:20</itunes:duration>
       <pubDate>Mon, 13 Jul 2026 04:46:31 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-07-14</title>
+      <description><![CDATA[Today's Hungarian Daily covers a major political shake-up in Hungary, with parliament passing a law to oust the President and implement a constitutional overhaul, signaling potential shifts in governance and policy. On a positive economic front, Europe's largest Mercedes-Benz factory has opened its expanded facilities in Kecskemét, following a one-billion-euro investment. The European Commission has also approved a two-billion-euro capital injection into the Hungarian Development Bank, and Hungary has officially joined the European Public Prosecutor’s Office. For events, Rod Dreher will be discussing 'My American Homecoming.' Tune in for details on these stories and more.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-07-14/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-07-14/HungaryDaily_Podcast_Final.mp3" length="17512324" type="audio/mpeg"/>
+      <itunes:duration>12:09</itunes:duration>
+      <pubDate>Tue, 14 Jul 2026 04:24:34 +0200</pubDate>
     </item>
   </channel>
 </rss>
