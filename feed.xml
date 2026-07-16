@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 15 Jul 2026 02:23:58 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2026 02:37:17 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Wed, 15 Jul 2026 04:23:54 +0200</pubDate>
+    <pubDate>Thu, 16 Jul 2026 04:37:13 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -733,6 +733,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-07-15/HungaryDaily_Podcast_Final.mp3" length="19904096" type="audio/mpeg"/>
       <itunes:duration>13:49</itunes:duration>
       <pubDate>Wed, 15 Jul 2026 04:23:54 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-07-16</title>
+      <description><![CDATA[Today on The Hungarian Daily, we explore the significant move of a former Hungarian Foreign Minister joining BYD's leadership, signaling robust foreign investment in Hungary's EV sector. We also delve into Audi Hungaria's strategy for navigating global challenges by emphasizing workforce flexibility for electric mobility. Economically, Hungary's industry order books are swelling despite weak production figures, indicating strong future growth potential, as the country returns to Europe's economic mainstream. We also touched upon the delay in Hungary's return to the Erasmus+ program, Lake Balaton's vibrant summer events, and Budapest's High Note SkyBar's unique folk-inspired cocktails. Tune in for more daily news and analysis.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-07-16/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-07-16/HungaryDaily_Podcast_Final.mp3" length="21234460" type="audio/mpeg"/>
+      <itunes:duration>14:44</itunes:duration>
+      <pubDate>Thu, 16 Jul 2026 04:37:13 +0200</pubDate>
     </item>
   </channel>
 </rss>
