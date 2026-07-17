@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 16 Jul 2026 02:37:17 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jul 2026 02:41:44 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Thu, 16 Jul 2026 04:37:13 +0200</pubDate>
+    <pubDate>Fri, 17 Jul 2026 04:41:41 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -741,6 +741,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-07-16/HungaryDaily_Podcast_Final.mp3" length="21234460" type="audio/mpeg"/>
       <itunes:duration>14:44</itunes:duration>
       <pubDate>Thu, 16 Jul 2026 04:37:13 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-07-17</title>
+      <description><![CDATA[Prime Minister Péter Magyar has announced a probe into former Foreign Minister Péter Szijjártó's Russia ties, alongside plans for stronger policing in Budapest and updates on fuel prices and railway upgrades. This comes as Szijjártó exits politics to join Chinese automaker BYD, sparking corruption allegations from Magyar and broader backlash. Meanwhile, Hungary was the EU's top buyer of Russian pipeline gas, and a constitutional dispute over President Tamás Sulyok's removal is escalating. For events, the Formula 1 Hungarian Grand Prix is coming to Budapest. Tune in for more details on these stories and their impact.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-07-17/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-07-17/HungaryDaily_Podcast_Final.mp3" length="22112801" type="audio/mpeg"/>
+      <itunes:duration>15:21</itunes:duration>
+      <pubDate>Fri, 17 Jul 2026 04:41:41 +0200</pubDate>
     </item>
   </channel>
 </rss>
