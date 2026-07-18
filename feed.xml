@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 17 Jul 2026 02:41:44 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2026 02:24:24 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Fri, 17 Jul 2026 04:41:41 +0200</pubDate>
+    <pubDate>Sat, 18 Jul 2026 04:24:19 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -749,6 +749,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-07-17/HungaryDaily_Podcast_Final.mp3" length="22112801" type="audio/mpeg"/>
       <itunes:duration>15:21</itunes:duration>
       <pubDate>Fri, 17 Jul 2026 04:41:41 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-07-18</title>
+      <description><![CDATA[On Saturday, July 18, 2026, The Hungarian Daily reports that the EU has unlocked 10 billion Euros in cohesion funds for Hungary, contingent on rule-of-law reforms, while the European Commission praised Hungary's progress but issued new recommendations. Additionally, leaders of four Central European countries met in Hungary to reboot regional cooperation, and the EU launched legal action against 17 member states over new single permit rules. Uber is set to acquire Foodora Hungary, and Nestlé will close its Diósgyőr plant. Hungary also plans to increase wind power capacity tenfold by 2030. Today's social media topics include discussions about Budapest nightlife and nerdy must-see attractions. Tune in for detailed analysis on these developments and more.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-07-18/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-07-18/HungaryDaily_Podcast_Final.mp3" length="17997575" type="audio/mpeg"/>
+      <itunes:duration>12:29</itunes:duration>
+      <pubDate>Sat, 18 Jul 2026 04:24:19 +0200</pubDate>
     </item>
   </channel>
 </rss>
