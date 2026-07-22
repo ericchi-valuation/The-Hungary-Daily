@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 21 Jul 2026 02:39:24 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 02:40:05 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 21 Jul 2026 04:39:21 +0200</pubDate>
+    <pubDate>Wed, 22 Jul 2026 04:40:02 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -781,6 +781,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-07-21/HungaryDaily_Podcast_Final.mp3" length="19501601" type="audio/mpeg"/>
       <itunes:duration>13:32</itunes:duration>
       <pubDate>Tue, 21 Jul 2026 04:39:21 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-07-22</title>
+      <description><![CDATA[Today's Hungarian Daily covers the Forint's stability after the MNB's rate cut, Hungary's push for EU investment support amid reforms, and a significant prosecutor's raid on the Orbán party's data center. We also discuss the Hungarian stock market hitting a historic high and retailers pressing for tax rollbacks. Upcoming events include the Ultimate Championship's Budapest debut in September and F1 pre-race activities this weekend. Tune in for more insights into Hungary's economy and lifestyle.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-07-22/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-07-22/HungaryDaily_Podcast_Final.mp3" length="21217533" type="audio/mpeg"/>
+      <itunes:duration>14:44</itunes:duration>
+      <pubDate>Wed, 22 Jul 2026 04:40:02 +0200</pubDate>
     </item>
   </channel>
 </rss>
