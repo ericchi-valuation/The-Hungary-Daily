@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 26 Jul 2026 02:43:41 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2026 02:53:32 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 26 Jul 2026 04:43:36 +0200</pubDate>
+    <pubDate>Mon, 27 Jul 2026 04:53:29 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -821,6 +821,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-07-26/HungaryDaily_Podcast_Final.mp3" length="15597026" type="audio/mpeg"/>
       <itunes:duration>10:49</itunes:duration>
       <pubDate>Sun, 26 Jul 2026 04:43:36 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-07-27</title>
+      <description><![CDATA[Today's Hungarian Daily covers significant political and urban development news, including the Tisza Party's nomination for a Constitutional Court judge and the planned renewal of Budapest's Népliget and Planetárium. We also discuss the F1 CEO's excitement about the Hungaroring's future and the economic benefits of Hungary hosting such a major event. Additionally, we delve into mixed signals from the labor market and the reassuring unity of the Monetary Council. Tune in for insights crucial for professionals in Budapest.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-07-27/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-07-27/HungaryDaily_Podcast_Final.mp3" length="20937918" type="audio/mpeg"/>
+      <itunes:duration>14:32</itunes:duration>
+      <pubDate>Mon, 27 Jul 2026 04:53:29 +0200</pubDate>
     </item>
   </channel>
 </rss>
