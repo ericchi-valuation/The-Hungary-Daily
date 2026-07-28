@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 27 Jul 2026 02:53:32 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2026 02:34:29 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 27 Jul 2026 04:53:29 +0200</pubDate>
+    <pubDate>Tue, 28 Jul 2026 04:34:23 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -829,6 +829,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-07-27/HungaryDaily_Podcast_Final.mp3" length="20937918" type="audio/mpeg"/>
       <itunes:duration>14:32</itunes:duration>
       <pubDate>Mon, 27 Jul 2026 04:53:29 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-07-28</title>
+      <description><![CDATA[Today on The Hungarian Daily, we delve into the significant economic implications of the BYD investment in Hungary, with the new Tisza cabinet restarting talks on subsidies and guest worker influx. We also examine the re-establishment of the Ministry of Health and its new operational regulations, signaling a renewed focus on healthcare reform. Plus, we explore Hungary's growing presence in quantum computing and the latest market movements. Tune in for these insights and more to help you navigate life in Budapest.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-07-28/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-07-28/HungaryDaily_Podcast_Final.mp3" length="22631280" type="audio/mpeg"/>
+      <itunes:duration>15:42</itunes:duration>
+      <pubDate>Tue, 28 Jul 2026 04:34:23 +0200</pubDate>
     </item>
   </channel>
 </rss>
