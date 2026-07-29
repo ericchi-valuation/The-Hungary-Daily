@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 28 Jul 2026 02:34:29 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 02:37:53 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 28 Jul 2026 04:34:23 +0200</pubDate>
+    <pubDate>Wed, 29 Jul 2026 04:37:50 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -837,6 +837,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-07-28/HungaryDaily_Podcast_Final.mp3" length="22631280" type="audio/mpeg"/>
       <itunes:duration>15:42</itunes:duration>
       <pubDate>Tue, 28 Jul 2026 04:34:23 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-07-29</title>
+      <description><![CDATA[The Hungarian Central Bank is initiating major banking reforms, including fee caps and simplified loan repayments, aimed at reducing bureaucracy for consumers and businesses. Meanwhile, the new BYD plant in Szeged faces numerous investigations regarding workplace safety and environmental compliance after fatal accidents. Additionally, Hungary has established a new agency to recover state funds allegedly embezzled during the Orbán era, signaling a push for greater transparency. Today, Queen fans can relive the historic Budapest Concert in a newly restored 4K release. Tune in for more insights into Hungary's economy and daily life.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-07-29/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-07-29/HungaryDaily_Podcast_Final.mp3" length="20788706" type="audio/mpeg"/>
+      <itunes:duration>14:26</itunes:duration>
+      <pubDate>Wed, 29 Jul 2026 04:37:50 +0200</pubDate>
     </item>
   </channel>
 </rss>
