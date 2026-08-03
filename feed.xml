@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 02 Aug 2026 02:45:34 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2026 02:47:14 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 02 Aug 2026 04:45:29 +0200</pubDate>
+    <pubDate>Mon, 03 Aug 2026 04:47:11 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -877,6 +877,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-02/HungaryDaily_Podcast_Final.mp3" length="24004902" type="audio/mpeg"/>
       <itunes:duration>16:40</itunes:duration>
       <pubDate>Sun, 02 Aug 2026 04:45:29 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-08-03</title>
+      <description><![CDATA[Today's Hungarian Daily focuses on the critical energy situation as the Paks Nuclear Power Plant faces a potential shutdown due to extreme heat and record-low Danube water levels, prompting Prime Minister Viktor Orbán to warn of 'critical days ahead.' This crisis is exacerbated by past failures in water management, as acknowledged by Lázár János, and has led to a nationwide energy-saving campaign. We also explore how Hungarian companies are adapting to shifts in political influence. For local events, don't miss the inaugural Solti International Conducting Competition in Budapest. Tune in for detailed analysis of these key developments impacting Hungary's economy and quality of life.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-03/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-03/HungaryDaily_Podcast_Final.mp3" length="22263893" type="audio/mpeg"/>
+      <itunes:duration>15:27</itunes:duration>
+      <pubDate>Mon, 03 Aug 2026 04:47:11 +0200</pubDate>
     </item>
   </channel>
 </rss>
