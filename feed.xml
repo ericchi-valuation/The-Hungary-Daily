@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 05 Aug 2026 02:26:18 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 06 Aug 2026 02:44:07 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Wed, 05 Aug 2026 04:26:15 +0200</pubDate>
+    <pubDate>Thu, 06 Aug 2026 04:44:01 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -901,6 +901,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-05/HungaryDaily_Podcast_Final.mp3" length="21622535" type="audio/mpeg"/>
       <itunes:duration>15:00</itunes:duration>
       <pubDate>Wed, 05 Aug 2026 04:26:15 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-08-06</title>
+      <description><![CDATA[Today's Hungarian Daily focuses on Hungary's critical energy situation due to record-low Danube waters and extreme heat, leading to power consumption curbs and reduced nuclear plant capacity. We also cover new, tighter migrant labor rules impacting employers and the significant news of Tesco reportedly preparing to sell its Central European operations, including Hungary. Additionally, discover Budapest's high AI readiness and the approval of a new pedestrian bridge to Óbuda Island. For social media, we're looking at a practical query about finding gluten-free local dishes in Budapest. Tune in for these vital updates and more.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-06/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-06/HungaryDaily_Podcast_Final.mp3" length="23135965" type="audio/mpeg"/>
+      <itunes:duration>16:03</itunes:duration>
+      <pubDate>Thu, 06 Aug 2026 04:44:01 +0200</pubDate>
     </item>
   </channel>
 </rss>
