@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 08 Aug 2026 01:33:58 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 09 Aug 2026 01:36:32 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sat, 08 Aug 2026 03:33:52 +0200</pubDate>
+    <pubDate>Sun, 09 Aug 2026 03:36:29 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -925,6 +925,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-08/HungaryDaily_Podcast_Final.mp3" length="19954251" type="audio/mpeg"/>
       <itunes:duration>13:51</itunes:duration>
       <pubDate>Sat, 08 Aug 2026 03:33:52 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-08-09</title>
+      <description><![CDATA[Today's Hungarian Daily covers the Tisza Party's nomination of András Baka for President, signaling a potential shift in the political landscape. We also discuss the temporary stabilization of Hungary's energy and water supply, alongside warnings about long-term challenges for the Paks nuclear plant and Danube water levels. An analyst suggests Hungary's Euro introduction could create significant bond investment opportunities. For Budapest events, we have no current or upcoming events to share today. Tune in for more insights into Hungary's economy and business environment.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-09/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-09/HungaryDaily_Podcast_Final.mp3" length="17062809" type="audio/mpeg"/>
+      <itunes:duration>11:50</itunes:duration>
+      <pubDate>Sun, 09 Aug 2026 03:36:29 +0200</pubDate>
     </item>
   </channel>
 </rss>
