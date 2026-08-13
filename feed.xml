@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 12 Aug 2026 01:53:47 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 13 Aug 2026 01:56:08 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Wed, 12 Aug 2026 03:53:43 +0200</pubDate>
+    <pubDate>Thu, 13 Aug 2026 03:56:05 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -957,6 +957,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-12/HungaryDaily_Podcast_Final.mp3" length="18709151" type="audio/mpeg"/>
       <itunes:duration>12:59</itunes:duration>
       <pubDate>Wed, 12 Aug 2026 03:53:43 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-08-13</title>
+      <description><![CDATA[Today's Hungarian Daily covers the government's plan to build a Danube riverbed sill and potentially sink barges to ensure the Paks nuclear plant's operation, alongside revelations of significant government payments to Századvég and alleged overpricing by 'NER-connected' construction firms. We also delve into the police investigation into the National Ambulance Service's ambulance procurement and Budapest's ongoing financial struggles with the central government. For events, don't miss 'Az Ország Tortája 2026,' the newly announced 'Bíborfehér' cake. Tune in for more essential news and insights.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-13/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-13/HungaryDaily_Podcast_Final.mp3" length="15538094" type="audio/mpeg"/>
+      <itunes:duration>10:47</itunes:duration>
+      <pubDate>Thu, 13 Aug 2026 03:56:05 +0200</pubDate>
     </item>
   </channel>
 </rss>
