@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 13 Aug 2026 01:56:08 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Aug 2026 01:54:44 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Thu, 13 Aug 2026 03:56:05 +0200</pubDate>
+    <pubDate>Fri, 14 Aug 2026 03:54:39 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -965,6 +965,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-13/HungaryDaily_Podcast_Final.mp3" length="15538094" type="audio/mpeg"/>
       <itunes:duration>10:47</itunes:duration>
       <pubDate>Thu, 13 Aug 2026 03:56:05 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-08-14</title>
+      <description><![CDATA[Today on The Hungarian Daily, we delved into the critical risk of a Paks nuclear power plant shutdown due to record-low Danube levels, a major threat to Hungary's energy security and economy. We also explored the mystery surrounding a potential White House visit by Viktor Orbán, and the encouraging signs of recovery in Hungary's commercial real estate market. For upcoming opportunities, the Magyar Helsinki Bizottság is accepting applications for its autumn Human Rights Learning Lab. Tune in for detailed analysis on these stories and more.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-14/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-14/HungaryDaily_Podcast_Final.mp3" length="19874630" type="audio/mpeg"/>
+      <itunes:duration>13:48</itunes:duration>
+      <pubDate>Fri, 14 Aug 2026 03:54:39 +0200</pubDate>
     </item>
   </channel>
 </rss>
