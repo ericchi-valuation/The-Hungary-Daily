@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 14 Aug 2026 01:54:44 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 Aug 2026 01:20:30 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Fri, 14 Aug 2026 03:54:39 +0200</pubDate>
+    <pubDate>Sat, 15 Aug 2026 03:20:27 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -973,6 +973,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-14/HungaryDaily_Podcast_Final.mp3" length="19874630" type="audio/mpeg"/>
       <itunes:duration>13:48</itunes:duration>
       <pubDate>Fri, 14 Aug 2026 03:54:39 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-08-15</title>
+      <description><![CDATA[On today's Hungarian Daily, we cover significant progress at the Paks nuclear power plant with new vessels arriving for caisson sinking, and discuss how the Danube's record low water levels could impact Europe's nuclear future, including Hungary's. We also detail major traffic restrictions in Budapest ahead of the August 20th celebrations, and examine how frost and drought are devastating Hungary’s fruit and vegetable sector. Plus, don't miss the Falling Walls Lab Budapest Pitch Competition, showcasing local innovation. Tune in for more essential news and insights for professionals in Budapest.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-15/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-15/HungaryDaily_Podcast_Final.mp3" length="25814248" type="audio/mpeg"/>
+      <itunes:duration>17:55</itunes:duration>
+      <pubDate>Sat, 15 Aug 2026 03:20:27 +0200</pubDate>
     </item>
   </channel>
 </rss>
