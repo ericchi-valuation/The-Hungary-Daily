@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 15 Aug 2026 01:20:30 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 16 Aug 2026 01:19:34 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sat, 15 Aug 2026 03:20:27 +0200</pubDate>
+    <pubDate>Sun, 16 Aug 2026 03:19:29 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -981,6 +981,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-15/HungaryDaily_Podcast_Final.mp3" length="25814248" type="audio/mpeg"/>
       <itunes:duration>17:55</itunes:duration>
       <pubDate>Sat, 15 Aug 2026 03:20:27 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-08-16</title>
+      <description><![CDATA[Today's Hungarian Daily discusses the critical stabilization of the Danube's water level near the Paks nuclear plant through swift intervention, ensuring Hungary's energy security. We also cover the government's commitment to securing the full €10 billion EU recovery fund and overhauling motorway contracts for greater efficiency. Plus, we delve into the Sziget Festival's reduced attendance and the public debate around its energy consumption amidst national saving calls. Tune in for deep insights into these key economic and lifestyle stories.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-16/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-16/HungaryDaily_Podcast_Final.mp3" length="18259635" type="audio/mpeg"/>
+      <itunes:duration>12:40</itunes:duration>
+      <pubDate>Sun, 16 Aug 2026 03:19:29 +0200</pubDate>
     </item>
   </channel>
 </rss>
