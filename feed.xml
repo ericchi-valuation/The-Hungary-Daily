@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 16 Aug 2026 01:19:34 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2026 01:21:21 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 16 Aug 2026 03:19:29 +0200</pubDate>
+    <pubDate>Mon, 17 Aug 2026 03:21:18 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -989,6 +989,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-16/HungaryDaily_Podcast_Final.mp3" length="18259635" type="audio/mpeg"/>
       <itunes:duration>12:40</itunes:duration>
       <pubDate>Sun, 16 Aug 2026 03:19:29 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-08-17</title>
+      <description><![CDATA[Today on The Hungarian Daily, we delve into the critical situation at the Paks Nuclear Power Plant, where 'superhuman work' is underway to keep turbines running amidst critically low Danube water levels, prompting the government to sink barges for protection. We also explore Budapest's growing popularity among Latin American travelers, a positive sign for the city's economy and cultural landscape. Plus, we highlight upcoming Jazz & Wine Nights at Opus Jazz Club and preview events for Budapest Design Week. Tune in for essential insights for professionals in Budapest.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-17/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-17/HungaryDaily_Podcast_Final.mp3" length="21527867" type="audio/mpeg"/>
+      <itunes:duration>14:56</itunes:duration>
+      <pubDate>Mon, 17 Aug 2026 03:21:18 +0200</pubDate>
     </item>
   </channel>
 </rss>
