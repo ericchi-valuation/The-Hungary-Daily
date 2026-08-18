@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 17 Aug 2026 01:21:21 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 18 Aug 2026 01:20:06 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 17 Aug 2026 03:21:18 +0200</pubDate>
+    <pubDate>Tue, 18 Aug 2026 03:20:02 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -997,6 +997,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-17/HungaryDaily_Podcast_Final.mp3" length="21527867" type="audio/mpeg"/>
       <itunes:duration>14:56</itunes:duration>
       <pubDate>Mon, 17 Aug 2026 03:21:18 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-08-18</title>
+      <description><![CDATA[Today on The Hungarian Daily, we delve into the government's comprehensive investigation into the 4iG group and the Constitutional Court's rejection of Fidesz-KDNP motions, alongside a significant firewood VAT cut. We also explore Hungary and Austria's delicate balancing act in their China policies and the implications of falling panel apartment prices in Budapest. For your leisure, we highlight exciting programs around Lake Balaton for the August 20th week and Szentendre's 'Soul of Bread' festival. Tune in for these stories and more to stay informed on life and business in Budapest.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-18/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-18/HungaryDaily_Podcast_Final.mp3" length="20822561" type="audio/mpeg"/>
+      <itunes:duration>14:27</itunes:duration>
+      <pubDate>Tue, 18 Aug 2026 03:20:02 +0200</pubDate>
     </item>
   </channel>
 </rss>
