@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 18 Aug 2026 01:20:06 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2026 01:16:59 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 18 Aug 2026 03:20:02 +0200</pubDate>
+    <pubDate>Wed, 19 Aug 2026 03:16:55 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1005,6 +1005,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-18/HungaryDaily_Podcast_Final.mp3" length="20822561" type="audio/mpeg"/>
       <itunes:duration>14:27</itunes:duration>
       <pubDate>Tue, 18 Aug 2026 03:20:02 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-08-19</title>
+      <description><![CDATA[Today on The Hungarian Daily, PM Magyar has leveled serious allegations against the Orbán government, describing a 'mafia system' siphoning public funds, with 4iG under particular scrutiny. The Constitutional Court has upheld the 17th Amendment, a decision met with delight by PM Magyar but strong criticism from the opposition. Meanwhile, global bond market pressures are causing the Forint to weaken against major currencies, impacting purchasing power and business costs. We also look at trending social media topics in Budapest. Tune in for the full analysis and what it means for you.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-19/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-19/HungaryDaily_Podcast_Final.mp3" length="22940987" type="audio/mpeg"/>
+      <itunes:duration>15:55</itunes:duration>
+      <pubDate>Wed, 19 Aug 2026 03:16:55 +0200</pubDate>
     </item>
   </channel>
 </rss>
