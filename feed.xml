@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 23 Aug 2026 01:20:34 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2026 01:19:16 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 23 Aug 2026 03:20:31 +0200</pubDate>
+    <pubDate>Mon, 24 Aug 2026 03:19:12 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1045,6 +1045,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-23/HungaryDaily_Podcast_Final.mp3" length="18636426" type="audio/mpeg"/>
       <itunes:duration>12:56</itunes:duration>
       <pubDate>Sun, 23 Aug 2026 03:20:31 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-08-24</title>
+      <description><![CDATA[Today on The Hungarian Daily, Ray covers the Tisza-government's upcoming 2026 budget presentation and the Paks Nuclear Power Plant's restart of three reactors, boosting Hungary's energy security. A parliamentary committee will also begin investigating alleged abuses at the Hungarian National Bank. Plus, the Transport Minister announced a new cycle route linking Győr and Budapest, and a Hungary heritage photo exhibition has opened. Tune in for more essential news and insights.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-24/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-24/HungaryDaily_Podcast_Final.mp3" length="21065813" type="audio/mpeg"/>
+      <itunes:duration>14:37</itunes:duration>
+      <pubDate>Mon, 24 Aug 2026 03:19:12 +0200</pubDate>
     </item>
   </channel>
 </rss>
