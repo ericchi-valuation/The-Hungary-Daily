@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 24 Aug 2026 01:19:16 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 25 Aug 2026 01:15:39 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 24 Aug 2026 03:19:12 +0200</pubDate>
+    <pubDate>Tue, 25 Aug 2026 03:15:36 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1053,6 +1053,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-24/HungaryDaily_Podcast_Final.mp3" length="21065813" type="audio/mpeg"/>
       <itunes:duration>14:37</itunes:duration>
       <pubDate>Mon, 24 Aug 2026 03:19:12 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-08-25</title>
+      <description><![CDATA[Today on The Hungarian Daily, we delve into the controversial new Asset Recovery Office, with Soros-linked NGOs nominating members, and examine The Guardian's report on Hungary's rapid 'de-Orbánisation' under Péter Magyar's government. We also cover Hungary's latest monetary easing and upcoming healthcare reforms. Plus, we've got exciting programs around Lake Balaton and Queen's final performance returning to IMAX. Tune in for all the details shaping your life in Budapest.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-25/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-25/HungaryDaily_Podcast_Final.mp3" length="11320050" type="audio/mpeg"/>
+      <itunes:duration>07:51</itunes:duration>
+      <pubDate>Tue, 25 Aug 2026 03:15:36 +0200</pubDate>
     </item>
   </channel>
 </rss>
