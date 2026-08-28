@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 27 Aug 2026 07:26:37 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 28 Aug 2026 09:42:50 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Thu, 27 Aug 2026 09:26:33 +0200</pubDate>
+    <pubDate>Fri, 28 Aug 2026 11:42:46 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1077,6 +1077,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-27/HungaryDaily_Podcast_Final.mp3" length="20510346" type="audio/mpeg"/>
       <itunes:duration>14:14</itunes:duration>
       <pubDate>Thu, 27 Aug 2026 09:26:33 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-08-28</title>
+      <description><![CDATA[Today's Hungarian Daily features major economic news, starting with the government's ambitious target to adopt the euro by 2030, signaling long-term stability and increased foreign investment. We also cover 4iG's strategic entry into the energy sector with plans for regional deployment of small modular nuclear reactors, promising enhanced energy security. Despite a slowdown in the rate of wage growth, real wages continue to rise, supported by expanded tax allowances and a tight labor market, benefiting professionals. Don't miss the '10 special programs where you can get to know Jewish culture' event, offering city walks, gastronomy, and concerts. Tune in for more insights into Hungary's economy and lifestyle.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-28/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-28/HungaryDaily_Podcast_Final.mp3" length="21094653" type="audio/mpeg"/>
+      <itunes:duration>14:38</itunes:duration>
+      <pubDate>Fri, 28 Aug 2026 11:42:46 +0200</pubDate>
     </item>
   </channel>
 </rss>
