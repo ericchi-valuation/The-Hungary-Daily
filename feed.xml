@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 29 Aug 2026 05:48:37 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 03:46:42 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sat, 29 Aug 2026 07:48:34 +0200</pubDate>
+    <pubDate>Sun, 30 Aug 2026 05:46:37 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1093,6 +1093,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-29/HungaryDaily_Podcast_Final.mp3" length="20331668" type="audio/mpeg"/>
       <itunes:duration>14:07</itunes:duration>
       <pubDate>Sat, 29 Aug 2026 07:48:34 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-08-30</title>
+      <description><![CDATA[Today, August 30, 2026, The Hungarian Daily reports on police investigations involving Viktor Orbán’s father, sparking questions about transparency and governance. We also cover parliamentary decisions concerning the National Asset Recovery and Asset Protection Office, highlighting institutional stability. Demographically, Hungary faces challenges with falling birth rates and a shrinking population, alongside a tightened labor market losing 29,000 workers. Environmentally, Europe's drought impacts Hungary's agriculture and economy. There are no current or upcoming Budapest events to highlight today. Social media buzzes with discussions on Hungarian alcoholic beverages, travel connections, and software career prospects for Canadian-Hungarians. Tune in for more essential updates.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-30/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-08-30/HungaryDaily_Podcast_Final.mp3" length="18801311" type="audio/mpeg"/>
+      <itunes:duration>13:03</itunes:duration>
+      <pubDate>Sun, 30 Aug 2026 05:46:37 +0200</pubDate>
     </item>
   </channel>
 </rss>
