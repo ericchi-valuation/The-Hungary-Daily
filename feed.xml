@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 01 Sep 2026 03:42:38 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2026 03:02:58 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 01 Sep 2026 05:42:33 +0200</pubDate>
+    <pubDate>Wed, 02 Sep 2026 05:02:53 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1117,6 +1117,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-01/HungaryDaily_Podcast_Final.mp3" length="19890303" type="audio/mpeg"/>
       <itunes:duration>13:48</itunes:duration>
       <pubDate>Tue, 01 Sep 2026 05:42:33 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-09-02</title>
+      <description><![CDATA[On Wednesday, September 02, 2026, The Hungarian Daily reports on the Forint's significant weakening against the Euro, reaching levels not seen since the last elections, while the BUX index hit a record high in August. Police have also seized documents in an investigation into state-owned Eximbank deals. Upcoming events include the 41st Wizz Air Budapest Half Marathon on September 6th, expecting over 24,000 runners, and acclaimed film critic Bidhan Rebeiro attending the Budapest film festival. Tune in for more essential news and updates for professionals in Budapest.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-02/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-02/HungaryDaily_Podcast_Final.mp3" length="21924093" type="audio/mpeg"/>
+      <itunes:duration>15:13</itunes:duration>
+      <pubDate>Wed, 02 Sep 2026 05:02:53 +0200</pubDate>
     </item>
   </channel>
 </rss>
