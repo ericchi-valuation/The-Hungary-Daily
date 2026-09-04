@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 03 Sep 2026 03:05:25 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 03:07:33 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Thu, 03 Sep 2026 05:05:21 +0200</pubDate>
+    <pubDate>Fri, 04 Sep 2026 05:07:30 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1133,6 +1133,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-03/HungaryDaily_Podcast_Final.mp3" length="15910496" type="audio/mpeg"/>
       <itunes:duration>11:02</itunes:duration>
       <pubDate>Thu, 03 Sep 2026 05:05:21 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-09-04</title>
+      <description><![CDATA[On today's Hungarian Daily, we cover the EU's response to Prime Minister Magyar Péter regarding Hungary's daily one million Euro migration fine, and how expiring emergency migration laws could be key to resolving this dispute. We also discuss Ukraine's significant diplomatic gesture condemning Soviet atrocities against Transcarpathian Hungarians. Plus, Budapest faces a potential liquidity crunch without a September deal with the government. For events, explore 'Hungarian Theatre in Transition – Between Art and a Struggle for Power,' a discussion on the cultural landscape. Tune in for more insights into Hungary's economy, policy, and quality of life.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-04/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-04/HungaryDaily_Podcast_Final.mp3" length="21616893" type="audio/mpeg"/>
+      <itunes:duration>15:00</itunes:duration>
+      <pubDate>Fri, 04 Sep 2026 05:07:30 +0200</pubDate>
     </item>
   </channel>
 </rss>
