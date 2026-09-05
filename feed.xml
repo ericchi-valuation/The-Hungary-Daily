@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 04 Sep 2026 03:07:33 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 05 Sep 2026 03:08:27 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Fri, 04 Sep 2026 05:07:30 +0200</pubDate>
+    <pubDate>Sat, 05 Sep 2026 05:08:23 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1141,6 +1141,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-04/HungaryDaily_Podcast_Final.mp3" length="21616893" type="audio/mpeg"/>
       <itunes:duration>15:00</itunes:duration>
       <pubDate>Fri, 04 Sep 2026 05:07:30 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-09-05</title>
+      <description><![CDATA[Today's Hungarian Daily covers Hungary's firm stance against the EU migration fine and its demand for a €1 billion reimbursement, alongside Fitch Ratings' concerns over the country's soaring budget deficit. We also discuss the extension of Hungary's 'mass migration crisis' measures, positive trends in retail sales, and the evolving tourism accommodation market. No major events are highlighted this weekend. Tune in for detailed analysis on the Forint's volatility and Budapest's economic landscape.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-05/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-05/HungaryDaily_Podcast_Final.mp3" length="20961115" type="audio/mpeg"/>
+      <itunes:duration>14:33</itunes:duration>
+      <pubDate>Sat, 05 Sep 2026 05:08:23 +0200</pubDate>
     </item>
   </channel>
 </rss>
