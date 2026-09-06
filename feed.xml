@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 05 Sep 2026 03:08:27 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2026 03:04:24 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sat, 05 Sep 2026 05:08:23 +0200</pubDate>
+    <pubDate>Sun, 06 Sep 2026 05:04:21 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1149,6 +1149,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-05/HungaryDaily_Podcast_Final.mp3" length="20961115" type="audio/mpeg"/>
       <itunes:duration>14:33</itunes:duration>
       <pubDate>Sat, 05 Sep 2026 05:08:23 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-09-06</title>
+      <description><![CDATA[Today's Hungarian Daily focuses on Budapest's continued hardline stance on migration, with the government extending its emergency status and rejecting EU refugee rules, alongside a pledge to fight EU fines. We also cover the ruling out of fuel price caps, a significant slowdown in the construction sector, and a planned 500 billion Forint healthcare wage hike. While no current Budapest events were available, we touch on social media trends like a painting of a Budapest view and a query about tourist prescriptions. Tune in for detailed analysis on these stories and more.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-06/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-06/HungaryDaily_Podcast_Final.mp3" length="18025160" type="audio/mpeg"/>
+      <itunes:duration>12:31</itunes:duration>
+      <pubDate>Sun, 06 Sep 2026 05:04:21 +0200</pubDate>
     </item>
   </channel>
 </rss>
