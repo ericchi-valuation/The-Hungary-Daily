@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 08 Sep 2026 03:14:04 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 09 Sep 2026 03:15:36 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 08 Sep 2026 05:14:01 +0200</pubDate>
+    <pubDate>Wed, 09 Sep 2026 05:15:32 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1173,6 +1173,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-08/HungaryDaily_Podcast_Final.mp3" length="22315302" type="audio/mpeg"/>
       <itunes:duration>15:29</itunes:duration>
       <pubDate>Tue, 08 Sep 2026 05:14:01 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-09-09</title>
+      <description><![CDATA[Today's Hungarian Daily features a deep dive into the escalating political rhetoric between former Prime Minister Viktor Orbán and the Tisza government, alongside Hungary's significant diplomatic move to expel ten Russian diplomats, drawing a sharp rebuke from Moscow. We also break down the latest economic figures, including August's inflation data, the impact of rising global oil prices, and the Forint's performance. Tune in for essential updates on Hungary's political, diplomatic, and economic landscape.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-09/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-09/HungaryDaily_Podcast_Final.mp3" length="19556772" type="audio/mpeg"/>
+      <itunes:duration>13:34</itunes:duration>
+      <pubDate>Wed, 09 Sep 2026 05:15:32 +0200</pubDate>
     </item>
   </channel>
 </rss>
