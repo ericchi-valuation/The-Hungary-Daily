@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 11 Sep 2026 03:11:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2026 03:15:42 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Fri, 11 Sep 2026 05:10:56 +0200</pubDate>
+    <pubDate>Sat, 12 Sep 2026 05:15:38 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1197,6 +1197,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-11/HungaryDaily_Podcast_Final.mp3" length="21692125" type="audio/mpeg"/>
       <itunes:duration>15:03</itunes:duration>
       <pubDate>Fri, 11 Sep 2026 05:10:56 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-09-12</title>
+      <description><![CDATA[Today's Hungarian Daily reports on Péter Magyar's Tisza government expelling Russian diplomats and dismantling Fidesz's county fiefdoms, signaling a major policy shift. The Visegrad Group vows to block EU policies that raise energy prices, aiming to protect businesses and residents from increased costs. Additionally, a key economic figure, Varga, expressed caution regarding euro adoption, indicating the Forint will remain Hungary's currency for the foreseeable future. This weekend, explore '8 zseniális gasztrohely Budapesten a kézműves sörök szerelmeseinek' for craft beer and food, or experience 'How one of Freddie Mercury’s last Queen shows is being re-imagined as a new live ‘gig’ experience'. Tune in for more insights into Hungary's economy, business environment, and quality of life.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-12/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-12/HungaryDaily_Podcast_Final.mp3" length="24625572" type="audio/mpeg"/>
+      <itunes:duration>17:06</itunes:duration>
+      <pubDate>Sat, 12 Sep 2026 05:15:38 +0200</pubDate>
     </item>
   </channel>
 </rss>
