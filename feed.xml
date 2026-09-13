@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 12 Sep 2026 03:15:42 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2026 03:25:27 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sat, 12 Sep 2026 05:15:38 +0200</pubDate>
+    <pubDate>Sun, 13 Sep 2026 05:25:24 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1205,6 +1205,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-12/HungaryDaily_Podcast_Final.mp3" length="24625572" type="audio/mpeg"/>
       <itunes:duration>17:06</itunes:duration>
       <pubDate>Sat, 12 Sep 2026 05:15:38 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-09-13</title>
+      <description><![CDATA[Today, Sunday, September 13, 2026, Prime Minister Magyar Péter's government launched a 10 billion Forint child protection program and announced plans to scrap the Orbán-era restriction on gay adoption, signaling major social policy shifts. Allegations surfaced regarding former Prime Minister Orbán's alleged overpayment for a telecom company, while the Treasury Single Account balance saw a fivefold increase. Budapest homebuyers are enjoying the biggest discounts in two years, and the city's Citadella has been beautifully renovated. On social media, discussions range from the 'Inside me there are two wolves' meme to a lost Indian passport on a FlixBus. Tune in for more news and analysis.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-13/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-13/HungaryDaily_Podcast_Final.mp3" length="19164935" type="audio/mpeg"/>
+      <itunes:duration>13:18</itunes:duration>
+      <pubDate>Sun, 13 Sep 2026 05:25:24 +0200</pubDate>
     </item>
   </channel>
 </rss>
