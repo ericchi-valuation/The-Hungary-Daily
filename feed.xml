@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 16 Sep 2026 03:31:23 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 03:38:07 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Wed, 16 Sep 2026 05:31:19 +0200</pubDate>
+    <pubDate>Thu, 17 Sep 2026 05:38:02 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1237,6 +1237,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-16/HungaryDaily_Podcast_Final.mp3" length="20453294" type="audio/mpeg"/>
       <itunes:duration>14:12</itunes:duration>
       <pubDate>Wed, 16 Sep 2026 05:31:19 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-09-17</title>
+      <description><![CDATA[Today on The Hungarian Daily, we explored Hungary's significant geothermal energy potential and the path to unlocking it, alongside the exciting news that Budapest-Belgrade railway passenger services are on the horizon. We also covered Westend City Center's Green Investment Award for its EUR 10 million sustainability upgrade, signaling Budapest's commitment to green initiatives. For events, Funzine Budapest recommends]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-17/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-17/HungaryDaily_Podcast_Final.mp3" length="23313389" type="audio/mpeg"/>
+      <itunes:duration>16:11</itunes:duration>
+      <pubDate>Thu, 17 Sep 2026 05:38:02 +0200</pubDate>
     </item>
   </channel>
 </rss>
