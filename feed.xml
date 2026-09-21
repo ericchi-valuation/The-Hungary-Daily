@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 20 Sep 2026 03:32:23 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 21 Sep 2026 03:31:23 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 20 Sep 2026 05:32:21 +0200</pubDate>
+    <pubDate>Mon, 21 Sep 2026 05:31:20 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1269,6 +1269,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-20/HungaryDaily_Podcast_Final.mp3" length="17589438" type="audio/mpeg"/>
       <itunes:duration>12:12</itunes:duration>
       <pubDate>Sun, 20 Sep 2026 05:32:21 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-09-21</title>
+      <description><![CDATA[On Monday, September 21, 2026, The Hungarian Daily reports on a pivotal agreement between MOL and Naftogaz for Ukraine to store fuel in Hungary, enhancing regional energy security. The Hungarian government is also set to terminate the MKIF motorway concession, signaling a major shift in infrastructure policy. Additionally, parental leave benefits for foreign nationals are slated to double in 2025, significantly improving quality of life. Tune in for details on the 'Irodalmi kaland' literary adventure at Füvészkert and family-friendly accommodation ideas across Hungary. I'm Ray, and I'll see you tomorrow. Viszlát!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-21/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-21/HungaryDaily_Podcast_Final.mp3" length="23608050" type="audio/mpeg"/>
+      <itunes:duration>16:23</itunes:duration>
+      <pubDate>Mon, 21 Sep 2026 05:31:20 +0200</pubDate>
     </item>
   </channel>
 </rss>
