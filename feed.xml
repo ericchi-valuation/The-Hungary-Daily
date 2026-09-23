@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 22 Sep 2026 03:31:58 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2026 03:31:19 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 22 Sep 2026 05:31:54 +0200</pubDate>
+    <pubDate>Wed, 23 Sep 2026 05:31:15 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1285,6 +1285,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-22/HungaryDaily_Podcast_Final.mp3" length="25125242" type="audio/mpeg"/>
       <itunes:duration>17:26</itunes:duration>
       <pubDate>Tue, 22 Sep 2026 05:31:54 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-09-23</title>
+      <description><![CDATA[Today's Hungarian Daily covers the Chief Prosecutor's Office's strong rebuttal to Magyar Péter's allegations and the Prime Minister's response, alongside a significant discussion on Hungary's potential Euro adoption by 2030. We also delve into Hungary's August budget deficit, which swelled to HUF 2.31 trillion due to EU project pre-financing, and the high-profile questioning of former central bank president Matolcsy György in an official misconduct probe. For events, you can win tickets to an early IMAX screening of the newly restored 'Queen Budapest' Concert Film. Tune in for detailed analysis on these stories and their impact on Budapest's economy, business environment, and quality of life.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-23/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-23/HungaryDaily_Podcast_Final.mp3" length="21268315" type="audio/mpeg"/>
+      <itunes:duration>14:46</itunes:duration>
+      <pubDate>Wed, 23 Sep 2026 05:31:15 +0200</pubDate>
     </item>
   </channel>
 </rss>
