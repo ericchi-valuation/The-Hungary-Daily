@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 25 Sep 2026 03:34:25 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 26 Sep 2026 03:40:02 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Fri, 25 Sep 2026 05:34:21 +0200</pubDate>
+    <pubDate>Sat, 26 Sep 2026 05:39:58 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1309,6 +1309,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-25/HungaryDaily_Podcast_Final.mp3" length="20890897" type="audio/mpeg"/>
       <itunes:duration>14:30</itunes:duration>
       <pubDate>Fri, 25 Sep 2026 05:34:21 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-09-26</title>
+      <description><![CDATA[Today's Hungarian Daily covers Hungary's significant diplomatic shift with Ukraine, signing a major declaration and resolving misunderstandings. We also delve into the promising news that an agreement on Budapest's financial situation with the government is weeks away, impacting city services and infrastructure. Additionally, we explore Hungary's efforts to extend its US sanctions waiver on Russian energy and its new EU gas market exemption, crucial for energy security. For events, get ready for Oktoberfest-themed beer tours and festivities kicking off in Budapest throughout October. Tune in for more essential news and insights.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-26/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-26/HungaryDaily_Podcast_Final.mp3" length="18033311" type="audio/mpeg"/>
+      <itunes:duration>12:31</itunes:duration>
+      <pubDate>Sat, 26 Sep 2026 05:39:58 +0200</pubDate>
     </item>
   </channel>
 </rss>
