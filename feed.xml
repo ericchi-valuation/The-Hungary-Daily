@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 26 Sep 2026 03:40:02 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 27 Sep 2026 03:51:34 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sat, 26 Sep 2026 05:39:58 +0200</pubDate>
+    <pubDate>Sun, 27 Sep 2026 05:51:28 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1317,6 +1317,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-26/HungaryDaily_Podcast_Final.mp3" length="18033311" type="audio/mpeg"/>
       <itunes:duration>12:31</itunes:duration>
       <pubDate>Sat, 26 Sep 2026 05:39:58 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-09-27</title>
+      <description><![CDATA[Today's Hungarian Daily delves into the past week's significant political developments, including an 'immunity battle' and 'intelligence shake-up,' alongside a discussion on the 'weaker forint' and its economic implications. We also explore Budapest's urban future with a focus on sustainable development and building management, and highlight the upcoming 31st Budapest International Book Festival. Culturally, don't miss the press photo exhibition at the Capa Centre and architectural tours of Bauhaus treasures. For entertainment, English stand-up comedy is trending. Tune in for insights affecting life and business in Budapest.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-27/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-27/HungaryDaily_Podcast_Final.mp3" length="17319854" type="audio/mpeg"/>
+      <itunes:duration>12:01</itunes:duration>
+      <pubDate>Sun, 27 Sep 2026 05:51:28 +0200</pubDate>
     </item>
   </channel>
 </rss>
