@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 29 Sep 2026 04:23:31 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2026 04:08:07 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 29 Sep 2026 06:23:27 +0200</pubDate>
+    <pubDate>Wed, 30 Sep 2026 06:07:54 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1341,6 +1341,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-29/HungaryDaily_Podcast_Final.mp3" length="22391162" type="audio/mpeg"/>
       <itunes:duration>15:32</itunes:duration>
       <pubDate>Tue, 29 Sep 2026 06:23:27 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-09-30</title>
+      <description><![CDATA[Today on The Hungarian Daily, Ray covers the significant news that the European Public Prosecutor's Office (EPPO) will open its Hungarian office by next summer, enhancing scrutiny over EU funds. Budapest is adjusting its electric vehicle parking discounts while extending other EV benefits until 2030, impacting urban mobility. The show also touches on allegations of ministerial corruption in infrastructure projects and the GKI's warnings about challenges ahead of Hungary's planned Euro adoption. For events, Funzine Budapest recommends 'Autumn relaxation in the Danube Bend: 6 beautiful accommodations next to golden foliage' and '7 captivating guided walks in Budapest for the most beautiful months of golden autumn.' Tune in for more insights into Hungary's economy, policy, and quality of life.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-30/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-09-30/HungaryDaily_Podcast_Final.mp3" length="21839456" type="audio/mpeg"/>
+      <itunes:duration>15:09</itunes:duration>
+      <pubDate>Wed, 30 Sep 2026 06:07:54 +0200</pubDate>
     </item>
   </channel>
 </rss>
