@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 02 Oct 2026 04:12:15 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 03 Oct 2026 04:00:37 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Fri, 02 Oct 2026 06:12:12 +0200</pubDate>
+    <pubDate>Sat, 03 Oct 2026 06:00:33 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1365,6 +1365,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-10-02/HungaryDaily_Podcast_Final.mp3" length="19396275" type="audio/mpeg"/>
       <itunes:duration>13:28</itunes:duration>
       <pubDate>Fri, 02 Oct 2026 06:12:12 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-10-03</title>
+      <description><![CDATA[On Saturday, October 03, 2026, The Hungarian Daily reports on escalating diplomatic tensions with Moscow, leading to the expulsion of Hungarian diplomats and warnings of economic consequences. Prime Minister Péter Magyar signaled a potential end to Hungary's food margin caps, a move that could impact both consumers and agricultural businesses. Additionally, Hungary is seeking new EU funds for major infrastructure projects, including high-speed rail and Budapest Airport development. Today's Budapest events include the Liszt Festival bringing world stars and special concerts to the city, and the South Balaton region offering a multitude of autumn experiences. Tune in for more insights on these stories and their implications.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-10-03/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-10-03/HungaryDaily_Podcast_Final.mp3" length="23366679" type="audio/mpeg"/>
+      <itunes:duration>16:13</itunes:duration>
+      <pubDate>Sat, 03 Oct 2026 06:00:33 +0200</pubDate>
     </item>
   </channel>
 </rss>
