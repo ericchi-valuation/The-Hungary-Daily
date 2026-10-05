@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 04 Oct 2026 04:31:08 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 05 Oct 2026 04:13:47 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 04 Oct 2026 06:31:04 +0200</pubDate>
+    <pubDate>Mon, 05 Oct 2026 06:13:44 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1381,6 +1381,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-10-04/HungaryDaily_Podcast_Final.mp3" length="23710868" type="audio/mpeg"/>
       <itunes:duration>16:27</itunes:duration>
       <pubDate>Sun, 04 Oct 2026 06:31:04 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-10-05</title>
+      <description><![CDATA[Today's Hungarian Daily covers the Forint's recent high volatility and its impact on purchasing power, potential challenges with the crucial CATL battery plant investment, and Budapest's plan for increased police presence to boost public safety. We also touch on OTP's moderate GDP growth forecasts for 2026-2027. For events, don't miss the Kolonics György Memorial Run on October 23rd at Népsziget. Tune in for all the details and more!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-10-05/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-10-05/HungaryDaily_Podcast_Final.mp3" length="17567495" type="audio/mpeg"/>
+      <itunes:duration>12:11</itunes:duration>
+      <pubDate>Mon, 05 Oct 2026 06:13:44 +0200</pubDate>
     </item>
   </channel>
 </rss>
