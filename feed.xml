@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 06 Oct 2026 04:59:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2026 04:29:59 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 06 Oct 2026 06:58:57 +0200</pubDate>
+    <pubDate>Wed, 07 Oct 2026 06:29:53 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1397,6 +1397,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-10-06/HungaryDaily_Podcast_Final.mp3" length="19400664" type="audio/mpeg"/>
       <itunes:duration>13:28</itunes:duration>
       <pubDate>Tue, 06 Oct 2026 06:58:57 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-10-07</title>
+      <description><![CDATA[On Wednesday, October 07, 2026, The Hungarian Daily reports on the OECD's proposed major tax and pension reforms for Hungary, aimed at bolstering fiscal sustainability amidst economic challenges. We also delve into the emergence of a new roadmap and potential date for Hungary's adoption of the Euro, a move with significant implications for economic stability and foreign investment. Additionally, a parliamentary investigation into former Foreign Minister Péter Szijjártó's move to BYD has sparked a political clash. Today's Budapest events include a 'Gilmore Girls gasztrokörút Budapesten' for culinary enthusiasts and an interactive Hungarian folk dance performance by the Duna Művészegyüttes. Tune in for more insights into Hungary's economy, business environment, and quality of life.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-10-07/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-10-07/HungaryDaily_Podcast_Final.mp3" length="21599965" type="audio/mpeg"/>
+      <itunes:duration>14:59</itunes:duration>
+      <pubDate>Wed, 07 Oct 2026 06:29:53 +0200</pubDate>
     </item>
   </channel>
 </rss>
