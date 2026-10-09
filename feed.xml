@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 08 Oct 2026 04:41:10 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 04:47:12 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Thu, 08 Oct 2026 06:41:06 +0200</pubDate>
+    <pubDate>Fri, 09 Oct 2026 06:47:08 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1413,6 +1413,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-10-08/HungaryDaily_Podcast_Final.mp3" length="19000050" type="audio/mpeg"/>
       <itunes:duration>13:11</itunes:duration>
       <pubDate>Thu, 08 Oct 2026 06:41:06 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-10-09</title>
+      <description><![CDATA[Today's Hungarian Daily covers the unprecedented 3300 billion Forint capital shortfall at the Hungarian National Bank, efforts by Ukraine and Hungary to find common ground on contentious issues, and reports of Orbán-era oligarchs seeking immunity deals with the new government. This week, Budapest is hosting a free beer festival at the Kopaszi Dam, featuring premium beers and live music. Tune in for detailed insights into Hungary's economy, policy shifts, and vibrant city life.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-10-09/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-10-09/HungaryDaily_Podcast_Final.mp3" length="25597954" type="audio/mpeg"/>
+      <itunes:duration>17:46</itunes:duration>
+      <pubDate>Fri, 09 Oct 2026 06:47:08 +0200</pubDate>
     </item>
   </channel>
 </rss>
