@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 11 Oct 2026 04:11:08 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 04:30:45 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 11 Oct 2026 06:11:05 +0200</pubDate>
+    <pubDate>Mon, 12 Oct 2026 06:30:42 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1437,6 +1437,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-10-11/HungaryDaily_Podcast_Final.mp3" length="22330976" type="audio/mpeg"/>
       <itunes:duration>15:30</itunes:duration>
       <pubDate>Sun, 11 Oct 2026 06:11:05 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-10-12</title>
+      <description><![CDATA[Today, The Hungarian Daily explores the shifting dynamics of US-Hungary relations, the critical role of EU funding in upgrading Hungary's electricity grid, and the ongoing debate around transparency in public money private equity funds. We also cover new restrictions on short-term lets in Budapest's Castle District and BMW's iX4 production starting in Debrecen. For events, consider '3 unique experiences across the country for the perfect year-end team building' or a 'special gastronomic experience this autumn with Szamos's sweetest program.' Tune in for more insights into Hungary's economy and lifestyle.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-10-12/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-10-12/HungaryDaily_Podcast_Final.mp3" length="19063371" type="audio/mpeg"/>
+      <itunes:duration>13:14</itunes:duration>
+      <pubDate>Mon, 12 Oct 2026 06:30:42 +0200</pubDate>
     </item>
   </channel>
 </rss>
