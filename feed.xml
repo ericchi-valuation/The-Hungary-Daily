@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 12 Oct 2026 04:30:45 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 05:40:46 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 12 Oct 2026 06:30:42 +0200</pubDate>
+    <pubDate>Tue, 13 Oct 2026 07:40:42 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1445,6 +1445,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-10-12/HungaryDaily_Podcast_Final.mp3" length="19063371" type="audio/mpeg"/>
       <itunes:duration>13:14</itunes:duration>
       <pubDate>Mon, 12 Oct 2026 06:30:42 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-10-13</title>
+      <description><![CDATA[Today's Hungarian Daily covers Central Bank Governor Mihály Varga's warning against rushing Euro adoption, emphasizing thorough preparation over a premature timeline. We also discuss Ukraine's new minority education law, a significant step for Hungarians in Transcarpathia, potentially opening new EU accession stages for Kyiv. The IMF has improved Hungary's growth and inflation outlooks but forecasts higher unemployment. Today's Budapest events include "Tudományos kalandok teszik izgalmassá a szülinapi gyerekzsúrt Budapest kedvelt élményközpontjában" for science-themed birthday parties and "5 rejtett kincs a Svábhegyen, amit érdemes felkeresni egy őszi séta alkalmával" for autumn walks. Tune in for detailed analysis on how these developments impact you.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-10-13/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-10-13/HungaryDaily_Podcast_Final.mp3" length="20585578" type="audio/mpeg"/>
+      <itunes:duration>14:17</itunes:duration>
+      <pubDate>Tue, 13 Oct 2026 07:40:42 +0200</pubDate>
     </item>
   </channel>
 </rss>
