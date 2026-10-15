@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 14 Oct 2026 03:44:59 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 03:21:15 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Wed, 14 Oct 2026 05:44:56 +0200</pubDate>
+    <pubDate>Thu, 15 Oct 2026 05:21:11 +0200</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1461,6 +1461,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-10-14/HungaryDaily_Podcast_Final.mp3" length="25527737" type="audio/mpeg"/>
       <itunes:duration>17:43</itunes:duration>
       <pubDate>Wed, 14 Oct 2026 05:44:56 +0200</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-10-15</title>
+      <description><![CDATA[Today's Hungarian Daily covers the significant unfreezing of 4.2 billion euros in EU funds for Hungary, signaling improved relations and economic stability, alongside an additional 250 million euros in Norwegian funding resolving long-standing disputes. We also delve into Péter Magyar's announced meeting with Ukrainian President Zelenskyy, indicating potential diplomatic shifts. For Budapest events, explore three captivating literary cafes and immerse yourself in the ongoing Kazakh Cinema Days. Tune in for more insights on Hungary's economy, business environment, and quality of life.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-10-15/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-10-15/HungaryDaily_Podcast_Final.mp3" length="21593069" type="audio/mpeg"/>
+      <itunes:duration>14:59</itunes:duration>
+      <pubDate>Thu, 15 Oct 2026 05:21:11 +0200</pubDate>
     </item>
   </channel>
 </rss>
