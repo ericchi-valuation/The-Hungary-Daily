@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 29 Oct 2026 04:34:21 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 04:32:06 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Thu, 29 Oct 2026 05:34:17 +0100</pubDate>
+    <pubDate>Fri, 30 Oct 2026 05:32:02 +0100</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1517,6 +1517,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-10-29/HungaryDaily_Podcast_Final.mp3" length="24387335" type="audio/mpeg"/>
       <itunes:duration>16:56</itunes:duration>
       <pubDate>Thu, 29 Oct 2026 05:34:17 +0100</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-10-30</title>
+      <description><![CDATA[On Friday, October 30, 2026, The Hungarian Daily reports on a significant political transition with a 'post-Orban shakeout' impacting the auto industry, while a European Parliament Vice President welcomes Hungary’s reforms but notes lingering concerns. The Forint shows stability against the Euro and Dollar despite broader currency fluctuations, and Ryanair expands its Budapest operations with new routes. Today's Budapest events include an autumn excursion to the Zsámbék church ruin and 'Make It So: Remembering Patrick Stewart' by Budapest Concerts. Tune in for more on these stories and their implications for life and business in Budapest.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-10-30/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-10-30/HungaryDaily_Podcast_Final.mp3" length="20723505" type="audio/mpeg"/>
+      <itunes:duration>14:23</itunes:duration>
+      <pubDate>Fri, 30 Oct 2026 05:32:02 +0100</pubDate>
     </item>
   </channel>
 </rss>
