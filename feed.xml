@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 01 Nov 2026 04:32:52 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 04:40:16 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 01 Nov 2026 05:32:48 +0100</pubDate>
+    <pubDate>Mon, 02 Nov 2026 05:40:12 +0100</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1541,6 +1541,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-11-01/HungaryDaily_Podcast_Final.mp3" length="21413137" type="audio/mpeg"/>
       <itunes:duration>14:52</itunes:duration>
       <pubDate>Sun, 01 Nov 2026 05:32:48 +0100</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-11-02</title>
+      <description><![CDATA[Today's Hungarian Daily covers the Tisza government's 2027 budget plans and upcoming lustration, signaling major policy shifts and transparency. We also discuss Hungary's strategic move to diversify its export markets beyond Europe for greater economic resilience. Additionally, we touch on closer cooperation between Prime Minister Péter Magyar and Czech politician Andrej Babiš. For events, Funzine Budapest offers '10 Autumn Programs in Budapest to put on your November bucket list,' featuring diverse activities throughout the month. Tune in for more insights on Hungary's economy, policy, and quality of life.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-11-02/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-11-02/HungaryDaily_Podcast_Final.mp3" length="21542287" type="audio/mpeg"/>
+      <itunes:duration>14:57</itunes:duration>
+      <pubDate>Mon, 02 Nov 2026 05:40:12 +0100</pubDate>
     </item>
   </channel>
 </rss>
