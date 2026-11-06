@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 05 Nov 2026 05:20:43 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 05:54:51 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Thu, 05 Nov 2026 06:20:37 +0100</pubDate>
+    <pubDate>Fri, 06 Nov 2026 06:54:47 +0100</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1573,6 +1573,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-11-05/HungaryDaily_Podcast_Final.mp3" length="21309066" type="audio/mpeg"/>
       <itunes:duration>14:47</itunes:duration>
       <pubDate>Thu, 05 Nov 2026 06:20:37 +0100</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-11-06</title>
+      <description><![CDATA[Today on The Hungarian Daily, we examine Hungary's business services sector as it nears 120,000 jobs and pivots toward high-value corporate operations, alongside a strong September surge in industrial production. We also analyze the key outcomes from the Visegrád Four summit in Budapest and insights from AmCham on corporate office market trends. For weekend planning, explore peak autumn foliage in regional botanical gardens or visit the newly opened VakVarjú Kiscelli in Óbuda for a nature-inspired dining experience. Tune in for your essential daily briefing on Hungary's economy, corporate landscape, and urban life!]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-11-06/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-11-06/HungaryDaily_Podcast_Final.mp3" length="20961742" type="audio/mpeg"/>
+      <itunes:duration>14:33</itunes:duration>
+      <pubDate>Fri, 06 Nov 2026 06:54:47 +0100</pubDate>
     </item>
   </channel>
 </rss>
