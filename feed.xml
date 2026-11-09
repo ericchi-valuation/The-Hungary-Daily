@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 08 Nov 2026 04:40:33 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 04:52:39 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sun, 08 Nov 2026 05:40:29 +0100</pubDate>
+    <pubDate>Mon, 09 Nov 2026 05:52:35 +0100</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1597,6 +1597,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-11-08/HungaryDaily_Podcast_Final.mp3" length="19005693" type="audio/mpeg"/>
       <itunes:duration>13:11</itunes:duration>
       <pubDate>Sun, 08 Nov 2026 05:40:29 +0100</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-11-09</title>
+      <description><![CDATA[Today's episode covers national debate surrounding a proposed wealth tax versus corporate economic concerns, September's 4.3% rise in Hungarian retail sales driven by non-food spending, Péter Magyar's upcoming Berlin talks with German Chancellor Friedrich Merz, Defence Ministry warnings on European flight security, and surging residential home completions. Featured events include the upcoming St. Martin's New Wine Festival in Szentendre (Nov 14-15) and top indoor cold-weather activities across Budapest. Tune in for your complete daily guide to business, policy, and executive lifestyle in Hungary.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-11-09/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-11-09/HungaryDaily_Podcast_Final.mp3" length="20335429" type="audio/mpeg"/>
+      <itunes:duration>14:07</itunes:duration>
+      <pubDate>Mon, 09 Nov 2026 05:52:35 +0100</pubDate>
     </item>
   </channel>
 </rss>
