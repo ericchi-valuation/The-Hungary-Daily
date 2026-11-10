@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 09 Nov 2026 04:52:39 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 06:08:18 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 09 Nov 2026 05:52:35 +0100</pubDate>
+    <pubDate>Tue, 10 Nov 2026 07:08:14 +0100</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1605,6 +1605,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-11-09/HungaryDaily_Podcast_Final.mp3" length="20335429" type="audio/mpeg"/>
       <itunes:duration>14:07</itunes:duration>
       <pubDate>Mon, 09 Nov 2026 05:52:35 +0100</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-11-10</title>
+      <description><![CDATA[Today's episode covers law enforcement raids and the arrest of Áron Orbán in a major human smuggling investigation involving over 100 Vietnamese nationals, reports of discussions surrounding a 5 billion euro loan framework between Hungary and China prior to elections, and structural shifts in the real estate market as the Otthon Start program yields to the Wekerle Plusz Program amidst wealth tax debates. For local events, Budapest hosts free mini-concerts across ten venues featuring baroque and jazz music, alongside seventeen vintage and retro fairs across the capital. Tune in for Ray's complete economic and business analysis.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-11-10/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-11-10/HungaryDaily_Podcast_Final.mp3" length="23705225" type="audio/mpeg"/>
+      <itunes:duration>16:27</itunes:duration>
+      <pubDate>Tue, 10 Nov 2026 07:08:14 +0100</pubDate>
     </item>
   </channel>
 </rss>
