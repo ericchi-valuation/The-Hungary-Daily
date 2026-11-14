@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 13 Nov 2026 05:14:58 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 05:08:30 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Fri, 13 Nov 2026 06:14:49 +0100</pubDate>
+    <pubDate>Sat, 14 Nov 2026 06:08:26 +0100</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1637,6 +1637,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-11-13/HungaryDaily_Podcast_Final.mp3" length="21857009" type="audio/mpeg"/>
       <itunes:duration>15:10</itunes:duration>
       <pubDate>Fri, 13 Nov 2026 06:14:49 +0100</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-11-14</title>
+      <description><![CDATA[In today's episode, we examine Hungary's contrasting economic indicators as automotive production surges by an extraordinary 62 percent while September construction output contracts by 5.6 percent. We also cover Rosatom's latest updates regarding the Paks II nuclear power plant project and a major financial seizure operation by national tax authorities. For weekend leisure in the capital, Budapest's iconic summer party venue transforms into a massive winter ice skating rink with seasonal light installations. Tune in for in-depth analysis and essential insights tailored for international business leaders living in Budapest.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-11-14/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-11-14/HungaryDaily_Podcast_Final.mp3" length="20798110" type="audio/mpeg"/>
+      <itunes:duration>14:26</itunes:duration>
+      <pubDate>Sat, 14 Nov 2026 06:08:26 +0100</pubDate>
     </item>
   </channel>
 </rss>
