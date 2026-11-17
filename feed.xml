@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 16 Nov 2026 04:55:21 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 06:44:54 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Mon, 16 Nov 2026 05:55:15 +0100</pubDate>
+    <pubDate>Tue, 17 Nov 2026 07:44:50 +0100</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1661,6 +1661,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-11-16/HungaryDaily_Podcast_Final.mp3" length="22971706" type="audio/mpeg"/>
       <itunes:duration>15:57</itunes:duration>
       <pubDate>Mon, 16 Nov 2026 05:55:15 +0100</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-11-17</title>
+      <description><![CDATA[In today's episode, we cover the upcoming year-end review of the Paks II nuclear expansion project, the Hungarian government's new border cash declaration rules taking effect next year, and how national housing initiatives are driving real estate demand toward smaller homes in Budapest. We also highlight the Buda Castle Advent Market, opening November 27 at Holy Trinity Square with local artisan crafts, seasonal foods, and cultural performances. Tune in for essential economic insights, financial market updates, and local Budapest news for international professionals.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-11-17/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-11-17/HungaryDaily_Podcast_Final.mp3" length="22289597" type="audio/mpeg"/>
+      <itunes:duration>15:28</itunes:duration>
+      <pubDate>Tue, 17 Nov 2026 07:44:50 +0100</pubDate>
     </item>
   </channel>
 </rss>
