@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 21 Nov 2026 05:47:46 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 05:18:04 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Sat, 21 Nov 2026 06:47:42 +0100</pubDate>
+    <pubDate>Sun, 22 Nov 2026 06:18:01 +0100</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1701,6 +1701,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-11-21/HungaryDaily_Podcast_Final.mp3" length="23393636" type="audio/mpeg"/>
       <itunes:duration>16:14</itunes:duration>
       <pubDate>Sat, 21 Nov 2026 06:47:42 +0100</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-11-22</title>
+      <description><![CDATA[In today's episode, Ray covers Moody's decision to revise Hungary's sovereign credit rating outlook to stable while affirming its Baa2 rating, an analysis of tax-efficient retail investment strategies for savings in Hungary, and new survey data on corporate AI adoption across local enterprises. In Budapest events, we highlight the Adni jó Advent charity initiatives across the capital and the opening of Hungary's free-entry Advent theme park. Tune in for your daily dose of Hungarian economic analysis and urban insights.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-11-22/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-11-22/HungaryDaily_Podcast_Final.mp3" length="21460784" type="audio/mpeg"/>
+      <itunes:duration>14:54</itunes:duration>
+      <pubDate>Sun, 22 Nov 2026 06:18:01 +0100</pubDate>
     </item>
   </channel>
 </rss>
