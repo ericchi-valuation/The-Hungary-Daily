@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 24 Nov 2026 08:38:21 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 07:09:31 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Tue, 24 Nov 2026 09:38:17 +0100</pubDate>
+    <pubDate>Wed, 25 Nov 2026 08:09:27 +0100</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1725,6 +1725,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-11-24/HungaryDaily_Podcast_Final.mp3" length="22872023" type="audio/mpeg"/>
       <itunes:duration>15:52</itunes:duration>
       <pubDate>Tue, 24 Nov 2026 09:38:17 +0100</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-11-25</title>
+      <description><![CDATA[Today's episode covers Hungary's deepening investment slump and its economic impact, the joint diplomatic front formed by the Visegrád Four and Austria against proposed EU budget shifts, and high-level talks between Péter Magyar and Volodymyr Zelensky alongside new aid for Transcarpathia. In Budapest events, we highlight vintage festive Ikarus buses featuring live music on Advent weekends and the opening of over 15 ice skating rinks across the capital, including City Park. Tune in for expert business analysis, settled exchange rates, and local urban insights.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-11-25/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-11-25/HungaryDaily_Podcast_Final.mp3" length="23665728" type="audio/mpeg"/>
+      <itunes:duration>16:25</itunes:duration>
+      <pubDate>Wed, 25 Nov 2026 08:09:27 +0100</pubDate>
     </item>
   </channel>
 </rss>
