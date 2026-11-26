@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 25 Nov 2026 07:09:31 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 07:05:34 +0000</lastBuildDate>
     <itunes:author>Eric Chi</itunes:author>
     <managingEditor>eric.chi1988@gmail.com (Eric Chi)</managingEditor>
-    <pubDate>Wed, 25 Nov 2026 08:09:27 +0100</pubDate>
+    <pubDate>Thu, 26 Nov 2026 08:05:30 +0100</pubDate>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
@@ -1733,6 +1733,14 @@ For upcoming events, enjoy free outdoor concerts at Budapest's historical venues
       <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-11-25/HungaryDaily_Podcast_Final.mp3" length="23665728" type="audio/mpeg"/>
       <itunes:duration>16:25</itunes:duration>
       <pubDate>Wed, 25 Nov 2026 08:09:27 +0100</pubDate>
+    </item>
+    <item>
+      <title>The Hungarian Daily — 2026-11-26</title>
+      <description><![CDATA[Budapest Mayor Gergely Karácsony proposes a complete phase-out of Airbnb short-term rentals under the new Budapest Flow strategy, while Magyar Telekom announces a multi-billion-forint data center expansion in the capital through 2028. Meanwhile, Hungary joins V4 partners and Austria to challenge proposed EU budget structures ahead of the Brussels summit. In Budapest events, festive Danube holiday boat cruises launch this December, offering winter panoramas of the city illuminated landmarks. Tune in for expert economic analysis, foreign exchange insights, and local updates.]]></description>
+      <guid isPermaLink="false">https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-11-26/HungaryDaily_Podcast_Final.mp3</guid>
+      <enclosure url="https://github.com/ericchi-valuation/The-Hungary-Daily/releases/download/ep-2026-11-26/HungaryDaily_Podcast_Final.mp3" length="24520872" type="audio/mpeg"/>
+      <itunes:duration>17:01</itunes:duration>
+      <pubDate>Thu, 26 Nov 2026 08:05:30 +0100</pubDate>
     </item>
   </channel>
 </rss>
